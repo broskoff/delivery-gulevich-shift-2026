@@ -9,14 +9,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		
 		window = UIWindow(windowScene: scene)
 		
-		let nav = UINavigationController()
+		let tabBarController = UITabBarController()
 		
-		window?.rootViewController = nav
+		let profileViewController = ProfileViewController()
+		let profileNavigationController = UINavigationController(rootViewController: profileViewController)
+		profileNavigationController.tabBarItem = UITabBarItem(title: "Профиль",
+															  image: UIImage(systemName: "person.crop.circle"),
+															  selectedImage: nil)
 		
-		nav.viewControllers = [
-			CalculationViewController()
-	]
-			
+		let historyViewController = HistoryViewController()
+		let historyNavigationController = UINavigationController(rootViewController: historyViewController)
+		historyNavigationController.tabBarItem = UITabBarItem(title: "История",
+															  image: UIImage(systemName: "clock"),
+															  selectedImage: nil)
+		
+		let calculationViewController = CalculationViewController()
+		let calculationNavigationController = UINavigationController(rootViewController: calculationViewController)
+		calculationNavigationController.tabBarItem = UITabBarItem(title: "Расчет",
+																  image: UIImage(systemName: "plus.forwardslash.minus"),
+																  selectedImage: nil)
+		
+		tabBarController.viewControllers = [
+			calculationNavigationController,
+			historyNavigationController,
+			profileNavigationController
+		]
+		
+		window?.rootViewController = tabBarController
 		window?.makeKeyAndVisible()
 	}
 }
