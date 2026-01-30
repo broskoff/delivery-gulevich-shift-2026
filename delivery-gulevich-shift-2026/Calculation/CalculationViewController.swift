@@ -11,8 +11,9 @@ class CalculationViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		title = "Мы доставим ваш заказ"
 	}
 }
+
+
 
 

@@ -18,7 +18,7 @@
 		C7DF60CB2F29BAA5009B0BA1 /* Exceptions for "delivery-gulevich-shift-2026" folder in "delivery-gulevich-shift-2026" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				App/Info.plist,
+				Supporting/Info.plist,
 			);
 			target = C7DF60B82F29BAA4009B0BA1 /* delivery-gulevich-shift-2026 */;
 		};
@@ -155,7 +155,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "delivery-gulevich-shift-2026/App/Info.plist";
+				INFOPLIST_FILE = "delivery-gulevich-shift-2026/Supporting/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -186,7 +186,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "delivery-gulevich-shift-2026/App/Info.plist";
+				INFOPLIST_FILE = "delivery-gulevich-shift-2026/Supporting/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
