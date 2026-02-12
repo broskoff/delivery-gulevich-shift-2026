@@ -1,6 +1,8 @@
 import UIKit
 
-class CalculationViewController: UIViewController {
+class CalculationViewController: UIViewController, ICoordinating {
+	
+	var coordinator: ICoordinator?
 	
 	private let calculationView = CalculationView()
 	

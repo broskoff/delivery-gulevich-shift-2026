@@ -1,6 +1,8 @@
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, ICoordinating {
+	
+	var coordinator: ICoordinator?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()

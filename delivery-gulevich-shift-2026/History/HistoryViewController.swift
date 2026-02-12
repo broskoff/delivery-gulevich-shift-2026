@@ -1,7 +1,9 @@
 import UIKit
 import SnapKit
 
-class HistoryViewController: UIViewController {
+class HistoryViewController: UIViewController, ICoordinating {
+	
+	var coordinator: ICoordinator?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
