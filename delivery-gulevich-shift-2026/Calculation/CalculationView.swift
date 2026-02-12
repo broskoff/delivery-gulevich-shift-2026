@@ -285,7 +285,7 @@ private extension CalculationView {
 	
 	func configurePromoStackView() {
 		mainStackView.addArrangedSubview(promoStackView)
-
+		
 		promoStackView.backgroundColor = ContentColor.promoAdvStackView
 		promoStackView.axis = .vertical
 		
@@ -296,17 +296,18 @@ private extension CalculationView {
 	}
 	
 	func configurePromoLabel() {
-		let titleLabel = UILabel()
-		titleLabel.text = "Бесплатная доставка"
-		titleLabel.textAlignment = .left
-		titleLabel.textColor = .white
-		titleLabel.font = .systemFont(ofSize: 24, weight: .bold)
+		//если данные для рекламной плашки будут приходить из сети, то хардкод заменить на них
+		let titleLabelConfig = PromoLabelConfig(text: "Бесплатная доставка",
+												fontSize: 24,
+												fontWeight: .bold)
 		
-		let subtitlelabel = UILabel()
-		subtitlelabel.text = "за приведенного друга"
-		subtitlelabel.textAlignment = .left
-		subtitlelabel.textColor = .white
-		subtitlelabel.font = .systemFont(ofSize: 14, weight: .light)
+		let titleLabel = PromoLabelFactory.createLabel(config: titleLabelConfig)
+		
+		let subtitleLabelConfig = PromoLabelConfig(text: "за приведенного друга",
+												   fontSize: 14,
+												   fontWeight: .light)
+		
+		let subtitlelabel = PromoLabelFactory.createLabel(config: subtitleLabelConfig)
 		
 		[
 			titleLabel,
