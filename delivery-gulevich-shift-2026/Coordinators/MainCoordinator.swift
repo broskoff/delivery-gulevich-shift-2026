@@ -1,33 +1,27 @@
 import Foundation
 import UIKit
 
-final class MainCoordinator: ICoordinator {
+final class MainCoordinator: IMainCoordinator {
 	var tabBarContorller: UITabBarController?
-	
-	func eventOcurred(type: Event) {
-		//		switch type {
-		//
-		//		}
-	}
 	
 	func start() {
 		
-		let calculationViewController = CalculationViewController()
-		calculationViewController.coordinator = self
+		let view = CalculationView()
+		let presenter = CalculationPresenter(coordinator: self)
+		let calculationViewController = CalculationViewController(calculationView: view,
+																  presenter: presenter)
 		let calculationNavigationController = UINavigationController(rootViewController: calculationViewController)
 		calculationNavigationController.tabBarItem = UITabBarItem(title: "Расчет",
 																  image: UIImage(systemName: "plus.forwardslash.minus"),
 																  selectedImage: nil)
 		
-		let profileViewController = ProfileViewController()
-		profileViewController.coordinator = self
+		let profileViewController = ProfileViewController(coordinator: self)
 		let profileNavigationController = UINavigationController(rootViewController: profileViewController)
 		profileNavigationController.tabBarItem = UITabBarItem(title: "Профиль",
 															  image: UIImage(systemName: "person.crop.circle"),
 															  selectedImage: nil)
 		
-		let historyViewController = HistoryViewController()
-		historyViewController.coordinator = self
+		let historyViewController = HistoryViewController(coordinator: self)
 		let historyNavigationController = UINavigationController(rootViewController: historyViewController)
 		historyNavigationController.tabBarItem = UITabBarItem(title: "История",
 															  image: UIImage(systemName: "clock"),
@@ -38,5 +32,13 @@ final class MainCoordinator: ICoordinator {
 			historyNavigationController,
 			profileNavigationController
 		]
+	}
+	
+	func showMethodOfSend() {
+		guard let nav = tabBarContorller?.selectedViewController as? UINavigationController else { return }
+		
+		let coordinator = MethodOfSendCoordinator()
+		coordinator.navigationController = nav
+		coordinator.showMethodOfSend()
 	}
 }
