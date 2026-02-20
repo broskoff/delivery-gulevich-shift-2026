@@ -1,21 +1,34 @@
 import UIKit
 
-class CalculationViewController: UIViewController, ICoordinating {
+class CalculationViewController: UIViewController, ICalculationViewDelegate {
 	
-	var coordinator: ICoordinator?
+	let calculationView: CalculationView
+	let presenter: ICalculationPresenter
 	
-	private let calculationView = CalculationView()
+	init(
+		calculationView: CalculationView,
+		presenter: ICalculationPresenter,
+	) {
+		self.calculationView = calculationView
+		self.presenter = presenter
+		super.init(nibName: nil, bundle: nil)
+	}
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
 	
 	override func loadView() {
-		view = calculationView
+		self.view = calculationView
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		calculationView.delegate = self
+	}
+	
+	func didTapButtonCalcDelivery() {
+		presenter.didTapCalculateButton()
 	}
 }
-
-
-
-

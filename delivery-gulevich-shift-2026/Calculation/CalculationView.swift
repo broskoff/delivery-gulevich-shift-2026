@@ -1,7 +1,13 @@
 import UIKit
 import SnapKit
 
+protocol ICalculationViewDelegate: AnyObject {
+	func didTapButtonCalcDelivery()
+}
+
 final class CalculationView: UIView {
+	
+	weak var delegate: ICalculationViewDelegate?
 	
 	private let topView = UIView()
 	private let scrollView = UIScrollView(frame: .zero)
@@ -167,6 +173,13 @@ private extension CalculationView {
 		let button = CustomButton.makeButton(setTitle: "Рассчитать")
 		
 		calculationStackView.addArrangedSubview(button)
+		
+		button.addTarget(self, action: #selector(buttonCalcDeliveryTapped), for: .touchUpInside)
+	}
+	
+	@objc
+	func buttonCalcDeliveryTapped() {
+		delegate?.didTapButtonCalcDelivery()
 	}
 }
 
@@ -319,20 +332,6 @@ private extension CalculationView {
 }
 
 extension CalculationView: UITextFieldDelegate {
-	//
-	//	func textFieldDidEndEditing(_ textField: UITextField) {
-	//		guard let text = textField.text else { return }
-	//
-	//		switch textField.tag {
-	//		case 0:
-	//			packageData.departureCity = text
-	//		case 1:
-	//			packageData.destinationCity = text
-	//		case 2:
-	//			packageData.sizePackage = text
-	//		default:
-	//			fatalError()
-	//		}
-	//	}
+	
 }
 
