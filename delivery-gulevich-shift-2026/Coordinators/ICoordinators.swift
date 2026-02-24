@@ -1,18 +1,17 @@
 import Foundation
 import UIKit
 
-protocol IMethodOfSendCoordinator : AnyObject {
-	
-	var navigationController: UINavigationController? { get set }
-	
+protocol IMethodOfSendCoordinator : ICoordinator {
+	func didFinish()
+}
+
+protocol IMainCoordinator: ICoordinator {
 	func showMethodOfSend()
 }
 
-protocol IMainCoordinator: AnyObject {
-	
-	var tabBarContorller: UITabBarController? { get set }
+protocol ICoordinator: AnyObject {
+	var childCoordinators: [ICoordinator] { get set }
 	
 	func start()
-	
-	func showMethodOfSend()
 }
+						
