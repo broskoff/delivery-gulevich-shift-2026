@@ -11,7 +11,7 @@ struct CustomTextFieldConfig {
 	let tagType: TextFieldTagType
 	let label: String
 	let placeholder: String
-	let boarderColor: UIColor
+	let borderColor: UIColor
 }
 
 final class CustomTextField: UIView {
@@ -40,7 +40,7 @@ final class CustomTextField: UIView {
 		textField.tag = config.tagType.rawValue
 		textField.layer.cornerRadius = 8
 		textField.layer.borderWidth = 1
-		textField.layer.borderColor = config.boarderColor.cgColor
+		textField.layer.borderColor = config.borderColor.cgColor
 		//вместо этой UIView скорее всего будет картинка геоточки
 		textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: textField.frame.height))
 		textField.leftViewMode = .always

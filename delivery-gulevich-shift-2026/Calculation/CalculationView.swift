@@ -191,7 +191,7 @@ private extension CalculationView {
 			tagType: .fromCity,
 			label: "Город отправки",
 			placeholder: "Выберите город",
-			boarderColor: ContentColor.borderLight
+			borderColor: ContentColor.borderLight
 		)
 		
 		departureCityTextField.makeComponent(
@@ -204,7 +204,7 @@ private extension CalculationView {
 			tagType: .toCity,
 			label: "Город назначения",
 			placeholder: "Выберите город",
-			boarderColor: ContentColor.borderLight
+			borderColor: ContentColor.borderLight
 		)
 		
 		destinationCityTextField.makeComponent(
@@ -212,17 +212,17 @@ private extension CalculationView {
 			config: destinationCityConfig
 		)
 		
-		let sizePackegeTextField = CustomTextField(frame: .zero)
-		let sizePackegeConfig = CustomTextFieldConfig(
+		let sizePackageTextField = CustomTextField(frame: .zero)
+		let sizePackageConfig = CustomTextFieldConfig(
 			tagType: .sizePackage,
 			label: "Размер посылки",
 			placeholder: "Выберите размер",
-			boarderColor: ContentColor.borderLight
+			borderColor: ContentColor.borderLight
 		)
 		
-		sizePackegeTextField.makeComponent(
+		sizePackageTextField.makeComponent(
 			delegate: self,
-			config: sizePackegeConfig
+			config: sizePackageConfig
 		)
 		
 		let stackView = UIStackView()
@@ -233,7 +233,7 @@ private extension CalculationView {
 		[
 			departureCityTextField,
 			destinationCityTextField,
-			sizePackegeTextField
+			sizePackageTextField
 		].forEach {
 			stackView.addArrangedSubview($0)
 		}
