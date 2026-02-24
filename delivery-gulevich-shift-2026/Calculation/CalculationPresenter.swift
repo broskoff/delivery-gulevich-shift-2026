@@ -10,7 +10,7 @@ class CalculationPresenter: ICalculationPresenter {
 	
 	weak var coordinator: IMainCoordinator?
 	
-	init(coordinator: IMainCoordinator?) {
+	init(coordinator: IMainCoordinator) {
 		self.coordinator = coordinator
 	}
 	

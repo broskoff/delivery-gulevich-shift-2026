@@ -7,33 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C713A6502F483C1500E32095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C713A6452F483C1500E32095 /* Assets.xcassets */; };
+		C713A6522F483C1500E32095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C713A6482F483C1500E32095 /* LaunchScreen.storyboard */; };
+		C713A6532F483C1500E32095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713A6342F483C1500E32095 /* AppDelegate.swift */; };
+		C713A6542F483C1500E32095 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713A6352F483C1500E32095 /* SceneDelegate.swift */; };
+		C713A6552F483C1500E32095 /* CalculationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713A6372F483C1500E32095 /* CalculationPresenter.swift */; };
+		C713A6562F483C1500E32095 /* CalculationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713A6382F483C1500E32095 /* CalculationView.swift */; };
+		C713A6572F483C1500E32095 /* CalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713A6392F483C1500E32095 /* CalculationViewController.swift */; };
+		C713A6582F483C1500E32095 /* ICoordinators.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713A63B2F483C1500E32095 /* ICoordinators.swift */; };
+		C713A6592F483C1500E32095 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713A63C2F483C1500E32095 /* MainCoordinator.swift */; };
+		C713A65A2F483C1500E32095 /* MethodOfSendCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713A63D2F483C1500E32095 /* MethodOfSendCoordinator.swift */; };
+		C713A65B2F483C1500E32095 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713A63F2F483C1500E32095 /* HistoryViewController.swift */; };
+		C713A65C2F483C1500E32095 /* MethodOfSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713A6412F483C1500E32095 /* MethodOfSendViewController.swift */; };
+		C713A65D2F483C1500E32095 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713A6432F483C1500E32095 /* ProfileViewController.swift */; };
+		C713A65E2F483C1500E32095 /* ContentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713A64A2F483C1500E32095 /* ContentColor.swift */; };
+		C713A65F2F483C1500E32095 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713A64B2F483C1500E32095 /* CustomButton.swift */; };
+		C713A6602F483C1500E32095 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713A64C2F483C1500E32095 /* CustomTextField.swift */; };
+		C713A6612F483C1500E32095 /* PromoLabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713A64D2F483C1500E32095 /* PromoLabelFactory.swift */; };
 		C7DF61422F29C607009B0BA1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C7DF61412F29C607009B0BA1 /* SnapKit */; };
+		C7F45A1A2F4DA171006B8E1C /* MethodOfSendPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F45A192F4DA171006B8E1C /* MethodOfSendPresenter.swift */; };
+		C7F45A1C2F4DA27F006B8E1C /* MethodOfSendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F45A1B2F4DA27F006B8E1C /* MethodOfSendView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C713A6342F483C1500E32095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C713A6352F483C1500E32095 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C713A6372F483C1500E32095 /* CalculationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationPresenter.swift; sourceTree = "<group>"; };
+		C713A6382F483C1500E32095 /* CalculationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationView.swift; sourceTree = "<group>"; };
+		C713A6392F483C1500E32095 /* CalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewController.swift; sourceTree = "<group>"; };
+		C713A63B2F483C1500E32095 /* ICoordinators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICoordinators.swift; sourceTree = "<group>"; };
+		C713A63C2F483C1500E32095 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		C713A63D2F483C1500E32095 /* MethodOfSendCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendCoordinator.swift; sourceTree = "<group>"; };
+		C713A63F2F483C1500E32095 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		C713A6412F483C1500E32095 /* MethodOfSendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendViewController.swift; sourceTree = "<group>"; };
+		C713A6432F483C1500E32095 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C713A6452F483C1500E32095 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C713A6462F483C1500E32095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C713A6472F483C1500E32095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C713A64A2F483C1500E32095 /* ContentColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentColor.swift; sourceTree = "<group>"; };
+		C713A64B2F483C1500E32095 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		C713A64C2F483C1500E32095 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		C713A64D2F483C1500E32095 /* PromoLabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoLabelFactory.swift; sourceTree = "<group>"; };
 		C7DF60B92F29BAA4009B0BA1 /* delivery-gulevich-shift-2026.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "delivery-gulevich-shift-2026.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7F45A192F4DA171006B8E1C /* MethodOfSendPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendPresenter.swift; sourceTree = "<group>"; };
+		C7F45A1B2F4DA27F006B8E1C /* MethodOfSendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C7DF60CB2F29BAA5009B0BA1 /* Exceptions for "delivery-gulevich-shift-2026" folder in "delivery-gulevich-shift-2026" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Supporting/Info.plist,
-			);
-			target = C7DF60B82F29BAA4009B0BA1 /* delivery-gulevich-shift-2026 */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		C7DF60BB2F29BAA4009B0BA1 /* delivery-gulevich-shift-2026 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				C7DF60CB2F29BAA5009B0BA1 /* Exceptions for "delivery-gulevich-shift-2026" folder in "delivery-gulevich-shift-2026" target */,
-			);
-			path = "delivery-gulevich-shift-2026";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C7DF60B62F29BAA4009B0BA1 /* Frameworks */ = {
@@ -47,10 +65,101 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C713A6362F483C1500E32095 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C713A6342F483C1500E32095 /* AppDelegate.swift */,
+				C713A6352F483C1500E32095 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C713A63A2F483C1500E32095 /* Calculation */ = {
+			isa = PBXGroup;
+			children = (
+				C713A6382F483C1500E32095 /* CalculationView.swift */,
+				C713A6392F483C1500E32095 /* CalculationViewController.swift */,
+				C713A6372F483C1500E32095 /* CalculationPresenter.swift */,
+			);
+			path = Calculation;
+			sourceTree = "<group>";
+		};
+		C713A63E2F483C1500E32095 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C713A63B2F483C1500E32095 /* ICoordinators.swift */,
+				C713A63C2F483C1500E32095 /* MainCoordinator.swift */,
+				C713A63D2F483C1500E32095 /* MethodOfSendCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		C713A6402F483C1500E32095 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				C713A63F2F483C1500E32095 /* HistoryViewController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		C713A6422F483C1500E32095 /* MethodOfSend */ = {
+			isa = PBXGroup;
+			children = (
+				C7F45A1B2F4DA27F006B8E1C /* MethodOfSendView.swift */,
+				C713A6412F483C1500E32095 /* MethodOfSendViewController.swift */,
+				C7F45A192F4DA171006B8E1C /* MethodOfSendPresenter.swift */,
+			);
+			path = MethodOfSend;
+			sourceTree = "<group>";
+		};
+		C713A6442F483C1500E32095 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C713A6432F483C1500E32095 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C713A6492F483C1500E32095 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				C713A6452F483C1500E32095 /* Assets.xcassets */,
+				C713A6462F483C1500E32095 /* Info.plist */,
+				C713A6482F483C1500E32095 /* LaunchScreen.storyboard */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		C713A64E2F483C1500E32095 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C713A64A2F483C1500E32095 /* ContentColor.swift */,
+				C713A64B2F483C1500E32095 /* CustomButton.swift */,
+				C713A64C2F483C1500E32095 /* CustomTextField.swift */,
+				C713A64D2F483C1500E32095 /* PromoLabelFactory.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C713A64F2F483C1500E32095 /* delivery-gulevich-shift-2026 */ = {
+			isa = PBXGroup;
+			children = (
+				C713A6362F483C1500E32095 /* App */,
+				C713A63E2F483C1500E32095 /* Coordinators */,
+				C713A63A2F483C1500E32095 /* Calculation */,
+				C713A6422F483C1500E32095 /* MethodOfSend */,
+				C713A6402F483C1500E32095 /* History */,
+				C713A6442F483C1500E32095 /* Profile */,
+				C713A64E2F483C1500E32095 /* UI */,
+				C713A6492F483C1500E32095 /* Supporting */,
+			);
+			path = "delivery-gulevich-shift-2026";
+			sourceTree = "<group>";
+		};
 		C7DF60B02F29BAA4009B0BA1 = {
 			isa = PBXGroup;
 			children = (
-				C7DF60BB2F29BAA4009B0BA1 /* delivery-gulevich-shift-2026 */,
+				C713A64F2F483C1500E32095 /* delivery-gulevich-shift-2026 */,
 				C7DF60BA2F29BAA4009B0BA1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,9 +186,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				C7DF60BB2F29BAA4009B0BA1 /* delivery-gulevich-shift-2026 */,
 			);
 			name = "delivery-gulevich-shift-2026";
 			packageProductDependencies = (
@@ -131,6 +237,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C713A6502F483C1500E32095 /* Assets.xcassets in Resources */,
+				C713A6522F483C1500E32095 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +249,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C713A6532F483C1500E32095 /* AppDelegate.swift in Sources */,
+				C713A6542F483C1500E32095 /* SceneDelegate.swift in Sources */,
+				C713A6552F483C1500E32095 /* CalculationPresenter.swift in Sources */,
+				C713A6562F483C1500E32095 /* CalculationView.swift in Sources */,
+				C713A6572F483C1500E32095 /* CalculationViewController.swift in Sources */,
+				C713A6582F483C1500E32095 /* ICoordinators.swift in Sources */,
+				C7F45A1C2F4DA27F006B8E1C /* MethodOfSendView.swift in Sources */,
+				C713A6592F483C1500E32095 /* MainCoordinator.swift in Sources */,
+				C713A65A2F483C1500E32095 /* MethodOfSendCoordinator.swift in Sources */,
+				C713A65B2F483C1500E32095 /* HistoryViewController.swift in Sources */,
+				C713A65C2F483C1500E32095 /* MethodOfSendViewController.swift in Sources */,
+				C713A65D2F483C1500E32095 /* ProfileViewController.swift in Sources */,
+				C713A65E2F483C1500E32095 /* ContentColor.swift in Sources */,
+				C7F45A1A2F4DA171006B8E1C /* MethodOfSendPresenter.swift in Sources */,
+				C713A65F2F483C1500E32095 /* CustomButton.swift in Sources */,
+				C713A6602F483C1500E32095 /* CustomTextField.swift in Sources */,
+				C713A6612F483C1500E32095 /* PromoLabelFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C713A6482F483C1500E32095 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C713A6472F483C1500E32095 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C7DF60CD2F29BAA5009B0BA1 /* Debug */ = {
