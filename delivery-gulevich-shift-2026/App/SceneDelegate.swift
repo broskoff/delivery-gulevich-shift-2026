@@ -11,8 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		
 		let tabBarController = UITabBarController()
 		
-		let coordinator = MainCoordinator()
-		coordinator.tabBarController = tabBarController
+		let coordinator = MainCoordinator(tabBarController: tabBarController)
 		
 		window?.rootViewController = tabBarController
 		window?.makeKeyAndVisible()

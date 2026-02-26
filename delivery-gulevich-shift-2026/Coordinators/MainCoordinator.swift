@@ -2,9 +2,13 @@ import Foundation
 import UIKit
 
 final class MainCoordinator: IMainCoordinator {
-
-	var tabBarController: UITabBarController?
+	
+	var tabBarController: UITabBarController
 	var childCoordinators: [ICoordinator] = []
+	
+	init(tabBarController: UITabBarController) {
+		self.tabBarController = tabBarController
+	}
 	
 	func start() {
 		
@@ -29,7 +33,7 @@ final class MainCoordinator: IMainCoordinator {
 															  image: UIImage(systemName: "clock"),
 															  selectedImage: nil)
 		
-		tabBarController?.viewControllers = [
+		tabBarController.viewControllers = [
 			calculationNavigationController,
 			historyNavigationController,
 			profileNavigationController
@@ -37,11 +41,11 @@ final class MainCoordinator: IMainCoordinator {
 	}
 	
 	func showMethodOfSend() {
-		guard let nav = tabBarController?.selectedViewController as? UINavigationController else { return }
-		
-		let coordinator = MethodOfSendCoordinator(parentCoordinator: self)
+		let coordinator = MethodOfSendCoordinator(
+			parentCoordinator: self,
+			navigationController: calculationNavigationController
+		)
 		childCoordinators.append(coordinator)
-		coordinator.navigationController = nav
 		coordinator.start()
 	}
 	
