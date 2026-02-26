@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7454F2C2F501CAC008A5D93 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7454F2B2F501CAC008A5D93 /* ProfileView.swift */; };
+		C7454F2E2F501CDC008A5D93 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7454F2D2F501CDC008A5D93 /* ProfilePresenter.swift */; };
 		C7510CE82F4ECF4600AA968F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7510CDD2F4ECF4600AA968F /* Assets.xcassets */; };
 		C7510CEA2F4ECF4600AA968F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7510CE02F4ECF4600AA968F /* LaunchScreen.storyboard */; };
 		C7510CEB2F4ECF4600AA968F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CCA2F4ECF4600AA968F /* AppDelegate.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7454F2B2F501CAC008A5D93 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C7454F2D2F501CDC008A5D93 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		C7510CCA2F4ECF4600AA968F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7510CCB2F4ECF4600AA968F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C7510CCD2F4ECF4600AA968F /* CalculationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationPresenter.swift; sourceTree = "<group>"; };
@@ -121,7 +125,9 @@
 		C7510CDC2F4ECF4600AA968F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C7454F2B2F501CAC008A5D93 /* ProfileView.swift */,
 				C7510CDB2F4ECF4600AA968F /* ProfileViewController.swift */,
+				C7454F2D2F501CDC008A5D93 /* ProfilePresenter.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -267,10 +273,12 @@
 				C7510CF32F4ECF4600AA968F /* HistoryViewController.swift in Sources */,
 				C7510CF42F4ECF4600AA968F /* MethodOfSendPresenter.swift in Sources */,
 				C7510CF52F4ECF4600AA968F /* MethodOfSendView.swift in Sources */,
+				C7454F2C2F501CAC008A5D93 /* ProfileView.swift in Sources */,
 				C7510CF62F4ECF4600AA968F /* MethodOfSendViewController.swift in Sources */,
 				C7EE1E5E2F500D6600B6326F /* HistoryPresenter.swift in Sources */,
 				C7510CF72F4ECF4600AA968F /* ProfileViewController.swift in Sources */,
 				C7510CF82F4ECF4600AA968F /* ContentColor.swift in Sources */,
+				C7454F2E2F501CDC008A5D93 /* ProfilePresenter.swift in Sources */,
 				C7510CF92F4ECF4600AA968F /* CustomButton.swift in Sources */,
 				C7510CFA2F4ECF4600AA968F /* CustomTextField.swift in Sources */,
 				C7510CFB2F4ECF4600AA968F /* PromoLabelFactory.swift in Sources */,

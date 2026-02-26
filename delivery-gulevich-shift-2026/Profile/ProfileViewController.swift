@@ -2,12 +2,15 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 	
-	var coordinator: IMainCoordinator
+	let profileView: ProfileView
+	let profilePresenter: IProfilePresenter
 	
 	init(
-		coordinator: IMainCoordinator
+		profileView: ProfileView,
+		profilePresenter: IProfilePresenter
 	) {
-		self.coordinator = coordinator
+		self.profileView = profileView
+		self.profilePresenter = profilePresenter
 		super.init(nibName: nil, bundle: nil)
 	}
 	
@@ -15,27 +18,13 @@ class ProfileViewController: UIViewController {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	override func loadView() {
+		self.view = profileView
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		title = "Профиль"
-		
-		view.backgroundColor = ContentColor.viewBackground
-		
-		configureLabel()
-	}
-	
-	func configureLabel() {
-		let label = UILabel()
-		
-		view.addSubview(label)
-		
-		label.text = "Раздел находится в стадии разработки"
-		label.textColor = ContentColor.subTitleColor
-		label.numberOfLines = 0
-		
-		label.snp.makeConstraints {
-			$0.center.equalToSuperview()
-		}
 	}
 }

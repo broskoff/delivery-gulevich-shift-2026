@@ -33,7 +33,9 @@ final class MainCoordinator: IMainCoordinator {
 															  image: UIImage(systemName: "clock"),
 															  selectedImage: nil)
 		
-		let profileViewController = ProfileViewController(coordinator: self)
+		let profileView = ProfileView()
+		let profilePresenter = ProfilePresenter(coordinator: self)
+		let profileViewController = ProfileViewController(profileView: profileView, profilePresenter: profilePresenter)
 		profileNavigationController.viewControllers = [profileViewController]
 		profileNavigationController.tabBarItem = UITabBarItem(title: "Профиль",
 															  image: UIImage(systemName: "person.crop.circle"),
