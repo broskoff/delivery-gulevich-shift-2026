@@ -16,25 +16,27 @@ final class MainCoordinator: IMainCoordinator {
 	
 	func start() {
 		
-		let view = CalculationView()
-		let presenter = CalculationPresenter(coordinator: self)
-		let calculationViewController = CalculationViewController(calculationView: view,
-																  presenter: presenter)
+		let calculationView = CalculationView()
+		let calculationPresenter = CalculationPresenter(coordinator: self)
+		let calculationViewController = CalculationViewController(calculationView: calculationView,
+																  presenter: calculationPresenter)
 		calculationNavigationController.viewControllers = [calculationViewController]
 		calculationNavigationController.tabBarItem = UITabBarItem(title: "Расчет",
 																  image: UIImage(systemName: "plus.forwardslash.minus"),
 																  selectedImage: nil)
 		
+		let historyView = HistoryView()
+		let historyPresenter = HistoryPresenter(coordinator: self)
+		let historyViewController = HistoryViewController(historyView: historyView, presenter: historyPresenter)
+		historyNavigationController.viewControllers = [historyViewController]
+		historyNavigationController.tabBarItem = UITabBarItem(title: "История",
+															  image: UIImage(systemName: "clock"),
+															  selectedImage: nil)
+		
 		let profileViewController = ProfileViewController(coordinator: self)
 		profileNavigationController.viewControllers = [profileViewController]
 		profileNavigationController.tabBarItem = UITabBarItem(title: "Профиль",
 															  image: UIImage(systemName: "person.crop.circle"),
-															  selectedImage: nil)
-		
-		let historyViewController = HistoryViewController(coordinator: self)
-		historyNavigationController.viewControllers = [historyViewController]
-		historyNavigationController.tabBarItem = UITabBarItem(title: "История",
-															  image: UIImage(systemName: "clock"),
 															  selectedImage: nil)
 		
 		tabBarController.viewControllers = [

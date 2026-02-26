@@ -27,6 +27,8 @@
 		C7510CFA2F4ECF4600AA968F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CE42F4ECF4600AA968F /* CustomTextField.swift */; };
 		C7510CFB2F4ECF4600AA968F /* PromoLabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CE52F4ECF4600AA968F /* PromoLabelFactory.swift */; };
 		C7DF61422F29C607009B0BA1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C7DF61412F29C607009B0BA1 /* SnapKit */; };
+		C7EE1E5C2F500D5700B6326F /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE1E5B2F500D5700B6326F /* HistoryView.swift */; };
+		C7EE1E5E2F500D6600B6326F /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE1E5D2F500D6600B6326F /* HistoryPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		C7510CE42F4ECF4600AA968F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C7510CE52F4ECF4600AA968F /* PromoLabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoLabelFactory.swift; sourceTree = "<group>"; };
 		C7DF60B92F29BAA4009B0BA1 /* delivery-gulevich-shift-2026.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "delivery-gulevich-shift-2026.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7EE1E5B2F500D5700B6326F /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		C7EE1E5D2F500D6600B6326F /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +101,9 @@
 		C7510CD62F4ECF4600AA968F /* History */ = {
 			isa = PBXGroup;
 			children = (
+				C7EE1E5B2F500D5700B6326F /* HistoryView.swift */,
 				C7510CD52F4ECF4600AA968F /* HistoryViewController.swift */,
+				C7EE1E5D2F500D6600B6326F /* HistoryPresenter.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -256,11 +262,13 @@
 				C7510CEF2F4ECF4600AA968F /* CalculationViewController.swift in Sources */,
 				C7510CF02F4ECF4600AA968F /* ICoordinators.swift in Sources */,
 				C7510CF12F4ECF4600AA968F /* MainCoordinator.swift in Sources */,
+				C7EE1E5C2F500D5700B6326F /* HistoryView.swift in Sources */,
 				C7510CF22F4ECF4600AA968F /* MethodOfSendCoordinator.swift in Sources */,
 				C7510CF32F4ECF4600AA968F /* HistoryViewController.swift in Sources */,
 				C7510CF42F4ECF4600AA968F /* MethodOfSendPresenter.swift in Sources */,
 				C7510CF52F4ECF4600AA968F /* MethodOfSendView.swift in Sources */,
 				C7510CF62F4ECF4600AA968F /* MethodOfSendViewController.swift in Sources */,
+				C7EE1E5E2F500D6600B6326F /* HistoryPresenter.swift in Sources */,
 				C7510CF72F4ECF4600AA968F /* ProfileViewController.swift in Sources */,
 				C7510CF82F4ECF4600AA968F /* ContentColor.swift in Sources */,
 				C7510CF92F4ECF4600AA968F /* CustomButton.swift in Sources */,
