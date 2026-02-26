@@ -65,4 +65,8 @@ final class MainCoordinator: IMainCoordinator {
 			}
 		}
 	}
+	
+	deinit {
+		print("MainCoordinator деинициализирован")
+	}
 }
