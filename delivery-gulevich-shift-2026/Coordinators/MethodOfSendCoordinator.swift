@@ -5,18 +5,19 @@ final class MethodOfSendCoordinator: IMethodOfSendCoordinator {
 	
 	weak var parentCoordinator: MainCoordinator?
 	
-	var navigationController: UINavigationController?
+	var navigationController: UINavigationController
 	var childCoordinators: [ICoordinator] = []
 	
-	init(parentCoordinator: MainCoordinator?) {
+	init(parentCoordinator: MainCoordinator?, navigationController: UINavigationController) {
 		self.parentCoordinator = parentCoordinator
+		self.navigationController = navigationController
 	}
 	
 	func start() {
 		let view = MethodOfSendView()
 		let presenter = MethodOfSendPresenter(coordinator: self)
 		let methodOfSendViewController = MethodOfSendViewController(methodOfSendView: view, presenter: presenter)
-		navigationController?.pushViewController(methodOfSendViewController, animated: true)
+		navigationController.pushViewController(methodOfSendViewController, animated: true)
 	}
 	
 	func didFinish() {

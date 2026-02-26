@@ -2,9 +2,17 @@ import Foundation
 import UIKit
 
 final class MainCoordinator: IMainCoordinator {
-
-	var tabBarController: UITabBarController?
+	
+	var tabBarController: UITabBarController
 	var childCoordinators: [ICoordinator] = []
+	
+	private let calculationNavigationController = UINavigationController()
+	private let profileNavigationController = UINavigationController()
+	private let historyNavigationController = UINavigationController()
+	
+	init(tabBarController: UITabBarController) {
+		self.tabBarController = tabBarController
+	}
 	
 	func start() {
 		
@@ -12,24 +20,24 @@ final class MainCoordinator: IMainCoordinator {
 		let presenter = CalculationPresenter(coordinator: self)
 		let calculationViewController = CalculationViewController(calculationView: view,
 																  presenter: presenter)
-		let calculationNavigationController = UINavigationController(rootViewController: calculationViewController)
+		calculationNavigationController.viewControllers = [calculationViewController]
 		calculationNavigationController.tabBarItem = UITabBarItem(title: "Расчет",
 																  image: UIImage(systemName: "plus.forwardslash.minus"),
 																  selectedImage: nil)
 		
 		let profileViewController = ProfileViewController(coordinator: self)
-		let profileNavigationController = UINavigationController(rootViewController: profileViewController)
+		profileNavigationController.viewControllers = [profileViewController]
 		profileNavigationController.tabBarItem = UITabBarItem(title: "Профиль",
 															  image: UIImage(systemName: "person.crop.circle"),
 															  selectedImage: nil)
 		
 		let historyViewController = HistoryViewController(coordinator: self)
-		let historyNavigationController = UINavigationController(rootViewController: historyViewController)
+		historyNavigationController.viewControllers = [historyViewController]
 		historyNavigationController.tabBarItem = UITabBarItem(title: "История",
 															  image: UIImage(systemName: "clock"),
 															  selectedImage: nil)
 		
-		tabBarController?.viewControllers = [
+		tabBarController.viewControllers = [
 			calculationNavigationController,
 			historyNavigationController,
 			profileNavigationController
@@ -37,11 +45,11 @@ final class MainCoordinator: IMainCoordinator {
 	}
 	
 	func showMethodOfSend() {
-		guard let nav = tabBarController?.selectedViewController as? UINavigationController else { return }
-		
-		let coordinator = MethodOfSendCoordinator(parentCoordinator: self)
+		let coordinator = MethodOfSendCoordinator(
+			parentCoordinator: self,
+			navigationController: calculationNavigationController
+		)
 		childCoordinators.append(coordinator)
-		coordinator.navigationController = nav
 		coordinator.start()
 	}
 	
