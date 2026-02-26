@@ -12,13 +12,20 @@ final class MethodOfSendView: UIView {
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		
-		backgroundColor = ContentColor.viewBackground
-		
-		configureLabel()
+		configureUI()
 	}
 	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
+	}
+}
+	
+extension MethodOfSendView {
+	
+	func configureUI() {
+		backgroundColor = ContentColor.viewBackground
+		
+		configureLabel()
 	}
 	
 	func configureLabel() {

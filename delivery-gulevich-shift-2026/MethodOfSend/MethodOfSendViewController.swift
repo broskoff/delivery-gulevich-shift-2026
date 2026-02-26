@@ -20,14 +20,13 @@ class MethodOfSendViewController: UIViewController, IMethodOfSendViewDelegate {
 	}
 	
 	override func loadView() {
-		
-		title = "Способ отправки"
 		self.view = methodOfSendView
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		title = "Способ отправки"
 		methodOfSendView.delegate = self
 	}
 	
