@@ -3,6 +3,7 @@ import UIKit
 
 final class MainCoordinator: IMainCoordinator {
 	
+	let assembly: IMainAssembly
 	var tabBarController: UITabBarController
 	var childCoordinators: [ICoordinator] = []
 	
@@ -10,32 +11,26 @@ final class MainCoordinator: IMainCoordinator {
 	private let profileNavigationController = UINavigationController()
 	private let historyNavigationController = UINavigationController()
 	
-	init(tabBarController: UITabBarController) {
+	init(assembly: IMainAssembly, tabBarController: UITabBarController) {
+		self.assembly = assembly
 		self.tabBarController = tabBarController
 	}
 	
 	func start() {
-		
-		let calculationView = CalculationView()
-		let calculationPresenter = CalculationPresenter(coordinator: self)
-		let calculationViewController = CalculationViewController(calculationView: calculationView,
-																  presenter: calculationPresenter)
+	
+		let calculationViewController = assembly.buildCalculationScreen(coordinator: self)
 		calculationNavigationController.viewControllers = [calculationViewController]
 		calculationNavigationController.tabBarItem = UITabBarItem(title: "Расчет",
 																  image: UIImage(systemName: "plus.forwardslash.minus"),
 																  selectedImage: nil)
 		
-		let historyView = HistoryView()
-		let historyPresenter = HistoryPresenter(coordinator: self)
-		let historyViewController = HistoryViewController(historyView: historyView, presenter: historyPresenter)
+		let historyViewController = assembly.buildHistoryScreen(coordinator: self)
 		historyNavigationController.viewControllers = [historyViewController]
 		historyNavigationController.tabBarItem = UITabBarItem(title: "История",
 															  image: UIImage(systemName: "clock"),
 															  selectedImage: nil)
 		
-		let profileView = ProfileView()
-		let profilePresenter = ProfilePresenter(coordinator: self)
-		let profileViewController = ProfileViewController(profileView: profileView, profilePresenter: profilePresenter)
+		let profileViewController = assembly.buildProfileScreen(coordinator: self)
 		profileNavigationController.viewControllers = [profileViewController]
 		profileNavigationController.tabBarItem = UITabBarItem(title: "Профиль",
 															  image: UIImage(systemName: "person.crop.circle"),
@@ -49,9 +44,12 @@ final class MainCoordinator: IMainCoordinator {
 	}
 	
 	func showMethodOfSend() {
+		//TODO: разобраться, оставить здесь создание methodOfSendAssembly или это в другом месте создается?
+		let methodOfSendAssembly = MethodOfSendAssembly()
 		let coordinator = MethodOfSendCoordinator(
 			parentCoordinator: self,
-			navigationController: calculationNavigationController
+			navigationController: calculationNavigationController,
+			methodOfSendAssembly: methodOfSendAssembly
 		)
 		childCoordinators.append(coordinator)
 		coordinator.start()
