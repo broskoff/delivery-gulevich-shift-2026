@@ -1,15 +1,20 @@
 import UIKit
 
+protocol IHistoryView: AnyObject {
+	
+	func updateView()
+}
+
 final class HistoryViewController: UIViewController {
 	
-	let historyView: HistoryView
+	let historyContentView: IHistoryContentView & UIView
 	let presenter: IHistoryPresenter
 	
 	init(
-		historyView: HistoryView,
+		historyContentView: IHistoryContentView & UIView,
 		presenter: IHistoryPresenter
 	) {
-		self.historyView = historyView
+		self.historyContentView = historyContentView
 		self.presenter = presenter
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -19,12 +24,19 @@ final class HistoryViewController: UIViewController {
 	}
 	
 	override func loadView() {
-		self.view = historyView
+		self.view = historyContentView
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		title = "История"
+	}
+}
+
+extension HistoryViewController: IHistoryView {
+	
+	func updateView() {
+		
 	}
 }

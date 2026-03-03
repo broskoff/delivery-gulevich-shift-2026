@@ -8,13 +8,14 @@ protocol IMethodOfSendAssembly: AnyObject {
 final class MethodOfSendAssembly: IMethodOfSendAssembly {
 	
 	func createScreen(coordinator: IMethodOfSendCoordinator) -> UIViewController {
-		let view = MethodOfSendView()
 		let presenter = MethodOfSendPresenter(coordinator: coordinator)
-		let methodOfSendViewController = MethodOfSendViewController(
-			methodOfSendView: view,
+		let methodContentView = MethodOfSendContentView()
+		let methodOfSendView = MethodOfSendViewController(
+			methodOfSendContentView: methodContentView,
 			presenter: presenter
 		)
 		
-		return methodOfSendViewController
+		presenter.view = methodOfSendView
+		return methodOfSendView
 	}
 }

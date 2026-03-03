@@ -1,16 +1,20 @@
 import UIKit
 import SnapKit
 
+protocol IMethodOfSendViewController: AnyObject {
+	func updateView()
+}
+
 class MethodOfSendViewController: UIViewController, IMethodOfSendViewDelegate {
 	
-	let methodOfSendView: MethodOfSendView
+	let methodOfSendContentView: UIView & IMethodOfSendContentView
 	let presenter: IMethodOfSendPresenter
 	
 	init(
-		methodOfSendView: MethodOfSendView,
+		methodOfSendContentView: UIView & IMethodOfSendContentView,
 		presenter: IMethodOfSendPresenter
 	) {
-		self.methodOfSendView = methodOfSendView
+		self.methodOfSendContentView = methodOfSendContentView
 		self.presenter = presenter
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -20,14 +24,14 @@ class MethodOfSendViewController: UIViewController, IMethodOfSendViewDelegate {
 	}
 	
 	override func loadView() {
-		self.view = methodOfSendView
+		self.view = methodOfSendContentView
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		title = "Способ отправки"
-		methodOfSendView.delegate = self
+		methodOfSendContentView.delegate = self
 	}
 	
 	override func viewDidDisappear(_ animated: Bool) {
@@ -39,5 +43,11 @@ class MethodOfSendViewController: UIViewController, IMethodOfSendViewDelegate {
 	//TODO: переход на экран заполнения данных получателя
 	func didTapDeliveryToTheDoor() {
 		print("Нажали Экспресс доставка до двери")
+	}
+}
+
+extension MethodOfSendViewController: IMethodOfSendViewController {
+	func updateView() {
+		
 	}
 }
