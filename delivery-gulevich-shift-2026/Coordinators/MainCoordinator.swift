@@ -3,10 +3,10 @@ import UIKit
 
 final class MainCoordinator: IMainCoordinator {
 	
-	let assembly: IMainAssembly
-	var tabBarController: UITabBarController
 	var childCoordinators: [ICoordinator] = []
 	
+	private let assembly: IMainAssembly
+	private let tabBarController: UITabBarController
 	private let calculationNavigationController = UINavigationController()
 	private let profileNavigationController = UINavigationController()
 	private let historyNavigationController = UINavigationController()
@@ -44,7 +44,7 @@ final class MainCoordinator: IMainCoordinator {
 	}
 	
 	func showMethodOfSend() {
-		//TODO: разобраться, оставить здесь создание methodOfSendAssembly или это в другом месте создается?
+		//TODO: разобраться с DI-контейнером, пока оставить здесь создание methodOfSendAssembly.
 		let methodOfSendAssembly = MethodOfSendAssembly()
 		let coordinator = MethodOfSendCoordinator(
 			parentCoordinator: self,

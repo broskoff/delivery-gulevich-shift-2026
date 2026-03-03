@@ -1,15 +1,19 @@
 import UIKit
 
+protocol IProfileView: AnyObject {
+	func updateView()
+}
+
 class ProfileViewController: UIViewController {
 	
-	let profileView: ProfileView
+	let profileContentView: IProfileContentView & UIView
 	let profilePresenter: IProfilePresenter
 	
 	init(
-		profileView: ProfileView,
+		profileContentView: IProfileContentView & UIView,
 		profilePresenter: IProfilePresenter
 	) {
-		self.profileView = profileView
+		self.profileContentView = profileContentView
 		self.profilePresenter = profilePresenter
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -19,12 +23,18 @@ class ProfileViewController: UIViewController {
 	}
 	
 	override func loadView() {
-		self.view = profileView
+		self.view = profileContentView
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		title = "Профиль"
+	}
+}
+
+extension ProfileViewController: IProfileView {
+	func updateView() {
+		
 	}
 }

@@ -5,7 +5,11 @@ protocol IMethodOfSendViewDelegate: AnyObject {
 	func didTapDeliveryToTheDoor()
 }
 
-final class MethodOfSendView: UIView {
+protocol IMethodOfSendContentView: AnyObject {
+	var delegate: IMethodOfSendViewDelegate? { get set }
+}
+
+final class MethodOfSendContentView: UIView, IMethodOfSendContentView {
 	
 	weak var delegate: IMethodOfSendViewDelegate?
 	
@@ -20,7 +24,7 @@ final class MethodOfSendView: UIView {
 	}
 }
 	
-extension MethodOfSendView {
+extension MethodOfSendContentView {
 	
 	func configureUI() {
 		backgroundColor = ContentColor.viewBackground

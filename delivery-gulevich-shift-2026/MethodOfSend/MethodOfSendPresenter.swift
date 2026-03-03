@@ -8,6 +8,7 @@ protocol IMethodOfSendPresenter: AnyObject {
 class MethodOfSendPresenter: IMethodOfSendPresenter {
 	
 	weak var coordinator: IMethodOfSendCoordinator?
+	weak var view: IMethodOfSendViewController?
 	
 	init(coordinator: IMethodOfSendCoordinator) {
 		self.coordinator = coordinator

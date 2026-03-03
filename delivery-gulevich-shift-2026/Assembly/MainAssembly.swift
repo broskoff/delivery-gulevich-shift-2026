@@ -12,37 +12,38 @@ protocol IMainAssembly: AnyObject {
 final class MainAssembly: IMainAssembly {
 	
 	func buildCalculationScreen(coordinator: IMainCoordinator) -> UIViewController {
-		
-		let calculationView = CalculationView()
 		let calculationPresenter = CalculationPresenter(coordinator: coordinator)
-		
-		let calculationViewController = CalculationViewController(
-			calculationView: calculationView,
+		let calculationContentView = CalculationContentView()
+		let calculationView = CalculationViewController(
+			calculationContentView: calculationContentView,
 			presenter: calculationPresenter
 		)
 		
-		return calculationViewController
+		calculationPresenter.view = calculationView
+		return calculationView
 	}
 	
 	func buildHistoryScreen(coordinator: IMainCoordinator) -> UIViewController {
-		let historyView = HistoryView()
 		let historyPresenter = HistoryPresenter(coordinator: coordinator)
-		let historyViewController = HistoryViewController(
-			historyView: historyView,
+		let historyContentView = HistoryContentView()
+		let historyView = HistoryViewController(
+			historyContentView: historyContentView,
 			presenter: historyPresenter
 		)
 		
-		return historyViewController
+		historyPresenter.view = historyView
+		return historyView
 	}
 		
 	func buildProfileScreen(coordinator: IMainCoordinator) -> UIViewController {
-		let profileView = ProfileView()
 		let profilePresenter = ProfilePresenter(coordinator: coordinator)
-		let profileViewController = ProfileViewController(
-			profileView: profileView,
-			profilePresenter: profilePresenter
+		let profileContentView = ProfileContentView()
+		let profileView = ProfileViewController(
+			profileContentView: profileContentView,
+			presenter: profilePresenter
 		)
 		
-		return profileViewController
+		profilePresenter.view = profileView
+		return profileView
 	}
 }

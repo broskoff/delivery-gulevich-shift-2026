@@ -1,13 +1,17 @@
 import UIKit
 import SnapKit
 
-protocol ICalculationViewDelegate: AnyObject {
+protocol ICalculationContentViewDelegate: AnyObject {
 	func didTapButtonCalcDelivery()
 }
 
-final class CalculationView: UIView {
+protocol ICalculationContentView : AnyObject {
+	var delegate: ICalculationContentViewDelegate? { get set }
+}
+
+final class CalculationContentView: UIView, ICalculationContentView {
 	
-	weak var delegate: ICalculationViewDelegate?
+	weak var delegate: ICalculationContentViewDelegate?
 	
 	private let topView = UIView()
 	private let scrollView = UIScrollView(frame: .zero)
@@ -30,7 +34,7 @@ final class CalculationView: UIView {
 	}
 }
 
-private extension CalculationView {
+private extension CalculationContentView {
 	
 	func configureUI() {
 		
@@ -118,7 +122,7 @@ private extension CalculationView {
 	}
 }
 
-private extension CalculationView {
+private extension CalculationContentView {
 	
 	func configureTitleStackView() {
 		titleStackView.axis = .vertical
@@ -183,7 +187,7 @@ private extension CalculationView {
 	}
 }
 
-private extension CalculationView {
+private extension CalculationContentView {
 	
 	func configureUserFields() {
 		let departureCityTextField = CustomTextField(frame: .zero)
@@ -242,7 +246,7 @@ private extension CalculationView {
 	}
 }
 
-private extension CalculationView {
+private extension CalculationContentView {
 	
 	func configureTrackStackView() {
 		mainStackView.addArrangedSubview(trackStackView)
@@ -294,7 +298,7 @@ private extension CalculationView {
 	}
 }
 
-private extension CalculationView {
+private extension CalculationContentView {
 	
 	func configurePromoStackView() {
 		mainStackView.addArrangedSubview(promoStackView)
@@ -331,7 +335,7 @@ private extension CalculationView {
 	}
 }
 
-extension CalculationView: UITextFieldDelegate {
+extension CalculationContentView: UITextFieldDelegate {
 	
 }
 

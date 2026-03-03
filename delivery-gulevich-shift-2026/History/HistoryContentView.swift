@@ -1,12 +1,16 @@
 import UIKit
 import SnapKit
 
-final class ProfileView: UIView {
+protocol IHistoryContentView: AnyObject {
+	func configUI()
+}
+
+final class HistoryContentView: UIView {
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		
-		configureUI()
+		configUI()
 	}
 	
 	required init?(coder: NSCoder) {
@@ -14,9 +18,9 @@ final class ProfileView: UIView {
 	}
 }
 
-extension ProfileView {
+extension HistoryContentView: IHistoryContentView {
 	
-	func configureUI() {
+	func configUI() {
 		backgroundColor = ContentColor.viewBackground
 		
 		configureLabel()

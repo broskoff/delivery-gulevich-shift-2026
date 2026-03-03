@@ -1,15 +1,19 @@
 import UIKit
 
-class CalculationViewController: UIViewController, ICalculationViewDelegate {
+protocol ICalculationView : AnyObject {
+	func updateView()
+}
+
+class CalculationViewController: UIViewController, ICalculationContentViewDelegate {
 	
-	let calculationView: CalculationView
+	private let calculationContentView: UIView & ICalculationContentView
 	let presenter: ICalculationPresenter
 	
 	init(
-		calculationView: CalculationView,
-		presenter: ICalculationPresenter,
+		calculationContentView: UIView & ICalculationContentView,
+		presenter: ICalculationPresenter
 	) {
-		self.calculationView = calculationView
+		self.calculationContentView = calculationContentView
 		self.presenter = presenter
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -19,16 +23,22 @@ class CalculationViewController: UIViewController, ICalculationViewDelegate {
 	}
 	
 	override func loadView() {
-		self.view = calculationView
+		self.view = calculationContentView
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		calculationView.delegate = self
+		calculationContentView.delegate = self
 	}
 	
 	func didTapButtonCalcDelivery() {
 		presenter.didTapCalculateButton()
+	}
+}
+
+extension CalculationViewController: ICalculationView {
+	func updateView() {
+
 	}
 }
