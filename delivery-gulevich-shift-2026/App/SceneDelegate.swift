@@ -1,9 +1,8 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-	
-	var window: UIWindow?
-	var coordinator: IMainCoordinator?
+
+	var coordinator: IAppCoordinator?
 	
 	func scene(_ scene: UIScene,
 			   willConnectTo session: UISceneSession,
@@ -11,20 +10,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		
 		guard let scene = (scene as? UIWindowScene) else { return }
 		
-		window = UIWindow(windowScene: scene)
-		
-		let tabBarController = UITabBarController()
-		let mainAssembly = MainAssembly()
-		
-		coordinator = MainCoordinator(
-			assembly: mainAssembly,
-			tabBarController: tabBarController
-		)
-		
-		window?.rootViewController = tabBarController
-		window?.makeKeyAndVisible()
-		
+		coordinator = AppCoordinator(scene: scene)
 		coordinator?.start()
 	}
 }
-
