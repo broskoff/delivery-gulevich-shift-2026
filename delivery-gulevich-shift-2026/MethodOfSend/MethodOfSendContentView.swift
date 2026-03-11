@@ -24,7 +24,7 @@ final class MethodOfSendContentView: UIView, IMethodOfSendContentView {
 	}
 }
 	
-extension MethodOfSendContentView {
+private extension MethodOfSendContentView {
 	
 	func configureUI() {
 		backgroundColor = ContentColor.viewBackground
@@ -46,4 +46,3 @@ extension MethodOfSendContentView {
 		}
 	}
 }
-

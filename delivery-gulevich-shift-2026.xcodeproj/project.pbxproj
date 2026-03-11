@@ -30,6 +30,10 @@
 		C7510CFB2F4ECF4600AA968F /* PromoLabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CE52F4ECF4600AA968F /* PromoLabelFactory.swift */; };
 		C783215A2F5564AA003144D0 /* MethodOfSendAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78321532F5564AA003144D0 /* MethodOfSendAssembly.swift */; };
 		C78321612F5569A8003144D0 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78321602F5569A8003144D0 /* MainAssembly.swift */; };
+		C7B856FD2F5946A2004D6B57 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B856FC2F5946A2004D6B57 /* AppCoordinator.swift */; };
+		C7B856FF2F59514B004D6B57 /* CalculationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B856FE2F59514B004D6B57 /* CalculationCoordinator.swift */; };
+		C7B857012F595205004D6B57 /* HistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B857002F595205004D6B57 /* HistoryCoordinator.swift */; };
+		C7B857032F595239004D6B57 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B857022F595239004D6B57 /* ProfileCoordinator.swift */; };
 		C7DF61422F29C607009B0BA1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C7DF61412F29C607009B0BA1 /* SnapKit */; };
 		C7EE1E5C2F500D5700B6326F /* HistoryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE1E5B2F500D5700B6326F /* HistoryContentView.swift */; };
 		C7EE1E5E2F500D6600B6326F /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE1E5D2F500D6600B6326F /* HistoryPresenter.swift */; };
@@ -60,6 +64,10 @@
 		C7510CE52F4ECF4600AA968F /* PromoLabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoLabelFactory.swift; sourceTree = "<group>"; };
 		C78321532F5564AA003144D0 /* MethodOfSendAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendAssembly.swift; sourceTree = "<group>"; };
 		C78321602F5569A8003144D0 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		C7B856FC2F5946A2004D6B57 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		C7B856FE2F59514B004D6B57 /* CalculationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationCoordinator.swift; sourceTree = "<group>"; };
+		C7B857002F595205004D6B57 /* HistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinator.swift; sourceTree = "<group>"; };
+		C7B857022F595239004D6B57 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		C7DF60B92F29BAA4009B0BA1 /* delivery-gulevich-shift-2026.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "delivery-gulevich-shift-2026.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EE1E5B2F500D5700B6326F /* HistoryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryContentView.swift; sourceTree = "<group>"; };
 		C7EE1E5D2F500D6600B6326F /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
@@ -100,7 +108,11 @@
 			isa = PBXGroup;
 			children = (
 				C7510CD12F4ECF4600AA968F /* ICoordinators.swift */,
+				C7B856FC2F5946A2004D6B57 /* AppCoordinator.swift */,
 				C7510CD22F4ECF4600AA968F /* MainCoordinator.swift */,
+				C7B856FE2F59514B004D6B57 /* CalculationCoordinator.swift */,
+				C7B857002F595205004D6B57 /* HistoryCoordinator.swift */,
+				C7B857022F595239004D6B57 /* ProfileCoordinator.swift */,
 				C7510CD32F4ECF4600AA968F /* MethodOfSendCoordinator.swift */,
 			);
 			path = Coordinators;
@@ -161,8 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				C7510CCC2F4ECF4600AA968F /* App */,
-				C78321552F5564AA003144D0 /* Assembly */,
 				C7510CD42F4ECF4600AA968F /* Coordinators */,
+				C78321552F5564AA003144D0 /* Assembly */,
 				C7510CD02F4ECF4600AA968F /* Calculation */,
 				C7510CDA2F4ECF4600AA968F /* MethodOfSend */,
 				C7510CD62F4ECF4600AA968F /* History */,
@@ -286,10 +298,14 @@
 				C7510CF22F4ECF4600AA968F /* MethodOfSendCoordinator.swift in Sources */,
 				C7510CF32F4ECF4600AA968F /* HistoryViewController.swift in Sources */,
 				C7510CF42F4ECF4600AA968F /* MethodOfSendPresenter.swift in Sources */,
+				C7B857032F595239004D6B57 /* ProfileCoordinator.swift in Sources */,
 				C7510CF52F4ECF4600AA968F /* MethodOfSendContentView.swift in Sources */,
+				C7B856FD2F5946A2004D6B57 /* AppCoordinator.swift in Sources */,
 				C7454F2C2F501CAC008A5D93 /* ProfileContentView.swift in Sources */,
 				C7510CF62F4ECF4600AA968F /* MethodOfSendViewController.swift in Sources */,
 				C783215A2F5564AA003144D0 /* MethodOfSendAssembly.swift in Sources */,
+				C7B856FF2F59514B004D6B57 /* CalculationCoordinator.swift in Sources */,
+				C7B857012F595205004D6B57 /* HistoryCoordinator.swift in Sources */,
 				C7EE1E5E2F500D6600B6326F /* HistoryPresenter.swift in Sources */,
 				C7510CF72F4ECF4600AA968F /* ProfileViewController.swift in Sources */,
 				C7510CF82F4ECF4600AA968F /* ContentColor.swift in Sources */,

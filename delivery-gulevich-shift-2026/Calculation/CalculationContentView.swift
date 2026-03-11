@@ -172,19 +172,6 @@ private extension CalculationContentView {
 		
 		calculationStackView.addArrangedSubview(label)
 	}
-	
-	func configureButtonCalcDelivery() {
-		let button = CustomButton.makeButton(setTitle: "Рассчитать")
-		
-		calculationStackView.addArrangedSubview(button)
-		
-		button.addTarget(self, action: #selector(buttonCalcDeliveryTapped), for: .touchUpInside)
-	}
-	
-	@objc
-	func buttonCalcDeliveryTapped() {
-		delegate?.didTapButtonCalcDelivery()
-	}
 }
 
 private extension CalculationContentView {
@@ -332,6 +319,23 @@ private extension CalculationContentView {
 		].forEach {
 			promoStackView.addArrangedSubview($0)
 		}
+	}
+}
+
+//MARK: Действие "Рассчитать" находится тут
+private extension CalculationContentView {
+	
+	func configureButtonCalcDelivery() {
+		let button = CustomButton.makeButton(setTitle: "Рассчитать")
+		
+		calculationStackView.addArrangedSubview(button)
+		
+		button.addTarget(self, action: #selector(buttonCalcDeliveryTapped), for: .touchUpInside)
+	}
+	
+	@objc
+	func buttonCalcDeliveryTapped() {
+		delegate?.didTapButtonCalcDelivery()
 	}
 }
 

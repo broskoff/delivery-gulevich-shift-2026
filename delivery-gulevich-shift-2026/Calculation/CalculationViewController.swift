@@ -33,7 +33,7 @@ class CalculationViewController: UIViewController, ICalculationContentViewDelega
 	}
 	
 	func didTapButtonCalcDelivery() {
-		presenter.didTapCalculateButton()
+		presenter.userDidTapCalculateButton()
 	}
 }
 

@@ -2,7 +2,7 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-	var coordinator: IAppCoordinator?
+	var appCoordinator: IAppCoordinator?
 	
 	func scene(_ scene: UIScene,
 			   willConnectTo session: UISceneSession,
@@ -10,7 +10,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		
 		guard let scene = (scene as? UIWindowScene) else { return }
 		
-		coordinator = AppCoordinator(scene: scene)
-		coordinator?.start()
+		appCoordinator = AppCoordinator(scene: scene)
+		appCoordinator?.start()
 	}
 }

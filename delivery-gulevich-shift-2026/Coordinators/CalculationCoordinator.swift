@@ -3,12 +3,13 @@ import UIKit
 final class CalculationCoordinator: ICoordinator {
 	
 	let navigationController: UINavigationController
-	let assembly = MainAssembly()
+	let assembly: IMainAssembly
 	
 	var childCoordinators: [MethodOfSendCoordinator] = []
 	
-	init(navigationController: UINavigationController) {
+	init(navigationController: UINavigationController, assembly: IMainAssembly) {
 		self.navigationController = navigationController
+		self.assembly = assembly
 	}
 	
 	func start() {
@@ -27,6 +28,7 @@ extension CalculationCoordinator: ICalculationPresenterOutput {
 			parentCoordinator: self,
 			navigationController: navigationController
 		)
+		
 		childCoordinators.append(coordinator)
 		coordinator.start()
 	}
