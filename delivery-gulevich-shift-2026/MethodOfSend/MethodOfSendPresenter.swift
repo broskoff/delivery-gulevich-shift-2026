@@ -1,12 +1,14 @@
 import Foundation
 import UIKit
 
+//переименовать userDidFinish() когда появится конкретное действие
 protocol IMethodOfSendPresenterOutput: AnyObject {
 	func userDidFinish()
 }
 
+//переименовать userActed() когда появится конкретное действие
 protocol IMethodOfSendPresenter: AnyObject {
-	func didFinish()
+	func userActed()
 }
 
 class MethodOfSendPresenter: IMethodOfSendPresenter {
@@ -18,7 +20,7 @@ class MethodOfSendPresenter: IMethodOfSendPresenter {
 		self.output = output
 	}
 	
-	func didFinish() {
+	func userActed() {
 		output?.userDidFinish()
 	}
 }

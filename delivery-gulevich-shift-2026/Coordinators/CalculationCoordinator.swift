@@ -1,6 +1,6 @@
 import UIKit
 
-final class CalculationCoordinator: ICoordinator {
+final class CalculationCoordinator: NSObject, ICoordinator {
 	
 	let navigationController: UINavigationController
 	let assembly: IMainAssembly
@@ -13,6 +13,7 @@ final class CalculationCoordinator: ICoordinator {
 	}
 	
 	func start() {
+		navigationController.delegate = self
 		let calculationViewController = assembly.buildCalculationScreen(output: self)
 		navigationController.viewControllers = [calculationViewController]
 		navigationController.tabBarItem = UITabBarItem(title: "Расчет",
@@ -39,6 +40,23 @@ extension CalculationCoordinator: ICalculationPresenterOutput {
 				childCoordinators.remove(at: index)
 				break
 			}
+		}
+	}
+}
+
+extension CalculationCoordinator: UINavigationControllerDelegate {
+	
+	func navigationController(_ navigationController: UINavigationController,
+							  didShow viewController: UIViewController,
+							  animated: Bool) {
+		
+		guard let fromVC = navigationController.transitionCoordinator?.viewController(forKey: .from) else { return }
+		
+		if navigationController.viewControllers.contains(fromVC) {
+			return
+		} else {
+			//тут проблема, что если в массиве будет больше координаторов, придется находить нужный среди всех
+			childDidFinish(child: childCoordinators.first)
 		}
 	}
 }

@@ -28,8 +28,8 @@ final class MethodOfSendCoordinator: ICoordinator {
 }
 
 extension MethodOfSendCoordinator: IMethodOfSendPresenterOutput {
-	
+	//переименовать userDidFinish() когда появится конкретное действие
 	func userDidFinish() {
-		parentCoordinator?.childDidFinish(child: self)
+//		parentCoordinator?.childDidFinish(child: self)
 	}
 }
