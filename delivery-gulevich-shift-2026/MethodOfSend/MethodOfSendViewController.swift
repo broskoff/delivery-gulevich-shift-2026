@@ -34,12 +34,6 @@ class MethodOfSendViewController: UIViewController, IMethodOfSendViewDelegate {
 		methodOfSendContentView.delegate = self
 	}
 	
-	override func viewDidDisappear(_ animated: Bool) {
-		super.viewDidDisappear(animated)
-		
-		presenter.didFinish()
-	}
-	
 	//TODO: переход на экран заполнения данных получателя
 	func didTapDeliveryToTheDoor() {
 		print("Нажали Экспресс доставка до двери")

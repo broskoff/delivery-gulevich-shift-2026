@@ -2,17 +2,17 @@ import UIKit
 
 protocol IMainAssembly: AnyObject {
 	
-	func buildCalculationScreen(coordinator: IMainCoordinator) -> UIViewController
+	func buildCalculationScreen(output: ICalculationPresenterOutput) -> UIViewController
 	
-	func buildHistoryScreen(coordinator: IMainCoordinator) -> UIViewController
+	func buildHistoryScreen(output: IHistoryPresenterOutput) -> UIViewController
 	
-	func buildProfileScreen(coordinator: IMainCoordinator) -> UIViewController
+	func buildProfileScreen(output: IProfilePresenterOutput) -> UIViewController
 }
 
 final class MainAssembly: IMainAssembly {
 	
-	func buildCalculationScreen(coordinator: IMainCoordinator) -> UIViewController {
-		let calculationPresenter = CalculationPresenter(coordinator: coordinator)
+	func buildCalculationScreen(output: ICalculationPresenterOutput) -> UIViewController {
+		let calculationPresenter = CalculationPresenter(output: output)
 		let calculationContentView = CalculationContentView()
 		let calculationView = CalculationViewController(
 			calculationContentView: calculationContentView,
@@ -23,8 +23,8 @@ final class MainAssembly: IMainAssembly {
 		return calculationView
 	}
 	
-	func buildHistoryScreen(coordinator: IMainCoordinator) -> UIViewController {
-		let historyPresenter = HistoryPresenter(coordinator: coordinator)
+	func buildHistoryScreen(output: IHistoryPresenterOutput) -> UIViewController {
+		let historyPresenter = HistoryPresenter(output: output)
 		let historyContentView = HistoryContentView()
 		let historyView = HistoryViewController(
 			historyContentView: historyContentView,
@@ -35,12 +35,12 @@ final class MainAssembly: IMainAssembly {
 		return historyView
 	}
 		
-	func buildProfileScreen(coordinator: IMainCoordinator) -> UIViewController {
-		let profilePresenter = ProfilePresenter(coordinator: coordinator)
+	func buildProfileScreen(output: IProfilePresenterOutput) -> UIViewController {
+		let profilePresenter = ProfilePresenter(output: output)
 		let profileContentView = ProfileContentView()
 		let profileView = ProfileViewController(
 			profileContentView: profileContentView,
-			presenter: profilePresenter
+			profilePresenter: profilePresenter
 		)
 		
 		profilePresenter.view = profileView

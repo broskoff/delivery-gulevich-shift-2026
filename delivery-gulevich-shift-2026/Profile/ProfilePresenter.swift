@@ -1,13 +1,17 @@
+protocol IProfilePresenterOutput: AnyObject {
+	
+}
+
 protocol IProfilePresenter: AnyObject {
 	
 }
 
 final class ProfilePresenter: IProfilePresenter {
 	
-	weak var coordinator: IMainCoordinator?
+	weak var output: IProfilePresenterOutput?
 	weak var view: IProfileView?
 	
-	init(coordinator: IMainCoordinator?) {
-		self.coordinator = coordinator
+	init(output: IProfilePresenterOutput) {
+		self.output = output
 	}
 }

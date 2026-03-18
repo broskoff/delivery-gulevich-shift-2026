@@ -1,34 +1,35 @@
 import Foundation
 import UIKit
 
-final class MethodOfSendCoordinator: IMethodOfSendCoordinator {
+final class MethodOfSendCoordinator: ICoordinator {
 	
-	weak var parentCoordinator: MainCoordinator?
-	var methodOfSendAssembly: IMethodOfSendAssembly
-	
+	weak var parentCoordinator: CalculationCoordinator?
+	var methodOfSendAssembly = MethodOfSendAssembly()
 	var navigationController: UINavigationController
 	var childCoordinators: [ICoordinator] = []
 	
 	init(
-		parentCoordinator: MainCoordinator?,
+		parentCoordinator: CalculationCoordinator?,
 		navigationController: UINavigationController,
-		methodOfSendAssembly: IMethodOfSendAssembly
 	) {
 		self.parentCoordinator = parentCoordinator
 		self.navigationController = navigationController
-		self.methodOfSendAssembly = methodOfSendAssembly
 	}
 	
 	func start() {
-		let methodOfSendViewController = methodOfSendAssembly.createScreen(coordinator: self)
+		
+		let methodOfSendViewController = methodOfSendAssembly.createScreen(output: self)
 		navigationController.pushViewController(methodOfSendViewController, animated: true)
 	}
-	
-	func didFinish() {
-		parentCoordinator?.childDidFinish(child: self)
-	}
-	
+
 	deinit {
 		print("MethodOfSendCoordinator deinit")
+	}
+}
+
+extension MethodOfSendCoordinator: IMethodOfSendPresenterOutput {
+	//переименовать userDidFinish() когда появится конкретное действие
+	func userDidFinish() {
+//		parentCoordinator?.childDidFinish(child: self)
 	}
 }

@@ -1,20 +1,26 @@
 import Foundation
 import UIKit
 
+//переименовать userDidFinish() когда появится конкретное действие
+protocol IMethodOfSendPresenterOutput: AnyObject {
+	func userDidFinish()
+}
+
+//переименовать userActed() когда появится конкретное действие
 protocol IMethodOfSendPresenter: AnyObject {
-	func didFinish()
+	func userActed()
 }
 
 class MethodOfSendPresenter: IMethodOfSendPresenter {
 	
-	weak var coordinator: IMethodOfSendCoordinator?
+	weak var output: IMethodOfSendPresenterOutput?
 	weak var view: IMethodOfSendViewController?
 	
-	init(coordinator: IMethodOfSendCoordinator) {
-		self.coordinator = coordinator
+	init(output: IMethodOfSendPresenterOutput) {
+		self.output = output
 	}
 	
-	func didFinish() {
-		coordinator?.didFinish()
+	func userActed() {
+		output?.userDidFinish()
 	}
 }

@@ -7,14 +7,14 @@ protocol IProfileView: AnyObject {
 class ProfileViewController: UIViewController {
 	
 	let profileContentView: IProfileContentView & UIView
-	let presenter: IProfilePresenter
+	let profilePresenter: IProfilePresenter
 	
 	init(
 		profileContentView: IProfileContentView & UIView,
-		presenter: IProfilePresenter
+		profilePresenter: IProfilePresenter
 	) {
 		self.profileContentView = profileContentView
-		self.presenter = presenter
+		self.profilePresenter = profilePresenter
 		super.init(nibName: nil, bundle: nil)
 	}
 	

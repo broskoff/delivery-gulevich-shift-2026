@@ -2,13 +2,13 @@ import UIKit
 
 protocol IMethodOfSendAssembly: AnyObject {
 	
-	func createScreen(coordinator: IMethodOfSendCoordinator) -> UIViewController
+	func createScreen(output: IMethodOfSendPresenterOutput) -> UIViewController
 }
 
 final class MethodOfSendAssembly: IMethodOfSendAssembly {
 	
-	func createScreen(coordinator: IMethodOfSendCoordinator) -> UIViewController {
-		let presenter = MethodOfSendPresenter(coordinator: coordinator)
+	func createScreen(output: IMethodOfSendPresenterOutput) -> UIViewController {
+		let presenter = MethodOfSendPresenter(output: output)
 		let methodContentView = MethodOfSendContentView()
 		let methodOfSendView = MethodOfSendViewController(
 			methodOfSendContentView: methodContentView,

@@ -1,21 +1,24 @@
 import Foundation
 import UIKit
 
-protocol ICalculationPresenter: AnyObject {
-	
-	func didTapCalculateButton()
+protocol ICalculationPresenterOutput: AnyObject {
+	func showMethodOfSend()
 }
 
-class CalculationPresenter: ICalculationPresenter {
-	
-	weak var coordinator: IMainCoordinator?
+protocol ICalculationPresenter: AnyObject {
+	func userDidTapCalculateButton()
+}
+
+final class CalculationPresenter: ICalculationPresenter {
+
+	weak var output: ICalculationPresenterOutput?
 	weak var view: ICalculationView?
 	
-	init(coordinator: IMainCoordinator) {
-		self.coordinator = coordinator
+	init(output: ICalculationPresenterOutput) {
+		self.output = output
 	}
 	
-	func didTapCalculateButton() {
-		coordinator?.showMethodOfSend()
+	func userDidTapCalculateButton() {
+		output?.showMethodOfSend()
 	}
 }
