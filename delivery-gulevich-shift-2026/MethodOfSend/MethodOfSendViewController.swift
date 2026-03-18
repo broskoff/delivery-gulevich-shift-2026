@@ -30,7 +30,6 @@ class MethodOfSendViewController: UIViewController, IMethodOfSendViewDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		title = "Способ отправки"
 		methodOfSendContentView.delegate = self
 	}
 	

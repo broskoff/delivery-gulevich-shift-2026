@@ -10,8 +10,14 @@ protocol IMethodOfSendContentView: AnyObject {
 }
 
 final class MethodOfSendContentView: UIView, IMethodOfSendContentView {
-	
 	weak var delegate: IMethodOfSendViewDelegate?
+	
+	private let topView = UIView()
+	
+	private let scrollView = UIScrollView()
+	private let contentView = UIView()
+	private let mainStackView = UIStackView()
+	private let titleStackView = UIStackView()
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -23,26 +29,123 @@ final class MethodOfSendContentView: UIView, IMethodOfSendContentView {
 		fatalError("init(coder:) has not been implemented")
 	}
 }
-	
-private extension MethodOfSendContentView {
-	
+
+extension MethodOfSendContentView {
 	func configureUI() {
 		backgroundColor = ContentColor.viewBackground
 		
-		configureLabel()
+		setupHierarchy()
+		
+		configureTopView()
+		
+		configureScrollView()
+		
+		configureMainStackView()
+	}
+}
+
+extension MethodOfSendContentView {
+	func setupHierarchy() {
+		addSubview(topView)
+		addSubview(scrollView)
+		
+		topView.addSubview(titleStackView)
+		
+		scrollView.addSubview(contentView)
+		contentView.addSubview(mainStackView)
 	}
 	
-	func configureLabel() {
-		let label = UILabel()
-		
-		addSubview(label)
-		
-		label.text = "Раздел находится в стадии разработки"
-		label.textColor = ContentColor.subTitleColor
-		label.numberOfLines = 0
-		
-		label.snp.makeConstraints {
-			$0.center.equalToSuperview()
+	func configureTopView() {
+		topView.snp.makeConstraints {
+			$0.top.equalToSuperview().offset(40)
+			$0.leading.trailing.equalToSuperview()
 		}
+		
+		configureTitleStackView()
+		configureTitleLabel()
+	}
+	
+	func configureTitleStackView() {
+		titleStackView.axis = .vertical
+		
+		titleStackView.snp.makeConstraints {
+			$0.edges.equalToSuperview().inset(20)
+		}
+	}
+	
+	func configureTitleLabel() {
+		let titleLabel = UILabel()
+		titleStackView.addArrangedSubview(titleLabel)
+		
+		titleLabel.text = "Способ отправки"
+		titleLabel.textAlignment = .center
+		titleLabel.font = .systemFont(ofSize: 28, weight: .bold)
+		
+		titleLabel.snp.makeConstraints {
+			$0.centerX.equalToSuperview()
+		}
+	}
+}
+
+extension MethodOfSendContentView {
+	func configureScrollView() {
+		scrollView.bouncesHorizontally = false
+		scrollView.alwaysBounceVertical = true
+		
+		scrollView.snp.makeConstraints {
+			$0.top.equalTo(topView.snp.bottom).offset(16)
+			$0.leading.trailing.equalToSuperview()
+			$0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
+		}
+		
+		configureContentView()
+	}
+	
+	func configureContentView() {
+		contentView.snp.makeConstraints {
+			$0.edges.equalToSuperview()
+			$0.width.equalToSuperview()
+		}
+	}
+}
+
+extension MethodOfSendContentView {
+	func configureMainStackView() {
+		mainStackView.axis = .vertical
+		mainStackView.spacing = 16
+		
+		mainStackView.snp.makeConstraints {
+			$0.top.bottom.equalToSuperview().inset(8)
+			$0.leading.trailing.equalToSuperview().inset(16)
+		}
+		
+		configureProgressBarComponent()
+		
+		let stackFrom = MethodOfSendStackViewFactory.create()
+		let stackTo = MethodOfSendStackViewFactory.create()
+		[stackFrom,stackTo].forEach {
+			mainStackView.addArrangedSubview($0)
+		}
+		
+		configureAdvBannerLabel()
+	}
+	
+	func configureProgressBarComponent() {
+		let progressBarComponent = ProgressBarComponent()
+		
+		mainStackView.addArrangedSubview(progressBarComponent)
+		progressBarComponent.makeComponent(currentStep: 1, totalSteps: 7)
+	}
+	
+	func configureAdvBannerLabel() {
+		
+		let advBanner = AdvBannerFactory.createAdvBannerStackView(
+			backgroundColor: ContentColor.blueBackgroudColorForPromoAdv,
+			titleFontSize: 32, 
+			titleText: "1+1=3",
+			subtitleText: "3-я доставка в подарок!"
+		)
+		
+		mainStackView.addArrangedSubview(advBanner)
 	}
 }

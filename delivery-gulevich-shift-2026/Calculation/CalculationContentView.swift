@@ -14,14 +14,13 @@ final class CalculationContentView: UIView, ICalculationContentView {
 	weak var delegate: ICalculationContentViewDelegate?
 	
 	private let topView = UIView()
-	private let scrollView = UIScrollView(frame: .zero)
-	private let contentView = UIView(frame: .zero)
+	private let scrollView = UIScrollView()
+	private let contentView = UIView()
 	private let mainStackView = UIStackView()
 	
 	private let titleStackView = UIStackView()
 	private let calculationStackView = UIStackView()
 	private let trackStackView = UIStackView()
-	private let promoStackView = UIStackView()
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -71,8 +70,6 @@ private extension CalculationContentView {
 		configureButtonTrack()
 		
 		configurePromoStackView()
-		
-		configurePromoLabel()
 	}
 	
 	func configureView() {
@@ -288,37 +285,14 @@ private extension CalculationContentView {
 private extension CalculationContentView {
 	
 	func configurePromoStackView() {
-		mainStackView.addArrangedSubview(promoStackView)
+		let advBanner = AdvBannerFactory.createAdvBannerStackView(
+			backgroundColor: ContentColor.brownBackgroudColorForPromoAdv,
+			titleFontSize: 24,
+			titleText: "Бесплатная доставка",
+			subtitleText: "за приведенного друга"
+		)
 		
-		promoStackView.backgroundColor = ContentColor.promoAdvStackView
-		promoStackView.axis = .vertical
-		
-		promoStackView.layer.cornerRadius = 16
-		
-		promoStackView.isLayoutMarginsRelativeArrangement = true
-		promoStackView.layoutMargins = .init(top: 16, left: 16, bottom: 16, right: 16)
-	}
-	
-	func configurePromoLabel() {
-		//если данные для рекламной плашки будут приходить из сети, то хардкод заменить на них
-		let titleLabelConfig = PromoLabelConfig(text: "Бесплатная доставка",
-												fontSize: 24,
-												fontWeight: .bold)
-		
-		let titleLabel = PromoLabelFactory.createLabel(config: titleLabelConfig)
-		
-		let subtitleLabelConfig = PromoLabelConfig(text: "за приведенного друга",
-												   fontSize: 14,
-												   fontWeight: .light)
-		
-		let subtitlelabel = PromoLabelFactory.createLabel(config: subtitleLabelConfig)
-		
-		[
-			titleLabel,
-			subtitlelabel
-		].forEach {
-			promoStackView.addArrangedSubview($0)
-		}
+		mainStackView.addArrangedSubview(advBanner)
 	}
 }
 

@@ -42,9 +42,3 @@ extension CalculationViewController: ICalculationView {
 
 	}
 }
-
-extension CalculationViewController: ICalculationView {
-	func updateView() {
-
-	}
-}

@@ -1,15 +1,14 @@
-import Foundation
 import UIKit
 
-struct PromoLabelConfig {
+struct AdvBannerLabelConfig {
 	let text: String
 	let fontSize: CGFloat
 	let fontWeight: UIFont.Weight
 }
 
-final class PromoLabelFactory {
+final class AdvBannerLabelFactory {
 	
-	static func createLabel(config: PromoLabelConfig) -> UILabel {
+	static func createLabel(config: AdvBannerLabelConfig) -> UILabel {
 		
 		let label = UILabel()
 		label.text = config.text
@@ -19,3 +18,4 @@ final class PromoLabelFactory {
 		return label
 	}
 }
+
