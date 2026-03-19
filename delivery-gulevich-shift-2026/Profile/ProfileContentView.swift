@@ -21,7 +21,7 @@ final class ProfileContentView: UIView {
 extension ProfileContentView: IProfileContentView {
 	
 	func configureUI() {
-		backgroundColor = ContentColor.viewBackground
+		backgroundColor = ContentColor.calculateViewBackground
 		
 		configureLabel()
 	}

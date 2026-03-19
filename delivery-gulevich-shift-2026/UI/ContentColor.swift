@@ -2,10 +2,15 @@ import UIKit
 
 final class ContentColor: UIColor, @unchecked Sendable {
 	
-	static let viewBackground = UIColor(red: 243/255,
-										green: 244/255,
-										blue: 246/255,
-										alpha: 1.0)
+	static let calculateViewBackground = UIColor(red: 243/255,
+												 green: 244/255,
+												 blue: 246/255,
+												 alpha: 1.0)
+	
+	static let methodOfSendViewBackground = UIColor(red: 255/255,
+													green: 255/255,
+													blue: 255/255,
+													alpha: 1.0)
 	
 	static let subTitleColor = UIColor(red: 99/255,
 									   green: 112/255,
@@ -31,4 +36,8 @@ final class ContentColor: UIColor, @unchecked Sendable {
 													   green: 117/255,
 													   blue: 255/255,
 													   alpha: 1)
+	static let ellipseColor = UIColor(red: 242/255,
+									  green: 244/255,
+									  blue: 247/255,
+									  alpha: 1)
 }

@@ -32,7 +32,7 @@ final class MethodOfSendContentView: UIView, IMethodOfSendContentView {
 
 extension MethodOfSendContentView {
 	func configureUI() {
-		backgroundColor = ContentColor.viewBackground
+		backgroundColor = ContentColor.methodOfSendViewBackground
 		
 		setupHierarchy()
 		
@@ -112,18 +112,25 @@ extension MethodOfSendContentView {
 extension MethodOfSendContentView {
 	func configureMainStackView() {
 		mainStackView.axis = .vertical
-		mainStackView.spacing = 16
+		mainStackView.spacing = 32
 		
 		mainStackView.snp.makeConstraints {
-			$0.top.bottom.equalToSuperview().inset(8)
+			$0.top.bottom.equalToSuperview().inset(16)
 			$0.leading.trailing.equalToSuperview().inset(16)
 		}
 		
 		configureProgressBarComponent()
 		
-		let stackFrom = MethodOfSendStackViewFactory.create()
-		let stackTo = MethodOfSendStackViewFactory.create()
-		[stackFrom,stackTo].forEach {
+		let expressDeliveryStack = DeliveryMethodStackFactory.setStacks(imageName: "Plane",
+												   typeDelivery: "Экспресс доставка до двери",
+												   price: "780 Р",
+												   countDays: "1 рабочий день")
+		
+		let ussualyDeliveryStack = DeliveryMethodStackFactory.setStacks(imageName: "Bus",
+												 typeDelivery: "Обычная доставка",
+												 price: "325 Р",
+												 countDays: "5 рабочих дней")
+		[expressDeliveryStack,ussualyDeliveryStack].forEach {
 			mainStackView.addArrangedSubview($0)
 		}
 		

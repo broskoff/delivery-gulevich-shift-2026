@@ -21,7 +21,7 @@ final class HistoryContentView: UIView {
 extension HistoryContentView: IHistoryContentView {
 	
 	func configUI() {
-		backgroundColor = ContentColor.viewBackground
+		backgroundColor = ContentColor.calculateViewBackground
 		
 		configureLabel()
 	}

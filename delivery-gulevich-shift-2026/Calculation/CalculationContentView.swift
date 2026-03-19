@@ -37,7 +37,7 @@ private extension CalculationContentView {
 	
 	func configureUI() {
 		
-		backgroundColor = ContentColor.viewBackground
+		backgroundColor = ContentColor.calculateViewBackground
 		
 		configureView()
 		

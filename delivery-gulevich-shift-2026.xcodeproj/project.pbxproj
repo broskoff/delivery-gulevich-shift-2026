@@ -12,8 +12,7 @@
 		C73AFA882F69176700DB14C5 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */; };
 		C73AFA8F2F6A5BB000DB14C5 /* AdvBannerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA8C2F6A5BB000DB14C5 /* AdvBannerFactory.swift */; };
 		C73AFA902F6A5BB000DB14C5 /* AdvBannerLabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA8D2F6A5BB000DB14C5 /* AdvBannerLabelFactory.swift */; };
-		C73AFA932F6A5E3800DB14C5 /* MethodOfSendStackFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA922F6A5E3800DB14C5 /* MethodOfSendStackFactory.swift */; };
-		C73AFA952F6A609500DB14C5 /* MethodOfSendStackLabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA942F6A609500DB14C5 /* MethodOfSendStackLabelFactory.swift */; };
+		C73AFAE02F6A996E00DB14C5 /* DeliveryMethodStackFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFADF2F6A996E00DB14C5 /* DeliveryMethodStackFactory.swift */; };
 		C7454F2C2F501CAC008A5D93 /* ProfileContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7454F2B2F501CAC008A5D93 /* ProfileContentView.swift */; };
 		C7454F2E2F501CDC008A5D93 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7454F2D2F501CDC008A5D93 /* ProfilePresenter.swift */; };
 		C7510CE82F4ECF4600AA968F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7510CDD2F4ECF4600AA968F /* Assets.xcassets */; };
@@ -50,8 +49,7 @@
 		C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarComponent.swift; sourceTree = "<group>"; };
 		C73AFA8C2F6A5BB000DB14C5 /* AdvBannerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvBannerFactory.swift; sourceTree = "<group>"; };
 		C73AFA8D2F6A5BB000DB14C5 /* AdvBannerLabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvBannerLabelFactory.swift; sourceTree = "<group>"; };
-		C73AFA922F6A5E3800DB14C5 /* MethodOfSendStackFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendStackFactory.swift; sourceTree = "<group>"; };
-		C73AFA942F6A609500DB14C5 /* MethodOfSendStackLabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendStackLabelFactory.swift; sourceTree = "<group>"; };
+		C73AFADF2F6A996E00DB14C5 /* DeliveryMethodStackFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMethodStackFactory.swift; sourceTree = "<group>"; };
 		C7454F2B2F501CAC008A5D93 /* ProfileContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContentView.swift; sourceTree = "<group>"; };
 		C7454F2D2F501CDC008A5D93 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		C7510CCA2F4ECF4600AA968F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,11 +110,10 @@
 			path = AdvBanner;
 			sourceTree = "<group>";
 		};
-		C73AFA912F6A5E1F00DB14C5 /* MethodOfSendStack */ = {
+		C73AFADE2F6A991700DB14C5 /* MethodOfSendStack */ = {
 			isa = PBXGroup;
 			children = (
-				C73AFA942F6A609500DB14C5 /* MethodOfSendStackLabelFactory.swift */,
-				C73AFA922F6A5E3800DB14C5 /* MethodOfSendStackFactory.swift */,
+				C73AFADF2F6A996E00DB14C5 /* DeliveryMethodStackFactory.swift */,
 			);
 			path = MethodOfSendStack;
 			sourceTree = "<group>";
@@ -198,7 +195,7 @@
 		C7510CE62F4ECF4600AA968F /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				C73AFA912F6A5E1F00DB14C5 /* MethodOfSendStack */,
+				C73AFADE2F6A991700DB14C5 /* MethodOfSendStack */,
 				C73AFA8E2F6A5BB000DB14C5 /* AdvBanner */,
 				C7510CE22F4ECF4600AA968F /* ContentColor.swift */,
 				C7510CE32F4ECF4600AA968F /* CustomButton.swift */,
@@ -327,8 +324,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7510CEB2F4ECF4600AA968F /* AppDelegate.swift in Sources */,
+				C73AFAE02F6A996E00DB14C5 /* DeliveryMethodStackFactory.swift in Sources */,
 				C73AFA8F2F6A5BB000DB14C5 /* AdvBannerFactory.swift in Sources */,
-				C73AFA932F6A5E3800DB14C5 /* MethodOfSendStackFactory.swift in Sources */,
 				C73AFA902F6A5BB000DB14C5 /* AdvBannerLabelFactory.swift in Sources */,
 				C7510CEC2F4ECF4600AA968F /* SceneDelegate.swift in Sources */,
 				C7510CED2F4ECF4600AA968F /* CalculationPresenter.swift in Sources */,
@@ -357,7 +354,6 @@
 				C7510CF92F4ECF4600AA968F /* CustomButton.swift in Sources */,
 				C72F4F842F67D3CD000083FC /* MethodOfSendContentView.swift in Sources */,
 				C7510CFA2F4ECF4600AA968F /* CustomTextField.swift in Sources */,
-				C73AFA952F6A609500DB14C5 /* MethodOfSendStackLabelFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
