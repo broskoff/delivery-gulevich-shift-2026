@@ -38,6 +38,7 @@
 		C7B856FF2F59514B004D6B57 /* CalculationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B856FE2F59514B004D6B57 /* CalculationCoordinator.swift */; };
 		C7B857012F595205004D6B57 /* HistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B857002F595205004D6B57 /* HistoryCoordinator.swift */; };
 		C7B857032F595239004D6B57 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B857022F595239004D6B57 /* ProfileCoordinator.swift */; };
+		C7BE24532F6BB8080045774E /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE24522F6BB8080045774E /* UIConstants.swift */; };
 		C7DF61422F29C607009B0BA1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C7DF61412F29C607009B0BA1 /* SnapKit */; };
 		C7EE1E5C2F500D5700B6326F /* HistoryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE1E5B2F500D5700B6326F /* HistoryContentView.swift */; };
 		C7EE1E5E2F500D6600B6326F /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE1E5D2F500D6600B6326F /* HistoryPresenter.swift */; };
@@ -76,6 +77,7 @@
 		C7B856FE2F59514B004D6B57 /* CalculationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationCoordinator.swift; sourceTree = "<group>"; };
 		C7B857002F595205004D6B57 /* HistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinator.swift; sourceTree = "<group>"; };
 		C7B857022F595239004D6B57 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		C7BE24522F6BB8080045774E /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 		C7DF60B92F29BAA4009B0BA1 /* delivery-gulevich-shift-2026.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "delivery-gulevich-shift-2026.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EE1E5B2F500D5700B6326F /* HistoryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryContentView.swift; sourceTree = "<group>"; };
 		C7EE1E5D2F500D6600B6326F /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				C7510CE32F4ECF4600AA968F /* CustomButton.swift */,
 				C7510CE42F4ECF4600AA968F /* CustomTextField.swift */,
 				C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */,
+				C7BE24522F6BB8080045774E /* UIConstants.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				C7510CEC2F4ECF4600AA968F /* SceneDelegate.swift in Sources */,
 				C7510CED2F4ECF4600AA968F /* CalculationPresenter.swift in Sources */,
 				C7510CEE2F4ECF4600AA968F /* CalculationContentView.swift in Sources */,
+				C7BE24532F6BB8080045774E /* UIConstants.swift in Sources */,
 				C7510CEF2F4ECF4600AA968F /* CalculationViewController.swift in Sources */,
 				C7510CF02F4ECF4600AA968F /* ICoordinators.swift in Sources */,
 				C7510CF12F4ECF4600AA968F /* MainCoordinator.swift in Sources */,

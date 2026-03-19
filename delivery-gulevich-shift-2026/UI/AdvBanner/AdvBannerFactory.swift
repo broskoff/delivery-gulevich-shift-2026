@@ -10,7 +10,7 @@ final class AdvBannerFactory: UIView {
 		let advBannerStackView = UIStackView()
 		advBannerStackView.backgroundColor = backgroundColor
 		advBannerStackView.axis = .vertical
-		advBannerStackView.layer.cornerRadius = 16
+		advBannerStackView.layer.cornerRadius = UIConstants.Layer.CornerRadius.small
 		
 		advBannerStackView.isLayoutMarginsRelativeArrangement = true
 		advBannerStackView.layoutMargins = .init(top: 16, left: 16, bottom: 16, right: 16)

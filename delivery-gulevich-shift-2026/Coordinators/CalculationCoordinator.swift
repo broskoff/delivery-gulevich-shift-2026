@@ -16,9 +16,11 @@ final class CalculationCoordinator: NSObject, ICoordinator {
 		navigationController.delegate = self
 		let calculationViewController = assembly.buildCalculationScreen(output: self)
 		navigationController.viewControllers = [calculationViewController]
-		navigationController.tabBarItem = UITabBarItem(title: "Расчет",
-													   image: UIImage(systemName: "plus.forwardslash.minus"),
-													   selectedImage: nil)
+		navigationController.tabBarItem = UITabBarItem(
+			title: UIConstants.TabBarItem.title.calculation,
+			image: UIImage(systemName: UIConstants.TabBarItem.image.calculation),
+			selectedImage: nil
+		)
 	}
 }
 

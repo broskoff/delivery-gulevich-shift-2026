@@ -13,10 +13,10 @@ final class DeliveryMethodStackFactory {
 		
 		stack.backgroundColor = .clear
 		stack.axis = .vertical
-		stack.layer.cornerRadius = 16
+		stack.layer.cornerRadius = UIConstants.Layer.CornerRadius.small
 		stack.layer.borderWidth = 1
 		stack.layer.borderColor = ContentColor.borderLight.cgColor
-		stack.spacing = 24
+		stack.spacing = UIConstants.Spacing.medium
 		
 		stack.isLayoutMarginsRelativeArrangement = true
 		stack.layoutMargins = .init(top: 16, left: 16, bottom: 16, right: 16)
@@ -39,7 +39,7 @@ private extension DeliveryMethodStackFactory {
 		let stack = UIStackView()
 		stack.axis = .horizontal
 		stack.distribution = .fill
-		stack.spacing = 24
+		stack.spacing = UIConstants.Spacing.medium
 		
 		let countDayLabel = UILabel()
 		countDayLabel.text = withDays
@@ -69,7 +69,7 @@ private extension DeliveryMethodStackFactory {
 		let stack = UIStackView()
 		stack.axis = .horizontal
 		stack.distribution = .fill
-		stack.spacing = 24
+		stack.spacing = UIConstants.Spacing.medium
 		
 		let imageViewLeft = UIImageView()
 		
@@ -78,7 +78,7 @@ private extension DeliveryMethodStackFactory {
 		}
 		
 		imageViewLeft.backgroundColor = ContentColor.ellipseColor
-		imageViewLeft.layer.cornerRadius = 24
+		imageViewLeft.layer.cornerRadius = UIConstants.Layer.CornerRadius.medium
 		imageViewLeft.clipsToBounds = true
 		imageViewLeft.image = UIImage(named: imageName)
 		imageViewLeft.contentMode = .center
@@ -104,7 +104,7 @@ private extension DeliveryMethodStackFactory {
 	static func makeStackTypeAndPrice(typeDelivery: String, price: String) -> UIStackView {
 		let stack = UIStackView()
 		stack.axis = .vertical
-		stack.spacing = 8
+		stack.spacing = UIConstants.Spacing.extraSmall
 		
 		let typeLabel = UILabel()
 		typeLabel.text = typeDelivery

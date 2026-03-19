@@ -110,11 +110,11 @@ private extension CalculationContentView {
 	
 	func configureMainStackView() {
 		mainStackView.axis = .vertical
-		mainStackView.spacing = 24
+		mainStackView.spacing = UIConstants.Spacing.medium
 		
 		mainStackView.snp.makeConstraints {
-			$0.top.leading.trailing.equalToSuperview().inset(16)
-			$0.bottom.equalToSuperview().inset(16)
+			$0.top.leading.trailing.equalToSuperview().inset(UIConstants.Inset.small)
+			$0.bottom.equalToSuperview().inset(UIConstants.Inset.small)
 		}
 	}
 }
@@ -123,11 +123,11 @@ private extension CalculationContentView {
 	
 	func configureTitleStackView() {
 		titleStackView.axis = .vertical
-		titleStackView.spacing = 8
+		titleStackView.spacing = UIConstants.Spacing.extraSmall
 		
 		titleStackView.snp.makeConstraints {
 			$0.top.equalToSuperview()
-			$0.leading.trailing.equalToSuperview().inset(16)
+			$0.leading.trailing.equalToSuperview().inset(UIConstants.Inset.small)
 		}
 	}
 	
@@ -138,12 +138,12 @@ private extension CalculationContentView {
 		titleStackView.addArrangedSubview(titleLabel)
 		titleStackView.addArrangedSubview(subtitleLabel)
 		
-		titleLabel.text = "Мы доставим\nваш заказ"
+		titleLabel.text = UIConstants.Calculation.HeaderNames.title
 		titleLabel.numberOfLines = 0
 		titleLabel.textAlignment = .left
 		titleLabel.font = .systemFont(ofSize: 30, weight: .bold)
 		
-		subtitleLabel.text = "Отправляйте посылки в приложении\nШифт Delivery"
+		subtitleLabel.text = UIConstants.Calculation.HeaderNames.subtitle
 		subtitleLabel.numberOfLines = 2
 		subtitleLabel.textColor = ContentColor.subTitleColor
 	}
@@ -153,9 +153,9 @@ private extension CalculationContentView {
 		
 		calculationStackView.backgroundColor = .white
 		calculationStackView.axis = .vertical
-		calculationStackView.spacing = 32
+		calculationStackView.spacing = UIConstants.Spacing.large
 		
-		calculationStackView.layer.cornerRadius = 16
+		calculationStackView.layer.cornerRadius = UIConstants.Layer.CornerRadius.medium
 		
 		calculationStackView.isLayoutMarginsRelativeArrangement = true
 		calculationStackView.layoutMargins = .init(top: 32, left: 16, bottom: 32, right: 16)
@@ -163,7 +163,7 @@ private extension CalculationContentView {
 	
 	func configureLabelCalcDelivery() {
 		let label = UILabel()
-		label.text = "Рассчитать доставку"
+		label.text = UIConstants.Calculation.CardNames.calculate
 		label.textAlignment = .center
 		label.font = .systemFont(ofSize: 30, weight: .bold)
 		
@@ -177,8 +177,8 @@ private extension CalculationContentView {
 		let departureCityTextField = CustomTextField(frame: .zero)
 		let departureCityConfig = CustomTextFieldConfig(
 			tagType: .fromCity,
-			label: "Город отправки",
-			placeholder: "Выберите город",
+			label: UIConstants.Calculation.LabelNames.cityFrom,
+			placeholder: UIConstants.Calculation.Placeholder.selectCity,
 			borderColor: ContentColor.borderLight
 		)
 		
@@ -190,8 +190,8 @@ private extension CalculationContentView {
 		let destinationCityTextField = CustomTextField(frame: .zero)
 		let destinationCityConfig = CustomTextFieldConfig(
 			tagType: .toCity,
-			label: "Город назначения",
-			placeholder: "Выберите город",
+			label: UIConstants.Calculation.LabelNames.cityTo,
+			placeholder: UIConstants.Calculation.Placeholder.selectCity,
 			borderColor: ContentColor.borderLight
 		)
 		
@@ -216,7 +216,7 @@ private extension CalculationContentView {
 		let stackView = UIStackView()
 		stackView.backgroundColor = .white
 		stackView.axis = .vertical
-		stackView.spacing = 16
+		stackView.spacing = UIConstants.Spacing.small
 		
 		[
 			departureCityTextField,
@@ -237,9 +237,9 @@ private extension CalculationContentView {
 		
 		trackStackView.backgroundColor = .white
 		trackStackView.axis = .vertical
-		trackStackView.spacing = 32
+		trackStackView.spacing = UIConstants.Spacing.large
 		
-		trackStackView.layer.cornerRadius = 16
+		trackStackView.layer.cornerRadius = UIConstants.Layer.CornerRadius.small
 		
 		trackStackView.isLayoutMarginsRelativeArrangement = true
 		trackStackView.layoutMargins = .init(top: 32, left: 16, bottom: 32, right: 16)
@@ -247,7 +247,7 @@ private extension CalculationContentView {
 	
 	func configureTrackLabel() {
 		let label = UILabel()
-		label.text = "Отследить посылку"
+		label.text = UIConstants.Calculation.CardNames.track
 		label.textAlignment = .center
 		label.font = .systemFont(ofSize: 30, weight: .bold)
 		
@@ -257,8 +257,8 @@ private extension CalculationContentView {
 	func configureTrackTextField() {
 		let textField = UITextField()
 		
-		textField.placeholder = "Номер заказа"
-		textField.layer.cornerRadius = 8
+		textField.placeholder = UIConstants.Calculation.Placeholder.orderNumber
+		textField.layer.cornerRadius = UIConstants.Layer.CornerRadius.extraSmall
 		textField.layer.borderWidth = 1
 		textField.layer.borderColor = ContentColor.borderLight.cgColor
 		
@@ -276,7 +276,7 @@ private extension CalculationContentView {
 	}
 	
 	func configureButtonTrack() {
-		let button = CustomButton.makeButton(setTitle: "Найти")
+		let button = CustomButton.makeButton(setTitle: UIConstants.Calculation.ButtonNames.find)
 		
 		trackStackView.addArrangedSubview(button)
 	}
@@ -300,7 +300,7 @@ private extension CalculationContentView {
 private extension CalculationContentView {
 	
 	func configureButtonCalcDelivery() {
-		let button = CustomButton.makeButton(setTitle: "Рассчитать")
+		let button = CustomButton.makeButton(setTitle: UIConstants.Calculation.ButtonNames.calculate)
 		
 		calculationStackView.addArrangedSubview(button)
 		

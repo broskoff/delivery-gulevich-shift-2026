@@ -31,7 +31,7 @@ extension HistoryContentView: IHistoryContentView {
 		
 		addSubview(label)
 		
-		label.text = "Раздел находится в стадии разработки"
+		label.text = UIConstants.SectionUnderDevelopment.label
 		label.textColor = ContentColor.subTitleColor
 		label.numberOfLines = 0
 		

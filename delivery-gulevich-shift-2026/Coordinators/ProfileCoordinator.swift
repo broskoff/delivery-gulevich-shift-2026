@@ -13,9 +13,11 @@ final class ProfileCoordinator: ICoordinator {
 	func start() {
 		let profileViewController = assembly.buildProfileScreen(output: self)
 		navigationController.viewControllers = [profileViewController]
-		navigationController.tabBarItem = UITabBarItem(title: "Профиль",
-															  image: UIImage(systemName: "person.crop.circle"),
-															  selectedImage: nil)
+		navigationController.tabBarItem = UITabBarItem(
+			title: UIConstants.TabBarItem.title.profile,
+			image: UIImage(systemName: UIConstants.TabBarItem.image.profile),
+			selectedImage: nil
+		)
 	}
 }
 

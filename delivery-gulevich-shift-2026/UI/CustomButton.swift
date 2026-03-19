@@ -10,7 +10,7 @@ final class CustomButton {
 		config.baseBackgroundColor = ContentColor.colorButton
 		config.title = setTitle
 		config.baseForegroundColor = .white
-		config.background.cornerRadius = 16
+		config.background.cornerRadius = UIConstants.Layer.CornerRadius.small
 		button.configuration = config
 
 		button.snp.makeConstraints {

@@ -77,7 +77,7 @@ extension MethodOfSendContentView {
 		let titleLabel = UILabel()
 		titleStackView.addArrangedSubview(titleLabel)
 		
-		titleLabel.text = "Способ отправки"
+		titleLabel.text = UIConstants.MethodOfSend.HeaderNames.title
 		titleLabel.textAlignment = .center
 		titleLabel.font = .systemFont(ofSize: 28, weight: .bold)
 		
@@ -112,11 +112,11 @@ extension MethodOfSendContentView {
 extension MethodOfSendContentView {
 	func configureMainStackView() {
 		mainStackView.axis = .vertical
-		mainStackView.spacing = 32
+		mainStackView.spacing = UIConstants.Spacing.large
 		
 		mainStackView.snp.makeConstraints {
-			$0.top.bottom.equalToSuperview().inset(16)
-			$0.leading.trailing.equalToSuperview().inset(16)
+			$0.top.bottom.equalToSuperview().inset(UIConstants.Inset.small)
+			$0.leading.trailing.equalToSuperview().inset(UIConstants.Inset.small)
 		}
 		
 		configureProgressBarComponent()

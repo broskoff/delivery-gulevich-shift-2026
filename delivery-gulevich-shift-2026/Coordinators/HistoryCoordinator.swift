@@ -13,9 +13,11 @@ final class HistoryCoordinator: ICoordinator {
 	func start() {
 		let historyViewController = assembly.buildHistoryScreen(output: self)
 		navigationController.viewControllers = [historyViewController]
-		navigationController.tabBarItem = UITabBarItem(title: "История",
-																	  image: UIImage(systemName: "clock"),
-																	  selectedImage: nil)
+		navigationController.tabBarItem = UITabBarItem(
+			title: UIConstants.TabBarItem.title.history,
+			image: UIImage(systemName: UIConstants.TabBarItem.image.history),
+			selectedImage: nil
+		)
 	}
 }
 

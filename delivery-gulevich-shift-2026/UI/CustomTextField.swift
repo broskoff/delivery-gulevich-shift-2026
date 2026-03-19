@@ -38,7 +38,7 @@ final class CustomTextField: UIView {
 		//возможно не пригодится, когда разберусь в Dropmenu/Это отдельный экран
 		textField.placeholder = config.placeholder
 		textField.tag = config.tagType.rawValue
-		textField.layer.cornerRadius = 8
+		textField.layer.cornerRadius = UIConstants.Layer.CornerRadius.extraSmall
 		textField.layer.borderWidth = 1
 		textField.layer.borderColor = config.borderColor.cgColor
 		//вместо этой UIView скорее всего будет картинка геоточки
