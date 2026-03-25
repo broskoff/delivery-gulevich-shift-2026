@@ -13,11 +13,11 @@ final class MethodOfSendContentView: UIView, IMethodOfSendContentView {
 	weak var delegate: IMethodOfSendViewDelegate?
 	
 	private let topView = UIView()
+	private let titleStackView = UIStackView()
 	
 	private let scrollView = UIScrollView()
 	private let contentView = UIView()
 	private let mainStackView = UIStackView()
-	private let titleStackView = UIStackView()
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -57,7 +57,7 @@ extension MethodOfSendContentView {
 	
 	func configureTopView() {
 		topView.snp.makeConstraints {
-			$0.top.equalToSuperview().offset(40)
+			$0.top.equalToSuperview().offset(UIConstants.Offset.topScreen)
 			$0.leading.trailing.equalToSuperview()
 		}
 		
@@ -123,12 +123,12 @@ extension MethodOfSendContentView {
 		
 		let expressDeliveryStack = DeliveryMethodStackFactory.setStacks(imageName: "Plane",
 												   typeDelivery: "Экспресс доставка до двери",
-												   price: "780 Р",
+												   price: "780 ₽",
 												   countDays: "1 рабочий день")
 		
 		let ussualyDeliveryStack = DeliveryMethodStackFactory.setStacks(imageName: "Bus",
 												 typeDelivery: "Обычная доставка",
-												 price: "325 Р",
+												 price: "325 ₽",
 												 countDays: "5 рабочих дней")
 		[expressDeliveryStack,ussualyDeliveryStack].forEach {
 			mainStackView.addArrangedSubview($0)

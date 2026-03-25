@@ -5,7 +5,7 @@ final class CalculationCoordinator: NSObject, ICoordinator {
 	let navigationController: UINavigationController
 	let assembly: IMainAssembly
 	
-	var childCoordinators: [MethodOfSendCoordinator] = []
+	var childCoordinators: [ICoordinator] = []
 	
 	init(navigationController: UINavigationController, assembly: IMainAssembly) {
 		self.navigationController = navigationController
@@ -17,8 +17,8 @@ final class CalculationCoordinator: NSObject, ICoordinator {
 		let calculationViewController = assembly.buildCalculationScreen(output: self)
 		navigationController.viewControllers = [calculationViewController]
 		navigationController.tabBarItem = UITabBarItem(
-			title: UIConstants.TabBarItem.title.calculation,
-			image: UIImage(systemName: UIConstants.TabBarItem.image.calculation),
+			title: UIConstants.TabBarItem.Title.calculation,
+			image: UIImage(systemName: UIConstants.TabBarItem.Image.calculation),
 			selectedImage: nil
 		)
 	}
@@ -27,13 +27,23 @@ final class CalculationCoordinator: NSObject, ICoordinator {
 extension CalculationCoordinator: ICalculationPresenterOutput {
 	
 	func showMethodOfSend() {
-		let coordinator = MethodOfSendCoordinator(
+		let methodOfSendCoordinator = MethodOfSendCoordinator(
 			parentCoordinator: self,
 			navigationController: navigationController
 		)
 		
-		childCoordinators.append(coordinator)
-		coordinator.start()
+		childCoordinators.append(methodOfSendCoordinator)
+		methodOfSendCoordinator.start()
+	}
+	
+	func showCitySelection() {
+		let citySelectionCoordinator = CitySelectionCoordinator(
+			parentCoordinator: self,
+			navigationController: navigationController
+		)
+		
+		childCoordinators.append(citySelectionCoordinator)
+		citySelectionCoordinator.start()
 	}
 	
 	func childDidFinish(child: MethodOfSendCoordinator?) {
@@ -57,8 +67,8 @@ extension CalculationCoordinator: UINavigationControllerDelegate {
 		if navigationController.viewControllers.contains(fromVC) {
 			return
 		} else {
-			//тут проблема, что если в массиве будет больше координаторов, придется находить нужный среди всех
-			childDidFinish(child: childCoordinators.first)
+			//тут проблема, что если в массиве будет больше координаторов, придется находить нужный среди всех! Уйти бы от кастинга
+			childDidFinish(child: childCoordinators.first as? MethodOfSendCoordinator)
 		}
 	}
 }

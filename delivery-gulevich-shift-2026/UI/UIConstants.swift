@@ -3,13 +3,13 @@ import UIKit
 
 enum UIConstants {
 	enum TabBarItem {
-		enum title {
+		enum Title {
 			static let calculation = "Расчет"
 			static let history = "История"
 			static let profile = "Профиль"
 		}
 		
-		enum image {
+		enum Image {
 			static let calculation = "plus.forwardslash.minus"
 			static let history = "clock"
 			static let profile = "person.crop.circle"
@@ -67,11 +67,25 @@ enum UIConstants {
 		static let large: CGFloat = 32
 	}
 	
+	enum Offset {
+		static let topScreen = 40
+	}
+	
 	enum Layer {
 		enum CornerRadius {
 			static let extraSmall: CGFloat = 8
 			static let small: CGFloat = 16
 			static let medium: CGFloat = 24
+		}
+	}
+	
+	enum CitySelection {
+		enum Headers {
+			static let title  = "Куда"
+		}
+		
+		enum Heights {
+			static let cell: CGFloat = 56
 		}
 	}
 }

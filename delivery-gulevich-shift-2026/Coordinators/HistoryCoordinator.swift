@@ -14,8 +14,8 @@ final class HistoryCoordinator: ICoordinator {
 		let historyViewController = assembly.buildHistoryScreen(output: self)
 		navigationController.viewControllers = [historyViewController]
 		navigationController.tabBarItem = UITabBarItem(
-			title: UIConstants.TabBarItem.title.history,
-			image: UIImage(systemName: UIConstants.TabBarItem.image.history),
+			title: UIConstants.TabBarItem.Title.history,
+			image: UIImage(systemName: UIConstants.TabBarItem.Image.history),
 			selectedImage: nil
 		)
 	}

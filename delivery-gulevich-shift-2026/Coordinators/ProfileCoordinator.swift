@@ -14,8 +14,8 @@ final class ProfileCoordinator: ICoordinator {
 		let profileViewController = assembly.buildProfileScreen(output: self)
 		navigationController.viewControllers = [profileViewController]
 		navigationController.tabBarItem = UITabBarItem(
-			title: UIConstants.TabBarItem.title.profile,
-			image: UIImage(systemName: UIConstants.TabBarItem.image.profile),
+			title: UIConstants.TabBarItem.Title.profile,
+			image: UIImage(systemName: UIConstants.TabBarItem.Image.profile),
 			selectedImage: nil
 		)
 	}

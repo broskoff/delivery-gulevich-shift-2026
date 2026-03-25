@@ -13,6 +13,8 @@ final class AppCoordinator: IAppCoordinator {
 		let tabBarController = mainCoordinator.start()
 		
 		window.rootViewController = tabBarController
+//		let vc = TestViewController()
+//		window.rootViewController = vc
 		window.makeKeyAndVisible()
 	}
 }
