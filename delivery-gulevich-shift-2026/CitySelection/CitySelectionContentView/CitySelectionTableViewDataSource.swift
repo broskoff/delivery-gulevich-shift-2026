@@ -20,7 +20,7 @@ final class CitySelectionTableViewDataSource: NSObject, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
 		guard let cell = tableView.dequeueReusableCell(
-			withIdentifier: CitySelectionTableViewCell.identifire,
+			withIdentifier: CitySelectionTableViewCell.identifier,
 			for: indexPath
 		) as? CitySelectionTableViewCell else { return UITableViewCell() }
 

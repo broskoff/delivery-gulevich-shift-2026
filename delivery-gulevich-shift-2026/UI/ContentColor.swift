@@ -41,8 +41,8 @@ final class ContentColor: UIColor, @unchecked Sendable {
 									  blue: 247/255,
 									  alpha: 1)
 	
-	static let textSelectedFieldColor = UIColor(red: 52/255,
-												green: 64/255,
-												blue: 81/255,
-												alpha: 1)
+	static let text = UIColor(red: 52/255,
+							  green: 64/255,
+							  blue: 81/255,
+							  alpha: 1)
 }

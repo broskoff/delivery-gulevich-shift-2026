@@ -15,7 +15,7 @@ final class CitySelectionContentView: UIView {
 		let tableView = UITableView()
 		tableView.register(
 			CitySelectionTableViewCell.self,
-			forCellReuseIdentifier: CitySelectionTableViewCell.identifire
+			forCellReuseIdentifier: CitySelectionTableViewCell.identifier
 		)
 		tableView.dataSource = citySelectionTableViewDataSource
 		tableView.separatorStyle = .none

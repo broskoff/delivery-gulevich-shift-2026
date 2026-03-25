@@ -5,7 +5,7 @@ protocol ICalculationView : AnyObject {
 }
 
 class CalculationViewController: UIViewController, ICalculationContentViewDelegate {
-	
+		
 	private let calculationContentView: UIView & ICalculationContentView
 	let presenter: ICalculationPresenter
 	
@@ -30,10 +30,35 @@ class CalculationViewController: UIViewController, ICalculationContentViewDelega
 		super.viewDidLoad()
 		
 		calculationContentView.delegate = self
+		
+		let backButton = UIBarButtonItem(
+				image: UIImage(systemName: ""),
+				style: .plain,
+				target: nil,
+				action: nil
+			)
+			
+			navigationItem.backBarButtonItem = backButton
 	}
 	
 	func didTapButtonCalcDelivery() {
 		presenter.userDidTapCalculateButton()
+	}
+	
+	func didTapButtonTrack() {
+		presenter.userDidTapCitySelectionField()
+	}
+}
+
+extension CalculationViewController: ICustomControlField {
+	
+	func didTapCitySelectedField() {
+		presenter.userDidTapCitySelectionField()
+	}
+	
+	func didTapPackageSizeField() {
+		//как запрезентить экран PackageSizeViewController
+      presenter.userDidTapPackageSizeField()
 	}
 }
 

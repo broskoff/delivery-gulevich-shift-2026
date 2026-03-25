@@ -3,10 +3,14 @@ import UIKit
 
 protocol ICalculationPresenterOutput: AnyObject {
 	func showMethodOfSend()
+	func showCitySelection()
+	func showPackageSize()
 }
 
 protocol ICalculationPresenter: AnyObject {
 	func userDidTapCalculateButton()
+	func userDidTapCitySelectionField()
+	func userDidTapPackageSizeField()
 }
 
 final class CalculationPresenter: ICalculationPresenter {
@@ -20,5 +24,13 @@ final class CalculationPresenter: ICalculationPresenter {
 	
 	func userDidTapCalculateButton() {
 		output?.showMethodOfSend()
+	}
+	
+	func userDidTapCitySelectionField() {
+		output?.showCitySelection()
+	}
+	
+	func userDidTapPackageSizeField() {
+		output?.showPackageSize()
 	}
 }

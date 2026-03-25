@@ -88,4 +88,10 @@ enum UIConstants {
 			static let cell: CGFloat = 56
 		}
 	}
+	
+	enum PackageSize {
+		enum Header {
+			static let title  = "Размер посылки"
+		}
+	}
 }

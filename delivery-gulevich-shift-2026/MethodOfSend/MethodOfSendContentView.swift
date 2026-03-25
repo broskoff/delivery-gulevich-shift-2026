@@ -93,7 +93,7 @@ extension MethodOfSendContentView {
 		scrollView.alwaysBounceVertical = true
 		
 		scrollView.snp.makeConstraints {
-			$0.top.equalTo(topView.snp.bottom).offset(16)
+			$0.top.equalTo(topView.snp.bottom)
 			$0.leading.trailing.equalToSuperview()
 			$0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
 		}

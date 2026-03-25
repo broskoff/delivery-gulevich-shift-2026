@@ -3,6 +3,10 @@ import SnapKit
 
 protocol ICalculationContentViewDelegate: AnyObject {
 	func didTapButtonCalcDelivery()
+	func didTapButtonTrack()
+	
+	func didTapCitySelectedField()
+	func didTapPackageSizeField()
 }
 
 protocol ICalculationContentView : AnyObject {
@@ -153,7 +157,7 @@ private extension CalculationContentView {
 		
 		calculationStackView.backgroundColor = .white
 		calculationStackView.axis = .vertical
-		calculationStackView.spacing = UIConstants.Spacing.large
+		calculationStackView.spacing = UIConstants.Spacing.medium
 		
 		calculationStackView.layer.cornerRadius = UIConstants.Layer.CornerRadius.medium
 		
@@ -172,56 +176,58 @@ private extension CalculationContentView {
 }
 
 private extension CalculationContentView {
-	
 	func configureUserFields() {
-		let departureCityTextField = CustomTextField(frame: .zero)
-		let departureCityConfig = CustomTextFieldConfig(
-			tagType: .fromCity,
-			label: UIConstants.Calculation.LabelNames.cityFrom,
-			placeholder: UIConstants.Calculation.Placeholder.selectCity,
-			borderColor: ContentColor.borderLight
+		let departureCityLabel = CustomControlLabel()
+		departureCityLabel.create(withText: "Город отправки")
+		
+		let departureCityField = CustomControlField()
+		departureCityField.delegate = self
+		let departureCityConfig = CustomControlFieldConfig(
+			tagType: .city,
+			placeholder: "Выберите город",
+			leftIconName: "IconLocation"
 		)
 		
-		departureCityTextField.makeComponent(
-			delegate: self,
-			config: departureCityConfig
+		departureCityField.makeComponent(using: departureCityConfig)
+		
+		let destinationCityLabel = CustomControlLabel()
+		destinationCityLabel.create(withText: "Город назначения")
+		
+		let destinationCityField = CustomControlField()
+		destinationCityField.delegate = self
+		let destinationCityConfig = CustomControlFieldConfig(
+			tagType: .city,
+			placeholder: "Выберите город",
+			leftIconName: "pointer"
 		)
 		
-		let destinationCityTextField = CustomTextField(frame: .zero)
-		let destinationCityConfig = CustomTextFieldConfig(
-			tagType: .toCity,
-			label: UIConstants.Calculation.LabelNames.cityTo,
-			placeholder: UIConstants.Calculation.Placeholder.selectCity,
-			borderColor: ContentColor.borderLight
-		)
+		destinationCityField.makeComponent(using: destinationCityConfig)
 		
-		destinationCityTextField.makeComponent(
-			delegate: self,
-			config: destinationCityConfig
-		)
+		let sizePackageLabel = CustomControlLabel()
+		sizePackageLabel.create(withText: "Размер посылки")
 		
-		let sizePackageTextField = CustomTextField(frame: .zero)
-		let sizePackageConfig = CustomTextFieldConfig(
+		let sizePackageField = CustomControlField()
+		sizePackageField.delegate = self
+		let sizePackageConfig = CustomControlFieldConfig(
 			tagType: .sizePackage,
-			label: "Размер посылки",
-			placeholder: "Выберите размер",
-			borderColor: ContentColor.borderLight
+			placeholder: "Конверт",
+			leftIconName: "IconEnvelope"
 		)
 		
-		sizePackageTextField.makeComponent(
-			delegate: self,
-			config: sizePackageConfig
-		)
+		sizePackageField.makeComponent(using: sizePackageConfig)
 		
 		let stackView = UIStackView()
 		stackView.backgroundColor = .white
 		stackView.axis = .vertical
-		stackView.spacing = UIConstants.Spacing.small
+		stackView.spacing = UIConstants.Spacing.medium
 		
 		[
-			departureCityTextField,
-			destinationCityTextField,
-			sizePackageTextField
+			departureCityLabel,
+			departureCityField,
+			destinationCityLabel,
+			destinationCityField,
+			sizePackageLabel,
+			sizePackageField
 		].forEach {
 			stackView.addArrangedSubview($0)
 		}
@@ -279,6 +285,15 @@ private extension CalculationContentView {
 		let button = CustomButton.makeButton(setTitle: UIConstants.Calculation.ButtonNames.find)
 		
 		trackStackView.addArrangedSubview(button)
+		
+		button.addTarget(self, action: #selector(buttonTrackTapped), for: .touchUpInside)
+	}
+	
+	
+	//MARK: Действие кнопки "Найти"
+	@objc
+	func buttonTrackTapped() {
+	
 	}
 }
 
@@ -313,7 +328,14 @@ private extension CalculationContentView {
 	}
 }
 
-extension CalculationContentView: UITextFieldDelegate {
+//MARK: "Выбрать город или Размер посылки"
+extension CalculationContentView: ICustomControlField {
+	func didTapCitySelectedField() {
+		
+		delegate?.didTapCitySelectedField()
+	}
 	
+	func didTapPackageSizeField() {
+		delegate?.didTapPackageSizeField()
+	}
 }
-
