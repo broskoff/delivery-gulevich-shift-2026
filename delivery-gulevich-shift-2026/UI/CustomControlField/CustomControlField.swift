@@ -1,26 +1,24 @@
 import UIKit
-protocol ICustomSelectedField: AnyObject {
-	func didTapSelectedField()
+protocol ICustomControlField: AnyObject {
+	func didTapCitySelectedField()
+	func didTapPackageSizeField()
 }
 
-enum SelectedFieldTagType: Int {
-	case fromCity = 0
-	case toCity = 1
-	case sizePackage = 2
+enum CustomControlFieldType: Int {
+	case city = 0
+	case sizePackage = 1
 }
 
-struct CustomSelectedFieldConfig {
-	let tagType: SelectedFieldTagType
-	let label: String
+struct CustomControlFieldConfig {
+	let tagType: CustomControlFieldType
 	let placeholder: String
 	let leftIconName: String
 }
 
-final class CustomSelectedField: UIControl {
+final class CustomControlField: UIControl {
 	
-	weak var delegate: ICustomSelectedField?
+	weak var delegate: ICustomControlField?
 	
-	private let titleLabelField = UILabel()
 	private let stackView = UIStackView()
 	
 	override init(frame: CGRect) {
@@ -31,12 +29,8 @@ final class CustomSelectedField: UIControl {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
-	func makeComponent(using config: CustomSelectedFieldConfig)  {
+	func makeComponent(using config: CustomControlFieldConfig)  {
 		layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 8, right: 0)
-		
-		titleLabelField.text = config.label
-		titleLabelField.textColor = ContentColor.textSelectedFieldColor
-		titleLabelField.font = UIFont.systemFont(ofSize: 14, weight: .medium)
 		
 		let spacerView: UIView = {
 			let spacer = UIView()
@@ -62,7 +56,7 @@ final class CustomSelectedField: UIControl {
 		let placeholderLabel: UILabel = {
 			let label = UILabel()
 			label.text = config.placeholder
-			label.textColor = ContentColor.textSelectedFieldColor
+			label.textColor = ContentColor.text
 			return label
 		}()
 		
@@ -79,6 +73,7 @@ final class CustomSelectedField: UIControl {
 		)
 		stackView.isLayoutMarginsRelativeArrangement = true
 		stackView.isUserInteractionEnabled = false
+		stackView.tag = config.tagType.rawValue
 		
 		[
 			leftImageView,
@@ -96,21 +91,22 @@ final class CustomSelectedField: UIControl {
 	
 	@objc
 	func didTap() {
-		delegate?.didTapSelectedField()
+		
+		switch stackView.tag {
+		case 0:
+			delegate?.didTapCitySelectedField()
+		case 1:
+			delegate?.didTapPackageSizeField()
+		default:
+			break
+		}
 	}
 	
 	func configureConstraints() {
-		addSubview(titleLabelField)
 		addSubview(stackView)
 		
-		titleLabelField.snp.makeConstraints {
-			$0.top.equalTo(layoutMarginsGuide.snp.top)
-			$0.leading.equalTo(layoutMarginsGuide.snp.leading)
-			$0.trailing.equalTo(layoutMarginsGuide.snp.trailing)
-		}
-		
 		stackView.snp.makeConstraints {
-			$0.top.equalTo(titleLabelField.snp.bottom).offset(4)
+			$0.top.equalTo(layoutMarginsGuide)
 			$0.bottom.equalTo(layoutMarginsGuide)
 			$0.leading.equalTo(layoutMarginsGuide)
 			$0.trailing.equalTo(layoutMarginsGuide)
