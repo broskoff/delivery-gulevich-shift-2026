@@ -8,9 +8,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			   willConnectTo session: UISceneSession,
 			   options connectionOptions: UIScene.ConnectionOptions) {
 		
-		guard let scene = (scene as? UIWindowScene) else { return }
+		guard let windowScene = (scene as? UIWindowScene) else { return }
 		
-		appCoordinator = AppCoordinator(scene: scene)
+		appCoordinator = AppCoordinator(scene: windowScene)
 		appCoordinator?.start()
 	}
 }

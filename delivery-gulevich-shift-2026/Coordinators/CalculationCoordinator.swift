@@ -46,6 +46,17 @@ extension CalculationCoordinator: ICalculationPresenterOutput {
 		citySelectionCoordinator.start()
 	}
 	
+	func showPackageSize() {
+		let packageSize = PackageSizeViewController()
+		
+		let sheet = packageSize.sheetPresentationController
+		sheet?.detents = [.medium()]
+		
+		packageSize.modalPresentationStyle = .pageSheet
+		
+		navigationController.present(packageSize, animated: true)
+	}
+	
 	func childDidFinish(child: MethodOfSendCoordinator?) {
 		for (index, coordinator) in childCoordinators.enumerated() {
 			if coordinator === child {
