@@ -10,9 +10,9 @@ final class AppCoordinator: IAppCoordinator {
 	}
 	
 	func start() {
-		let tabBarController = mainCoordinator.start()
+		mainCoordinator.start()
 		
-		window.rootViewController = tabBarController
+		window.rootViewController = mainCoordinator.tabBarController
 //		let vc = TestViewController()
 //		window.rootViewController = vc
 		window.makeKeyAndVisible()

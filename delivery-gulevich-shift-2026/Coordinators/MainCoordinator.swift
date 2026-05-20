@@ -3,12 +3,11 @@ import UIKit
 
 final class MainCoordinator {
 	
-	let assembly = MainAssembly()
+	private(set) var tabBarController = UITabBarController()
+	private let assembly = MainAssembly()
 	private var coordinators: [ICoordinator] = []
 	
-	func start() -> UITabBarController {
-		
-		let tabBarController = UITabBarController()
+	func start() {
 		
 		let calculationNavigationController = UINavigationController()
 		let historyNavigationController = UINavigationController()
@@ -42,8 +41,6 @@ final class MainCoordinator {
 			historyNavigationController,
 			profileNavigationController
 		]
-		
-		return tabBarController
 	}
 	
 	deinit {
