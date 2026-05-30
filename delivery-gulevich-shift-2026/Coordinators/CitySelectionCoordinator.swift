@@ -1,7 +1,7 @@
 import UIKit
 //навигацию назад не забудь
 
-final class CitySelectionCoordinator: ICoordinator {
+final class CitySelectionCoordinator: CoordinatorProtocol {
 	
 	weak var parentCoordinator: CalculationCoordinator?
 	let citySelectionAssembly = CitySelectionAssembly()

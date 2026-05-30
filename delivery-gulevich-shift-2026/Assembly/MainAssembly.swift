@@ -1,6 +1,6 @@
 import UIKit
 
-protocol IMainAssembly: AnyObject {
+protocol MainAssemblyProtocol: AnyObject {
 	
 	func buildCalculationScreen(output: ICalculationPresenterOutput) -> UIViewController
 	
@@ -9,7 +9,7 @@ protocol IMainAssembly: AnyObject {
 	func buildProfileScreen(output: IProfilePresenterOutput) -> UIViewController
 }
 
-final class MainAssembly: IMainAssembly {
+final class MainAssembly: MainAssemblyProtocol {
 	
 	func buildCalculationScreen(output: ICalculationPresenterOutput) -> UIViewController {
 		let calculationPresenter = CalculationPresenter(output: output)

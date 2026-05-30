@@ -5,7 +5,7 @@ final class MainCoordinator {
 	
 	private(set) var tabBarController = UITabBarController()
 	private let assembly = MainAssembly()
-	private var coordinators: [ICoordinator] = []
+	private var coordinators: [CoordinatorProtocol] = []
 	
 	func start() {
 		

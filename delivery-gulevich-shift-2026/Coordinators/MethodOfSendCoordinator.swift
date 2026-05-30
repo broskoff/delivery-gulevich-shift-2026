@@ -1,12 +1,12 @@
 import Foundation
 import UIKit
 
-final class MethodOfSendCoordinator: ICoordinator {
+final class MethodOfSendCoordinator: CoordinatorProtocol {
 	
 	weak var parentCoordinator: CalculationCoordinator?
 	var methodOfSendAssembly = MethodOfSendAssembly()
 	var navigationController: UINavigationController
-	var childCoordinators: [ICoordinator] = []
+	var childCoordinators: [CoordinatorProtocol] = []
 	
 	init(
 		parentCoordinator: CalculationCoordinator?,

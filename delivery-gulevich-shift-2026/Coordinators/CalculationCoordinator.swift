@@ -1,13 +1,16 @@
 import UIKit
 
-final class CalculationCoordinator: NSObject, ICoordinator {
+final class CalculationCoordinator: NSObject, CoordinatorProtocol {
 	
 	let navigationController: UINavigationController
-	let assembly: IMainAssembly
+	let assembly: MainAssemblyProtocol
 	
-	var childCoordinators: [ICoordinator] = []
+	var childCoordinators: [CoordinatorProtocol] = []
 	
-	init(navigationController: UINavigationController, assembly: IMainAssembly) {
+	init(
+		navigationController: UINavigationController,
+		assembly: MainAssemblyProtocol
+	) {
 		self.navigationController = navigationController
 		self.assembly = assembly
 	}
@@ -33,6 +36,7 @@ extension CalculationCoordinator: ICalculationPresenterOutput {
 		)
 		
 		childCoordinators.append(methodOfSendCoordinator)
+		print(childCoordinators)
 		methodOfSendCoordinator.start()
 	}
 	

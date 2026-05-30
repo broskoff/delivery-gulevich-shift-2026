@@ -1,11 +1,11 @@
 import UIKit
 
-final class HistoryCoordinator: ICoordinator {
+final class HistoryCoordinator: CoordinatorProtocol {
 	
 	let navigationController: UINavigationController
-	let assembly: IMainAssembly
+	let assembly: MainAssemblyProtocol
 	
-	init(navigationController: UINavigationController, assembly: IMainAssembly) {
+	init(navigationController: UINavigationController, assembly: MainAssemblyProtocol) {
 		self.navigationController = navigationController
 		self.assembly = assembly
 	}

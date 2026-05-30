@@ -22,7 +22,7 @@
 		C7510CED2F4ECF4600AA968F /* CalculationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CCD2F4ECF4600AA968F /* CalculationPresenter.swift */; };
 		C7510CEE2F4ECF4600AA968F /* CalculationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CCE2F4ECF4600AA968F /* CalculationContentView.swift */; };
 		C7510CEF2F4ECF4600AA968F /* CalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CCF2F4ECF4600AA968F /* CalculationViewController.swift */; };
-		C7510CF02F4ECF4600AA968F /* ICoordinators.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD12F4ECF4600AA968F /* ICoordinators.swift */; };
+		C7510CF02F4ECF4600AA968F /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD12F4ECF4600AA968F /* CoordinatorProtocol.swift */; };
 		C7510CF12F4ECF4600AA968F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD22F4ECF4600AA968F /* MainCoordinator.swift */; };
 		C7510CF22F4ECF4600AA968F /* MethodOfSendCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD32F4ECF4600AA968F /* MethodOfSendCoordinator.swift */; };
 		C7510CF32F4ECF4600AA968F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD52F4ECF4600AA968F /* HistoryViewController.swift */; };
@@ -71,7 +71,7 @@
 		C7510CCD2F4ECF4600AA968F /* CalculationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationPresenter.swift; sourceTree = "<group>"; };
 		C7510CCE2F4ECF4600AA968F /* CalculationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationContentView.swift; sourceTree = "<group>"; };
 		C7510CCF2F4ECF4600AA968F /* CalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewController.swift; sourceTree = "<group>"; };
-		C7510CD12F4ECF4600AA968F /* ICoordinators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICoordinators.swift; sourceTree = "<group>"; };
+		C7510CD12F4ECF4600AA968F /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		C7510CD22F4ECF4600AA968F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		C7510CD32F4ECF4600AA968F /* MethodOfSendCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendCoordinator.swift; sourceTree = "<group>"; };
 		C7510CD52F4ECF4600AA968F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		C7510CD42F4ECF4600AA968F /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				C7510CD12F4ECF4600AA968F /* ICoordinators.swift */,
+				C7510CD12F4ECF4600AA968F /* CoordinatorProtocol.swift */,
 				C7B856FC2F5946A2004D6B57 /* AppCoordinator.swift */,
 				C7510CD22F4ECF4600AA968F /* MainCoordinator.swift */,
 				C7B856FE2F59514B004D6B57 /* CalculationCoordinator.swift */,
@@ -417,7 +417,7 @@
 				C7510CEE2F4ECF4600AA968F /* CalculationContentView.swift in Sources */,
 				C7BE24532F6BB8080045774E /* UIConstants.swift in Sources */,
 				C7510CEF2F4ECF4600AA968F /* CalculationViewController.swift in Sources */,
-				C7510CF02F4ECF4600AA968F /* ICoordinators.swift in Sources */,
+				C7510CF02F4ECF4600AA968F /* CoordinatorProtocol.swift in Sources */,
 				C7510CF12F4ECF4600AA968F /* MainCoordinator.swift in Sources */,
 				C7EE1E5C2F500D5700B6326F /* HistoryContentView.swift in Sources */,
 				C7510CF22F4ECF4600AA968F /* MethodOfSendCoordinator.swift in Sources */,
@@ -503,8 +503,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "delivery-gulevich-shift-2026/Supporting/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -519,6 +521,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Tatiana-Gulevich.delivery-gulevich-shift-2026";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
