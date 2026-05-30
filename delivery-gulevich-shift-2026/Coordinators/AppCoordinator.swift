@@ -1,18 +1,19 @@
 import UIKit
 
-final class AppCoordinator: IAppCoordinator {
+final class AppCoordinator: CoordinatorProtocol {
 	
-	var window: UIWindow
+	private var window: UIWindow
 	private let mainCoordinator = MainCoordinator()
 	
-	init(scene: UIWindowScene) {
-		window = UIWindow(windowScene: scene)
+	init(window: UIWindow) {
+		self.window = window
 	}
 	
 	func start() {
 		mainCoordinator.start()
 		
 		window.rootViewController = mainCoordinator.tabBarController
+//
 //		let vc = TestViewController()
 //		window.rootViewController = vc
 		window.makeKeyAndVisible()
