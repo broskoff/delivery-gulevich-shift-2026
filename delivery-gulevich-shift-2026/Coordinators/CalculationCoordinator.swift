@@ -16,6 +16,10 @@ final class CalculationCoordinator: NSObject, CoordinatorProtocol {
 	}
 	
 	func start() {
+		showScreen()
+	}
+	
+	private func showScreen() {
 		navigationController.delegate = self
 		let calculationViewController = assembly.buildCalculationScreen(output: self)
 		navigationController.viewControllers = [calculationViewController]
@@ -47,6 +51,7 @@ extension CalculationCoordinator: ICalculationPresenterOutput {
 		)
 		
 		childCoordinators.append(citySelectionCoordinator)
+		print(childCoordinators)
 		citySelectionCoordinator.start()
 	}
 	
@@ -82,8 +87,13 @@ extension CalculationCoordinator: UINavigationControllerDelegate {
 		if navigationController.viewControllers.contains(fromVC) {
 			return
 		} else {
-			//тут проблема, что если в массиве будет больше координаторов, придется находить нужный среди всех! Уйти бы от кастинга
-			childDidFinish(child: childCoordinators.first as? MethodOfSendCoordinator)
+			switch fromVC {
+			case is MethodOfSendViewController:
+				childCoordinators.removeAll { $0 is MethodOfSendCoordinator }
+			case is CitySelectionViewController:
+				childCoordinators.removeAll { $0 is CitySelectionCoordinator }
+			default: break
+			}
 		}
 	}
 }

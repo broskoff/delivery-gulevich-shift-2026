@@ -8,7 +8,10 @@ final class MainCoordinator {
 	private var coordinators: [CoordinatorProtocol] = []
 	
 	func start() {
-		
+		showTabBarContorller()
+	}
+	
+	private func showTabBarContorller() {
 		let calculationNavigationController = UINavigationController()
 		let historyNavigationController = UINavigationController()
 		let profileNavigationController = UINavigationController()

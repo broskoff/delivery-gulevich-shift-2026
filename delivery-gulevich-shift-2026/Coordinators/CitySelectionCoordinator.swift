@@ -16,14 +16,18 @@ final class CitySelectionCoordinator: CoordinatorProtocol {
 	func start() {
 		
 		let citySelectionViewController = citySelectionAssembly.createScreen(output: self)
-		
+		print("parent: \(parentCoordinator)")
 		navigationController.pushViewController(citySelectionViewController, animated: true)
+	}
+	
+	deinit {
+		print("CitySelectionCoordinator deinit")
 	}
 }
 
 extension CitySelectionCoordinator: ICitySelectionPresenterOutput {
 	//переименовать userDidFinish() когда появится конкретное действие
 	func userDidFinish() {
-//		parentCoordinator?.childDidFinish(child: self)
+		parentCoordinator?.childDidFinish(child: self)
 	}
 }

@@ -19,6 +19,7 @@ final class MethodOfSendCoordinator: CoordinatorProtocol {
 	func start() {
 		
 		let methodOfSendViewController = methodOfSendAssembly.createScreen(output: self)
+		print("parent: \(parentCoordinator)")
 		navigationController.pushViewController(methodOfSendViewController, animated: true)
 	}
 
@@ -30,6 +31,6 @@ final class MethodOfSendCoordinator: CoordinatorProtocol {
 extension MethodOfSendCoordinator: IMethodOfSendPresenterOutput {
 	//переименовать userDidFinish() когда появится конкретное действие
 	func userDidFinish() {
-//		parentCoordinator?.childDidFinish(child: self)
+		parentCoordinator?.childDidFinish(child: self)
 	}
 }
