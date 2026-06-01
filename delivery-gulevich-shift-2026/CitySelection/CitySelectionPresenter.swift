@@ -12,7 +12,7 @@ protocol ICitySelectionPresenter: AnyObject {
 
 final class CitySelectionPresenter: ICitySelectionPresenter {
 	
-	var output: ICitySelectionPresenterOutput?
+	weak var output: ICitySelectionPresenterOutput?
 	var view: CitySelectionViewController?
 	
 	init(output: ICitySelectionPresenterOutput) {
