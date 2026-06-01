@@ -66,13 +66,9 @@ extension CalculationCoordinator: ICalculationPresenterOutput {
 		navigationController.present(packageSize, animated: true)
 	}
 	
-	func childDidFinish(child: MethodOfSendCoordinator?) {
-		for (index, coordinator) in childCoordinators.enumerated() {
-			if coordinator === child {
-				childCoordinators.remove(at: index)
-				break
-			}
-		}
+	func childDidFinish(child: CoordinatorProtocol) {
+		childCoordinators.removeAll { $0 === child }
+		print("принт из метода childDidFinish в CalculationCoordinator: \(childCoordinators)")
 	}
 }
 
