@@ -11,7 +11,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		let window = UIWindow(windowScene: windowScene)
 		
-		appCoordinator = AppCoordinator(window: window)
+		let appContainer = AppContainer(window: window)
+		appCoordinator = AppCoordinator(window: window, appContainer: appContainer)
 		appCoordinator?.start()
 	}
 }
+
+
+/*
+ 
+ Закоммитить AppContainer and ThemeService
+ Разделить MainAssembly на Calculation, History, Profile. Возможно сделать фабрику и ассембли
+ Создать в ProfileView сегментКонтрол с выбором темы и реализовать нажатие кнопок и смену темы приложения.
+ 
+ */
