@@ -4,13 +4,13 @@ protocol IProfileView: AnyObject {
 	func updateView()
 }
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, ProfileContentViewDelegateProtocol {
 	
-	let profileContentView: IProfileContentView & UIView
+	let profileContentView: ProfileContentViewProtocol & UIView
 	let profilePresenter: IProfilePresenter
 	
 	init(
-		profileContentView: IProfileContentView & UIView,
+		profileContentView: ProfileContentViewProtocol & UIView,
 		profilePresenter: IProfilePresenter
 	) {
 		self.profileContentView = profileContentView
@@ -29,12 +29,18 @@ class ProfileViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		profileContentView.delegate = self
+		
 		title = "Профиль"
+	}
+	
+	func didChoiceSegment(index: Int) {
+		profilePresenter.userChoiceSegment(index: index)
 	}
 }
 
 extension ProfileViewController: IProfileView {
 	func updateView() {
-		
+//		profileContentView
 	}
 }

@@ -51,6 +51,7 @@ enum UIConstants {
 	
 	enum SectionUnderDevelopment {
 		static let label = "Раздел находится в стадии разработки"
+		static let labelTheme = "Раздел находится в стадии разработки,\n пока можно выбрать тему приложения"
 	}
 	
 	enum Spacing {
