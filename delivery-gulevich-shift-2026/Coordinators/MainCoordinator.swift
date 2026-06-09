@@ -4,8 +4,21 @@ import UIKit
 final class MainCoordinator {
 	
 	private(set) var tabBarController = UITabBarController()
-	private let assembly = MainAssembly()
 	private var coordinators: [CoordinatorProtocol] = []
+	
+	private let calculationAssembly: CalculationAssemblyProtocol 
+	private let historyAssembly: HistoryAssemblyProtocol
+	private let profileAssembly: ProfileAssemblyProtocol
+	
+	init(
+		calculationAssembly: CalculationAssemblyProtocol,
+		 historyAssembly: HistoryAssemblyProtocol,
+		 profileAssembly: ProfileAssemblyProtocol
+	) {
+		self.calculationAssembly = calculationAssembly
+		self.historyAssembly = historyAssembly
+		self.profileAssembly = profileAssembly
+	}
 	
 	func start() {
 		showTabBarContorller()
@@ -18,15 +31,15 @@ final class MainCoordinator {
 		
 		let calculationCoordinator = CalculationCoordinator(
 			navigationController: calculationNavigationController,
-			assembly: assembly
+			assembly: calculationAssembly
 		)
 		let historyCoordinator = HistoryCoordinator(
 			navigationController: historyNavigationController,
-			assembly: assembly
+			assembly: historyAssembly
 		)
 		let profileCoordinator = ProfileCoordinator(
 			navigationController: profileNavigationController,
-			assembly: assembly
+			assembly: profileAssembly
 		)
 		
 		coordinators = [

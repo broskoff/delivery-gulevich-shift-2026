@@ -3,15 +3,15 @@ import UIKit
 final class HistoryCoordinator: CoordinatorProtocol {
 	
 	let navigationController: UINavigationController
-	let assembly: MainAssemblyProtocol
+	let assembly: HistoryAssemblyProtocol
 	
-	init(navigationController: UINavigationController, assembly: MainAssemblyProtocol) {
+	init(navigationController: UINavigationController, assembly: HistoryAssemblyProtocol) {
 		self.navigationController = navigationController
 		self.assembly = assembly
 	}
 	
 	func start() {
-		let historyViewController = assembly.buildHistoryScreen(output: self)
+		let historyViewController = assembly.build(output: self)
 		navigationController.viewControllers = [historyViewController]
 		navigationController.tabBarItem = UITabBarItem(
 			title: UIConstants.TabBarItem.Title.history,

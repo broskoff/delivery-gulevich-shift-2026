@@ -3,13 +3,13 @@ import UIKit
 final class CalculationCoordinator: NSObject, CoordinatorProtocol {
 	
 	let navigationController: UINavigationController
-	let assembly: MainAssemblyProtocol
+	let assembly: CalculationAssemblyProtocol
 	
 	var childCoordinators: [CoordinatorProtocol] = []
 	
 	init(
 		navigationController: UINavigationController,
-		assembly: MainAssemblyProtocol
+		assembly: CalculationAssemblyProtocol
 	) {
 		self.navigationController = navigationController
 		self.assembly = assembly
@@ -21,7 +21,7 @@ final class CalculationCoordinator: NSObject, CoordinatorProtocol {
 	
 	private func showScreen() {
 		navigationController.delegate = self
-		let calculationViewController = assembly.buildCalculationScreen(output: self)
+		let calculationViewController = assembly.build(output: self)
 		navigationController.viewControllers = [calculationViewController]
 		navigationController.tabBarItem = UITabBarItem(
 			title: UIConstants.TabBarItem.Title.calculation,

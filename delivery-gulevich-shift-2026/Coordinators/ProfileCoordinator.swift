@@ -3,15 +3,15 @@ import UIKit
 final class ProfileCoordinator: CoordinatorProtocol {
 	
 	let navigationController: UINavigationController
-	let assembly: MainAssemblyProtocol
+	let assembly: ProfileAssemblyProtocol
 	
-	init(navigationController: UINavigationController, assembly: MainAssemblyProtocol) {
+	init(navigationController: UINavigationController, assembly: ProfileAssemblyProtocol) {
 		self.navigationController = navigationController
 		self.assembly = assembly
 	}
 	
 	func start() {
-		let profileViewController = assembly.buildProfileScreen(output: self)
+		let profileViewController = assembly.build(output: self)
 		navigationController.viewControllers = [profileViewController]
 		navigationController.tabBarItem = UITabBarItem(
 			title: UIConstants.TabBarItem.Title.profile,
