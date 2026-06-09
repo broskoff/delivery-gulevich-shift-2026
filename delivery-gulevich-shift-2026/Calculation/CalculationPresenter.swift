@@ -11,6 +11,7 @@ protocol ICalculationPresenter: AnyObject {
 	func userDidTapCalculateButton()
 	func userDidTapCitySelectionField()
 	func userDidTapPackageSizeField()
+	func userDidTapTrackButton()
 }
 
 final class CalculationPresenter: ICalculationPresenter {
@@ -32,5 +33,10 @@ final class CalculationPresenter: ICalculationPresenter {
 	
 	func userDidTapPackageSizeField() {
 		output?.showPackageSize()
+	}
+	
+	func userDidTapTrackButton() {
+		print("Нажали кнопку Найти. Это напечатано из CalculationPresenter 2")
+//		output?.
 	}
 }

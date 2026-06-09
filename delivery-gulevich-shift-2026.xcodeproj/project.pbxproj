@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C70BE6CA2FD2C06600386F5E /* CalculationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70BE6C92FD2C06600386F5E /* CalculationAssembly.swift */; };
+		C70BE6CC2FD2C26E00386F5E /* HistoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70BE6CB2FD2C26E00386F5E /* HistoryAssembly.swift */; };
+		C70BE6CE2FD2C34200386F5E /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70BE6CD2FD2C34200386F5E /* ProfileAssembly.swift */; };
 		C72F4F842F67D3CD000083FC /* MethodOfSendContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F4F832F67D3CD000083FC /* MethodOfSendContentView.swift */; };
 		C73AFA672F68F82000DB14C5 /* PersonalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA652F68F82000DB14C5 /* PersonalData.swift */; };
 		C73AFA882F69176700DB14C5 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */; };
@@ -32,12 +35,14 @@
 		C7510CF82F4ECF4600AA968F /* ContentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CE22F4ECF4600AA968F /* ContentColor.swift */; };
 		C7510CF92F4ECF4600AA968F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CE32F4ECF4600AA968F /* CustomButton.swift */; };
 		C783215A2F5564AA003144D0 /* MethodOfSendAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78321532F5564AA003144D0 /* MethodOfSendAssembly.swift */; };
-		C78321612F5569A8003144D0 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78321602F5569A8003144D0 /* MainAssembly.swift */; };
 		C7A8B75C2F74E14200ACBC95 /* PackageSizeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B75B2F74E14200ACBC95 /* PackageSizeContentView.swift */; };
 		C7A8B75E2F74E1FB00ACBC95 /* PackageSizeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B75D2F74E1FB00ACBC95 /* PackageSizeTableViewCell.swift */; };
 		C7A8B7622F74E5A400ACBC95 /* PackageSizeTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B7612F74E5A400ACBC95 /* PackageSizeTableViewDataSource.swift */; };
 		C7A8B7652F74EA4100ACBC95 /* PackageSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B7642F74EA4100ACBC95 /* PackageSizeViewController.swift */; };
 		C7A8B7672F74EE5200ACBC95 /* PackageSizeTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B7662F74EE5200ACBC95 /* PackageSizeTitleTableViewCell.swift */; };
+		C7B1F3692FCEFE5B0086A9FB /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B1F3682FCEFE5B0086A9FB /* AppTheme.swift */; };
+		C7B1F36B2FCEFE760086A9FB /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B1F36A2FCEFE760086A9FB /* ThemeService.swift */; };
+		C7B1F36D2FD1470B0086A9FB /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B1F36C2FD1470B0086A9FB /* AppContainer.swift */; };
 		C7B856FD2F5946A2004D6B57 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B856FC2F5946A2004D6B57 /* AppCoordinator.swift */; };
 		C7B856FF2F59514B004D6B57 /* CalculationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B856FE2F59514B004D6B57 /* CalculationCoordinator.swift */; };
 		C7B857012F595205004D6B57 /* HistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B857002F595205004D6B57 /* HistoryCoordinator.swift */; };
@@ -58,6 +63,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C70BE6C92FD2C06600386F5E /* CalculationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationAssembly.swift; sourceTree = "<group>"; };
+		C70BE6CB2FD2C26E00386F5E /* HistoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAssembly.swift; sourceTree = "<group>"; };
+		C70BE6CD2FD2C34200386F5E /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
 		C72F4F832F67D3CD000083FC /* MethodOfSendContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendContentView.swift; sourceTree = "<group>"; };
 		C73AFA652F68F82000DB14C5 /* PersonalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalData.swift; sourceTree = "<group>"; };
 		C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarComponent.swift; sourceTree = "<group>"; };
@@ -84,12 +92,14 @@
 		C7510CE22F4ECF4600AA968F /* ContentColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentColor.swift; sourceTree = "<group>"; };
 		C7510CE32F4ECF4600AA968F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C78321532F5564AA003144D0 /* MethodOfSendAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendAssembly.swift; sourceTree = "<group>"; };
-		C78321602F5569A8003144D0 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		C7A8B75B2F74E14200ACBC95 /* PackageSizeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSizeContentView.swift; sourceTree = "<group>"; };
 		C7A8B75D2F74E1FB00ACBC95 /* PackageSizeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSizeTableViewCell.swift; sourceTree = "<group>"; };
 		C7A8B7612F74E5A400ACBC95 /* PackageSizeTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSizeTableViewDataSource.swift; sourceTree = "<group>"; };
 		C7A8B7642F74EA4100ACBC95 /* PackageSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSizeViewController.swift; sourceTree = "<group>"; };
 		C7A8B7662F74EE5200ACBC95 /* PackageSizeTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSizeTitleTableViewCell.swift; sourceTree = "<group>"; };
+		C7B1F3682FCEFE5B0086A9FB /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		C7B1F36A2FCEFE760086A9FB /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
+		C7B1F36C2FD1470B0086A9FB /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		C7B856FC2F5946A2004D6B57 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C7B856FE2F59514B004D6B57 /* CalculationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationCoordinator.swift; sourceTree = "<group>"; };
 		C7B857002F595205004D6B57 /* HistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinator.swift; sourceTree = "<group>"; };
@@ -149,8 +159,11 @@
 		C7510CCC2F4ECF4600AA968F /* App */ = {
 			isa = PBXGroup;
 			children = (
-				C7510CCA2F4ECF4600AA968F /* AppDelegate.swift */,
 				C7510CCB2F4ECF4600AA968F /* SceneDelegate.swift */,
+				C7B1F36C2FD1470B0086A9FB /* AppContainer.swift */,
+				C7B856FC2F5946A2004D6B57 /* AppCoordinator.swift */,
+				C7510CCA2F4ECF4600AA968F /* AppDelegate.swift */,
+				C7B1F3672FCEFE480086A9FB /* Theme */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -169,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				C7510CD12F4ECF4600AA968F /* CoordinatorProtocol.swift */,
-				C7B856FC2F5946A2004D6B57 /* AppCoordinator.swift */,
 				C7510CD22F4ECF4600AA968F /* MainCoordinator.swift */,
 				C7B856FE2F59514B004D6B57 /* CalculationCoordinator.swift */,
 				C7B857002F595205004D6B57 /* HistoryCoordinator.swift */,
@@ -256,7 +268,9 @@
 		C78321552F5564AA003144D0 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				C78321602F5569A8003144D0 /* MainAssembly.swift */,
+				C70BE6C92FD2C06600386F5E /* CalculationAssembly.swift */,
+				C70BE6CB2FD2C26E00386F5E /* HistoryAssembly.swift */,
+				C70BE6CD2FD2C34200386F5E /* ProfileAssembly.swift */,
 				C78321532F5564AA003144D0 /* MethodOfSendAssembly.swift */,
 				C7BD59152F6FC20400E8C6AB /* CitySelectionAssembly.swift */,
 			);
@@ -281,6 +295,15 @@
 				C7A8B7662F74EE5200ACBC95 /* PackageSizeTitleTableViewCell.swift */,
 			);
 			path = PackageSizeContentView;
+			sourceTree = "<group>";
+		};
+		C7B1F3672FCEFE480086A9FB /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				C7B1F3682FCEFE5B0086A9FB /* AppTheme.swift */,
+				C7B1F36A2FCEFE760086A9FB /* ThemeService.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		C7BD59122F6FBF9600E8C6AB /* CitySelectionContentView */ = {
@@ -408,6 +431,7 @@
 				C7510CEB2F4ECF4600AA968F /* AppDelegate.swift in Sources */,
 				C7A8B75E2F74E1FB00ACBC95 /* PackageSizeTableViewCell.swift in Sources */,
 				C73AFAE02F6A996E00DB14C5 /* DeliveryMethodStackFactory.swift in Sources */,
+				C70BE6CA2FD2C06600386F5E /* CalculationAssembly.swift in Sources */,
 				C73AFA8F2F6A5BB000DB14C5 /* AdvBannerFactory.swift in Sources */,
 				C73AFA902F6A5BB000DB14C5 /* AdvBannerLabelFactory.swift in Sources */,
 				C7510CEC2F4ECF4600AA968F /* SceneDelegate.swift in Sources */,
@@ -421,6 +445,8 @@
 				C7510CF12F4ECF4600AA968F /* MainCoordinator.swift in Sources */,
 				C7EE1E5C2F500D5700B6326F /* HistoryContentView.swift in Sources */,
 				C7510CF22F4ECF4600AA968F /* MethodOfSendCoordinator.swift in Sources */,
+				C7B1F36B2FCEFE760086A9FB /* ThemeService.swift in Sources */,
+				C7B1F36D2FD1470B0086A9FB /* AppContainer.swift in Sources */,
 				C7A8B7652F74EA4100ACBC95 /* PackageSizeViewController.swift in Sources */,
 				C7BD59592F74204200E8C6AB /* CustomControlLabel.swift in Sources */,
 				C7510CF32F4ECF4600AA968F /* HistoryViewController.swift in Sources */,
@@ -428,6 +454,7 @@
 				C73AFA882F69176700DB14C5 /* ProgressBarComponent.swift in Sources */,
 				C7BD59162F6FC20400E8C6AB /* CitySelectionAssembly.swift in Sources */,
 				C7B857032F595239004D6B57 /* ProfileCoordinator.swift in Sources */,
+				C70BE6CC2FD2C26E00386F5E /* HistoryAssembly.swift in Sources */,
 				C7B856FD2F5946A2004D6B57 /* AppCoordinator.swift in Sources */,
 				C7454F2C2F501CAC008A5D93 /* ProfileContentView.swift in Sources */,
 				C7510CF62F4ECF4600AA968F /* MethodOfSendViewController.swift in Sources */,
@@ -436,6 +463,8 @@
 				C783215A2F5564AA003144D0 /* MethodOfSendAssembly.swift in Sources */,
 				C7B856FF2F59514B004D6B57 /* CalculationCoordinator.swift in Sources */,
 				C7B857012F595205004D6B57 /* HistoryCoordinator.swift in Sources */,
+				C70BE6CE2FD2C34200386F5E /* ProfileAssembly.swift in Sources */,
+				C7B1F3692FCEFE5B0086A9FB /* AppTheme.swift in Sources */,
 				C7EE1E5E2F500D6600B6326F /* HistoryPresenter.swift in Sources */,
 				C73AFA672F68F82000DB14C5 /* PersonalData.swift in Sources */,
 				C7BE24AB2F6D8ECD0045774E /* CitySelectionTableViewDataSource.swift in Sources */,
@@ -443,7 +472,6 @@
 				C7510CF72F4ECF4600AA968F /* ProfileViewController.swift in Sources */,
 				C7510CF82F4ECF4600AA968F /* ContentColor.swift in Sources */,
 				C7A8B7622F74E5A400ACBC95 /* PackageSizeTableViewDataSource.swift in Sources */,
-				C78321612F5569A8003144D0 /* MainAssembly.swift in Sources */,
 				C7BE24A32F6D888E0045774E /* CitySelectionViewController.swift in Sources */,
 				C7454F2E2F501CDC008A5D93 /* ProfilePresenter.swift in Sources */,
 				C7A8B75C2F74E14200ACBC95 /* PackageSizeContentView.swift in Sources */,

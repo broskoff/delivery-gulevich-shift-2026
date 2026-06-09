@@ -4,10 +4,10 @@ protocol ICalculationView : AnyObject {
 	func updateView()
 }
 
-class CalculationViewController: UIViewController, ICalculationContentViewDelegate {
+final class CalculationViewController: UIViewController {
 		
 	private let calculationContentView: UIView & ICalculationContentView
-	let presenter: ICalculationPresenter
+	private let presenter: ICalculationPresenter
 	
 	init(
 		calculationContentView: UIView & ICalculationContentView,
@@ -30,27 +30,23 @@ class CalculationViewController: UIViewController, ICalculationContentViewDelega
 		super.viewDidLoad()
 		
 		calculationContentView.delegate = self
-		
-		let backButton = UIBarButtonItem(
-				image: UIImage(systemName: ""),
-				style: .plain,
-				target: nil,
-				action: nil
-			)
-			
-			navigationItem.backBarButtonItem = backButton
+		configureBackButtonTitle()
 	}
 	
-	func didTapButtonCalcDelivery() {
-		presenter.userDidTapCalculateButton()
-	}
-	
-	func didTapButtonTrack() {
-		presenter.userDidTapCitySelectionField()
+	private func configureBackButtonTitle() {
+		navigationItem.backButtonDisplayMode = .minimal
 	}
 }
 
-extension CalculationViewController: ICustomControlField {
+extension CalculationViewController: ICalculationContentViewDelegate {
+	func didTapCalculateDelivery() {
+		presenter.userDidTapCalculateButton()
+	}
+	
+	func didTapTrackParcel() {
+		print("Нажали кнопку Найти. Это напечатано из CalculationViewController 1")
+		presenter.userDidTapTrackButton()
+	}
 	
 	func didTapCitySelectedField() {
 		presenter.userDidTapCitySelectionField()

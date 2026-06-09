@@ -2,8 +2,8 @@ import UIKit
 import SnapKit
 
 protocol ICalculationContentViewDelegate: AnyObject {
-	func didTapButtonCalcDelivery()
-	func didTapButtonTrack()
+	func didTapCalculateDelivery()
+	func didTapTrackParcel()
 	
 	func didTapCitySelectedField()
 	func didTapPackageSizeField()
@@ -293,7 +293,8 @@ private extension CalculationContentView {
 	//MARK: Действие кнопки "Найти"
 	@objc
 	func buttonTrackTapped() {
-	
+		delegate?.didTapTrackParcel()
+	print("нажали кнопку Найти. Это напечатано из CalculationContentView 3")
 	}
 }
 
@@ -324,7 +325,7 @@ private extension CalculationContentView {
 	
 	@objc
 	func buttonCalcDeliveryTapped() {
-		delegate?.didTapButtonCalcDelivery()
+		delegate?.didTapCalculateDelivery()
 	}
 }
 
