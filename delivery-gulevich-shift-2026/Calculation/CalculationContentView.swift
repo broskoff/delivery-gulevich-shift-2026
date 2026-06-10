@@ -22,8 +22,8 @@ final class CalculationContentView: UIView, ICalculationContentView {
 	private let contentView = UIView()
 	private let mainStackView = UIStackView()
 	
-	private let titleStackView = UIStackView()
-	private let calculationStackView = UIStackView()
+	private let headerStackView = UIStackView()
+	private let deliveryСalculationStackView = UIStackView()
 	private let trackStackView = UIStackView()
 	
 	override init(frame: CGRect) {
@@ -43,50 +43,47 @@ private extension CalculationContentView {
 		
 		backgroundColor = ContentColor.calculateViewBackground
 		
-		configureView()
-		
-		configureTopView()
-		
+		setupHierarchy()
+		configureHeader()
 		configureScrollView()
-		
-		configureContentView()
-		
 		configureMainStackView()
 		
-		configureTitleStackView()
+		configureDeliveryСalculationStackView()
+		configureLabelCalculateDelivery()
 		
-		configureTitleLabels()
-		
-		configureCalculationStackView()
-		
-		configureLabelCalcDelivery()
-		
-		configureUserFields()
+		configureShipmentFields()
 		
 		configureButtonCalcDelivery()
 		
 		configureTrackStackView()
-		
 		configureTrackLabel()
-		
 		configureTrackTextField()
-		
 		configureButtonTrack()
-		
 		configurePromoStackView()
 	}
 	
-	func configureView() {
+	func setupHierarchy() {
 		addSubview(topView)
 		addSubview(scrollView)
 		
+		topView.addSubview(headerStackView)
+		
 		scrollView.addSubview(contentView)
 		contentView.addSubview(mainStackView)
+		
+		mainStackView.addArrangedSubview(deliveryСalculationStackView)
+		mainStackView.addArrangedSubview(trackStackView)
+	}
+}
+
+private extension CalculationContentView {
+	func configureHeader() {
+		setupConstraintsTopView()
+		configureTitleStackView()
+		configureTitleLabels()
 	}
 	
-	func configureTopView() {
-		topView.addSubview(titleStackView)
-		
+	func setupConstraintsTopView() {
 		topView.snp.makeConstraints {
 			$0.top.equalToSuperview().offset(64)
 			$0.leading.trailing.equalToSuperview()
@@ -94,42 +91,11 @@ private extension CalculationContentView {
 		}
 	}
 	
-	func configureScrollView() {
-		scrollView.bouncesHorizontally = false
-		scrollView.alwaysBounceVertical = true
-		
-		scrollView.snp.makeConstraints {
-			$0.top.equalTo(topView.snp.bottom)
-			$0.leading.trailing.equalToSuperview()
-			$0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
-		}
-	}
-	
-	func configureContentView() {
-		contentView.snp.makeConstraints {
-			$0.edges.equalToSuperview()
-			$0.width.equalToSuperview()
-		}
-	}
-	
-	func configureMainStackView() {
-		mainStackView.axis = .vertical
-		mainStackView.spacing = UIConstants.Spacing.medium
-		
-		mainStackView.snp.makeConstraints {
-			$0.top.leading.trailing.equalToSuperview().inset(UIConstants.Inset.small)
-			$0.bottom.equalToSuperview().inset(UIConstants.Inset.small)
-		}
-	}
-}
-
-private extension CalculationContentView {
-	
 	func configureTitleStackView() {
-		titleStackView.axis = .vertical
-		titleStackView.spacing = UIConstants.Spacing.extraSmall
+		headerStackView.axis = .vertical
+		headerStackView.spacing = UIConstants.Spacing.extraSmall
 		
-		titleStackView.snp.makeConstraints {
+		headerStackView.snp.makeConstraints {
 			$0.top.equalToSuperview()
 			$0.leading.trailing.equalToSuperview().inset(UIConstants.Inset.small)
 		}
@@ -139,8 +105,8 @@ private extension CalculationContentView {
 		let titleLabel = UILabel()
 		let subtitleLabel = UILabel()
 		
-		titleStackView.addArrangedSubview(titleLabel)
-		titleStackView.addArrangedSubview(subtitleLabel)
+		headerStackView.addArrangedSubview(titleLabel)
+		headerStackView.addArrangedSubview(subtitleLabel)
 		
 		titleLabel.text = UIConstants.Calculation.HeaderNames.title
 		titleLabel.numberOfLines = 0
@@ -151,27 +117,66 @@ private extension CalculationContentView {
 		subtitleLabel.numberOfLines = 2
 		subtitleLabel.textColor = ContentColor.subTitleColor
 	}
-	
-	func configureCalculationStackView() {
-		mainStackView.addArrangedSubview(calculationStackView)
+}
+
+private extension CalculationContentView {
+	func configureScrollView() {
+		scrollView.bouncesHorizontally = false
+		scrollView.alwaysBounceVertical = true
 		
-		calculationStackView.backgroundColor = .white
-		calculationStackView.axis = .vertical
-		calculationStackView.spacing = UIConstants.Spacing.medium
-		
-		calculationStackView.layer.cornerRadius = UIConstants.Layer.CornerRadius.medium
-		
-		calculationStackView.isLayoutMarginsRelativeArrangement = true
-		calculationStackView.layoutMargins = .init(top: 32, left: 16, bottom: 32, right: 16)
+		setupConstraintsScrollView()
+		setupConstraintsContentView()
 	}
 	
-	func configureLabelCalcDelivery() {
+	func setupConstraintsScrollView() {
+		scrollView.snp.makeConstraints {
+			$0.top.equalTo(topView.snp.bottom)
+			$0.leading.trailing.equalToSuperview()
+			$0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
+		}
+	}
+	
+	func setupConstraintsContentView() {
+		contentView.snp.makeConstraints {
+			$0.edges.equalToSuperview()
+			$0.width.equalToSuperview()
+		}
+	}
+	
+	func configureMainStackView() {
+		mainStackView.axis = .vertical
+		mainStackView.spacing = UIConstants.Spacing.medium
+		
+		setupConstraintsMainStackView()
+	}
+	
+	func setupConstraintsMainStackView() {
+		mainStackView.snp.makeConstraints {
+			$0.top.leading.trailing.equalToSuperview().inset(UIConstants.Inset.small)
+			$0.bottom.equalToSuperview().inset(UIConstants.Inset.small)
+		}
+	}
+}
+	
+private extension CalculationContentView {
+	func configureDeliveryСalculationStackView() {
+		deliveryСalculationStackView.backgroundColor = .white
+		deliveryСalculationStackView.axis = .vertical
+		deliveryСalculationStackView.spacing = UIConstants.Spacing.medium
+		
+		deliveryСalculationStackView.layer.cornerRadius = UIConstants.Layer.CornerRadius.medium
+		
+		deliveryСalculationStackView.isLayoutMarginsRelativeArrangement = true
+		deliveryСalculationStackView.layoutMargins = .init(top: 32, left: 16, bottom: 32, right: 16)
+	}
+	
+	func configureLabelCalculateDelivery() {
 		let label = UILabel()
 		label.text = UIConstants.Calculation.CardNames.calculate
 		label.textAlignment = .center
 		label.font = .systemFont(ofSize: 30, weight: .bold)
 		
-		calculationStackView.addArrangedSubview(label)
+		deliveryСalculationStackView.addArrangedSubview(label)
 	}
 }
 
@@ -226,15 +231,13 @@ private extension CalculationContentView {
 			stackView.addArrangedSubview($0)
 		}
 		
-		calculationStackView.addArrangedSubview(stackView)
+		deliveryСalculationStackView.addArrangedSubview(stackView)
 	}
 }
 
 private extension CalculationContentView {
 	
 	func configureTrackStackView() {
-		mainStackView.addArrangedSubview(trackStackView)
-		
 		trackStackView.backgroundColor = .white
 		trackStackView.axis = .vertical
 		trackStackView.spacing = UIConstants.Spacing.large
@@ -276,7 +279,11 @@ private extension CalculationContentView {
 	}
 	
 	func configureButtonTrack() {
-		let button = CustomButton.makeButton(setTitle: UIConstants.Calculation.ButtonNames.find)
+		let button = CustomButtonFactory.make(withTitle: UIConstants.Calculation.ButtonNames.find)
+		
+		button.snp.makeConstraints {
+			$0.height.equalTo(56)
+		}
 		
 		trackStackView.addArrangedSubview(button)
 		
@@ -288,7 +295,7 @@ private extension CalculationContentView {
 	@objc
 	func buttonTrackTapped() {
 		delegate?.didTapTrackParcel()
-	print("нажали кнопку Найти. Это напечатано из CalculationContentView 3")
+		print("нажали кнопку Найти. Это напечатано из CalculationContentView 3")
 	}
 }
 
@@ -310,9 +317,13 @@ private extension CalculationContentView {
 private extension CalculationContentView {
 	
 	func configureButtonCalcDelivery() {
-		let button = CustomButton.makeButton(setTitle: UIConstants.Calculation.ButtonNames.calculate)
+		let button = CustomButtonFactory.make(withTitle: UIConstants.Calculation.ButtonNames.calculate)
 		
-		calculationStackView.addArrangedSubview(button)
+		button.snp.makeConstraints {
+			$0.height.equalTo(56)
+		}
+		
+		deliveryСalculationStackView.addArrangedSubview(button)
 		
 		button.addTarget(self, action: #selector(buttonCalcDeliveryTapped), for: .touchUpInside)
 	}
@@ -324,7 +335,7 @@ private extension CalculationContentView {
 }
 
 //MARK: "Выбрать город или Размер посылки"
-extension CalculationContentView: ICustomControlField {
+extension CalculationContentView: SelectionFieldProtocol {
 	func didTapCitySelectedField() {
 		
 		delegate?.didTapCitySelectedField()
