@@ -1,23 +1,24 @@
 import UIKit
-protocol ICustomControlField: AnyObject {
+protocol SelectionFieldProtocol: AnyObject {
 	func didTapCitySelectedField()
 	func didTapPackageSizeField()
 }
 
-enum CustomControlFieldType: Int {
-	case city = 0
-	case sizePackage = 1
+enum SelectionFieldType: Int {
+	case departureCity = 0
+	case destinationCity = 1
+	case sizePackage = 2
 }
 
-struct CustomControlFieldConfig {
-	let tagType: CustomControlFieldType
+struct SelectionFieldConfig {
+	let tagType: SelectionFieldType
 	let placeholder: String
 	let leftIconName: String
 }
 
-final class CustomControlField: UIControl {
+final class SelectionField: UIControl {
 	
-	weak var delegate: ICustomControlField?
+	weak var delegate: SelectionFieldProtocol?
 	
 	private let stackView = UIStackView()
 	
@@ -29,7 +30,7 @@ final class CustomControlField: UIControl {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
-	func makeComponent(using config: CustomControlFieldConfig)  {
+	func makeComponent(using config: SelectionFieldConfig)  {
 		layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 8, right: 0)
 		
 		let spacerView: UIView = {
@@ -96,6 +97,8 @@ final class CustomControlField: UIControl {
 		case 0:
 			delegate?.didTapCitySelectedField()
 		case 1:
+			delegate?.didTapCitySelectedField()
+		case 2:
 			delegate?.didTapPackageSizeField()
 		default:
 			break

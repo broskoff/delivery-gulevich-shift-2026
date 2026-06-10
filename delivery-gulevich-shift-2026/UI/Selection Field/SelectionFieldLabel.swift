@@ -1,6 +1,6 @@
 import UIKit
 
-final class CustomControlLabel: UIView {
+final class SelectionFieldLabel: UIView {
 	
 	var label = UILabel()
 	

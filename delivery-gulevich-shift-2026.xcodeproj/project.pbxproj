@@ -33,7 +33,8 @@
 		C7510CF62F4ECF4600AA968F /* MethodOfSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD92F4ECF4600AA968F /* MethodOfSendViewController.swift */; };
 		C7510CF72F4ECF4600AA968F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CDB2F4ECF4600AA968F /* ProfileViewController.swift */; };
 		C7510CF82F4ECF4600AA968F /* ContentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CE22F4ECF4600AA968F /* ContentColor.swift */; };
-		C7510CF92F4ECF4600AA968F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CE32F4ECF4600AA968F /* CustomButton.swift */; };
+		C7510CF92F4ECF4600AA968F /* CustomButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CE32F4ECF4600AA968F /* CustomButtonFactory.swift */; };
+		C75A24BE2FD983CA0085700A /* FormFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75A24BD2FD983CA0085700A /* FormFieldFactory.swift */; };
 		C783215A2F5564AA003144D0 /* MethodOfSendAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78321532F5564AA003144D0 /* MethodOfSendAssembly.swift */; };
 		C7A8B75C2F74E14200ACBC95 /* PackageSizeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B75B2F74E14200ACBC95 /* PackageSizeContentView.swift */; };
 		C7A8B75E2F74E1FB00ACBC95 /* PackageSizeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B75D2F74E1FB00ACBC95 /* PackageSizeTableViewCell.swift */; };
@@ -49,8 +50,8 @@
 		C7B857032F595239004D6B57 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B857022F595239004D6B57 /* ProfileCoordinator.swift */; };
 		C7BD59142F6FC01900E8C6AB /* CitySelectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD59132F6FC01900E8C6AB /* CitySelectionCoordinator.swift */; };
 		C7BD59162F6FC20400E8C6AB /* CitySelectionAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD59152F6FC20400E8C6AB /* CitySelectionAssembly.swift */; };
-		C7BD59372F722FB400E8C6AB /* CustomControlField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD59362F722FB400E8C6AB /* CustomControlField.swift */; };
-		C7BD59592F74204200E8C6AB /* CustomControlLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD59582F74204200E8C6AB /* CustomControlLabel.swift */; };
+		C7BD59372F722FB400E8C6AB /* SelectionField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD59362F722FB400E8C6AB /* SelectionField.swift */; };
+		C7BD59592F74204200E8C6AB /* SelectionFieldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD59582F74204200E8C6AB /* SelectionFieldLabel.swift */; };
 		C7BE24532F6BB8080045774E /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE24522F6BB8080045774E /* UIConstants.swift */; };
 		C7BE24A32F6D888E0045774E /* CitySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE24A22F6D888E0045774E /* CitySelectionViewController.swift */; };
 		C7BE24A52F6D88A70045774E /* CitySelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE24A42F6D88A70045774E /* CitySelectionPresenter.swift */; };
@@ -90,7 +91,8 @@
 		C7510CDE2F4ECF4600AA968F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7510CDF2F4ECF4600AA968F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7510CE22F4ECF4600AA968F /* ContentColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentColor.swift; sourceTree = "<group>"; };
-		C7510CE32F4ECF4600AA968F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		C7510CE32F4ECF4600AA968F /* CustomButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonFactory.swift; sourceTree = "<group>"; };
+		C75A24BD2FD983CA0085700A /* FormFieldFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldFactory.swift; sourceTree = "<group>"; };
 		C78321532F5564AA003144D0 /* MethodOfSendAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendAssembly.swift; sourceTree = "<group>"; };
 		C7A8B75B2F74E14200ACBC95 /* PackageSizeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSizeContentView.swift; sourceTree = "<group>"; };
 		C7A8B75D2F74E1FB00ACBC95 /* PackageSizeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSizeTableViewCell.swift; sourceTree = "<group>"; };
@@ -106,8 +108,8 @@
 		C7B857022F595239004D6B57 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		C7BD59132F6FC01900E8C6AB /* CitySelectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionCoordinator.swift; sourceTree = "<group>"; };
 		C7BD59152F6FC20400E8C6AB /* CitySelectionAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionAssembly.swift; sourceTree = "<group>"; };
-		C7BD59362F722FB400E8C6AB /* CustomControlField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControlField.swift; sourceTree = "<group>"; };
-		C7BD59582F74204200E8C6AB /* CustomControlLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControlLabel.swift; sourceTree = "<group>"; };
+		C7BD59362F722FB400E8C6AB /* SelectionField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionField.swift; sourceTree = "<group>"; };
+		C7BD59582F74204200E8C6AB /* SelectionFieldLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionFieldLabel.swift; sourceTree = "<group>"; };
 		C7BE24522F6BB8080045774E /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 		C7BE24A22F6D888E0045774E /* CitySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionViewController.swift; sourceTree = "<group>"; };
 		C7BE24A42F6D88A70045774E /* CitySelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionPresenter.swift; sourceTree = "<group>"; };
@@ -236,11 +238,11 @@
 		C7510CE62F4ECF4600AA968F /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				C7BD59572F74201D00E8C6AB /* CustomControlField */,
+				C7BD59572F74201D00E8C6AB /* Selection Field */,
 				C73AFADE2F6A991700DB14C5 /* MethodOfSendStack */,
 				C73AFA8E2F6A5BB000DB14C5 /* AdvBanner */,
 				C7510CE22F4ECF4600AA968F /* ContentColor.swift */,
-				C7510CE32F4ECF4600AA968F /* CustomButton.swift */,
+				C7510CE32F4ECF4600AA968F /* CustomButtonFactory.swift */,
 				C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */,
 				C7BE24522F6BB8080045774E /* UIConstants.swift */,
 			);
@@ -316,13 +318,14 @@
 			path = CitySelectionContentView;
 			sourceTree = "<group>";
 		};
-		C7BD59572F74201D00E8C6AB /* CustomControlField */ = {
+		C7BD59572F74201D00E8C6AB /* Selection Field */ = {
 			isa = PBXGroup;
 			children = (
-				C7BD59362F722FB400E8C6AB /* CustomControlField.swift */,
-				C7BD59582F74204200E8C6AB /* CustomControlLabel.swift */,
+				C7BD59362F722FB400E8C6AB /* SelectionField.swift */,
+				C7BD59582F74204200E8C6AB /* SelectionFieldLabel.swift */,
+				C75A24BD2FD983CA0085700A /* FormFieldFactory.swift */,
 			);
-			path = CustomControlField;
+			path = "Selection Field";
 			sourceTree = "<group>";
 		};
 		C7BE24A12F6D87290045774E /* CitySelection */ = {
@@ -436,7 +439,8 @@
 				C73AFA902F6A5BB000DB14C5 /* AdvBannerLabelFactory.swift in Sources */,
 				C7510CEC2F4ECF4600AA968F /* SceneDelegate.swift in Sources */,
 				C7BE24A72F6D88BC0045774E /* CitySelectionContentView.swift in Sources */,
-				C7BD59372F722FB400E8C6AB /* CustomControlField.swift in Sources */,
+				C75A24BE2FD983CA0085700A /* FormFieldFactory.swift in Sources */,
+				C7BD59372F722FB400E8C6AB /* SelectionField.swift in Sources */,
 				C7510CED2F4ECF4600AA968F /* CalculationPresenter.swift in Sources */,
 				C7510CEE2F4ECF4600AA968F /* CalculationContentView.swift in Sources */,
 				C7BE24532F6BB8080045774E /* UIConstants.swift in Sources */,
@@ -448,7 +452,7 @@
 				C7B1F36B2FCEFE760086A9FB /* ThemeService.swift in Sources */,
 				C7B1F36D2FD1470B0086A9FB /* AppContainer.swift in Sources */,
 				C7A8B7652F74EA4100ACBC95 /* PackageSizeViewController.swift in Sources */,
-				C7BD59592F74204200E8C6AB /* CustomControlLabel.swift in Sources */,
+				C7BD59592F74204200E8C6AB /* SelectionFieldLabel.swift in Sources */,
 				C7510CF32F4ECF4600AA968F /* HistoryViewController.swift in Sources */,
 				C7510CF42F4ECF4600AA968F /* MethodOfSendPresenter.swift in Sources */,
 				C73AFA882F69176700DB14C5 /* ProgressBarComponent.swift in Sources */,
@@ -476,7 +480,7 @@
 				C7454F2E2F501CDC008A5D93 /* ProfilePresenter.swift in Sources */,
 				C7A8B75C2F74E14200ACBC95 /* PackageSizeContentView.swift in Sources */,
 				C7BD59142F6FC01900E8C6AB /* CitySelectionCoordinator.swift in Sources */,
-				C7510CF92F4ECF4600AA968F /* CustomButton.swift in Sources */,
+				C7510CF92F4ECF4600AA968F /* CustomButtonFactory.swift in Sources */,
 				C72F4F842F67D3CD000083FC /* MethodOfSendContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
