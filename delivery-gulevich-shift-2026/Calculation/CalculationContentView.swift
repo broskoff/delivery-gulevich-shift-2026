@@ -176,45 +176,42 @@ private extension CalculationContentView {
 }
 
 private extension CalculationContentView {
-	func configureUserFields() {
-		let departureCityLabel = CustomControlLabel()
-		departureCityLabel.create(withText: "Город отправки")
-		
-		let departureCityField = CustomControlField()
-		departureCityField.delegate = self
-		let departureCityConfig = CustomControlFieldConfig(
-			tagType: .city,
+	func configureShipmentFields() {
+		let departureCityConfig = SelectionFieldConfig(
+			tagType: .departureCity,
 			placeholder: "Выберите город",
 			leftIconName: "IconLocation"
 		)
 		
-		departureCityField.makeComponent(using: departureCityConfig)
+		let departureField = FormFieldFactory.make(
+			title: "Город отправки",
+			config: departureCityConfig,
+			delegate: self
+		)
 		
-		let destinationCityLabel = CustomControlLabel()
-		destinationCityLabel.create(withText: "Город назначения")
-		
-		let destinationCityField = CustomControlField()
-		destinationCityField.delegate = self
-		let destinationCityConfig = CustomControlFieldConfig(
-			tagType: .city,
+		let destinationCityConfig = SelectionFieldConfig(
+			tagType: .departureCity,
 			placeholder: "Выберите город",
 			leftIconName: "pointer"
 		)
 		
-		destinationCityField.makeComponent(using: destinationCityConfig)
+		let destinationField = FormFieldFactory.make(
+			title: "Город назначения",
+			config: destinationCityConfig,
+			delegate: self
+		)
 		
-		let sizePackageLabel = CustomControlLabel()
-		sizePackageLabel.create(withText: "Размер посылки")
-		
-		let sizePackageField = CustomControlField()
-		sizePackageField.delegate = self
-		let sizePackageConfig = CustomControlFieldConfig(
+		let sizePackageConfig = SelectionFieldConfig(
 			tagType: .sizePackage,
 			placeholder: "Конверт",
 			leftIconName: "IconEnvelope"
 		)
 		
-		sizePackageField.makeComponent(using: sizePackageConfig)
+		let sizePackageField = FormFieldFactory.make(
+			title: "Размер посылки",
+			config: sizePackageConfig,
+			delegate: self
+		)
 		
 		let stackView = UIStackView()
 		stackView.backgroundColor = .white
@@ -222,11 +219,8 @@ private extension CalculationContentView {
 		stackView.spacing = UIConstants.Spacing.medium
 		
 		[
-			departureCityLabel,
-			departureCityField,
-			destinationCityLabel,
-			destinationCityField,
-			sizePackageLabel,
+			departureField,
+			destinationField,
 			sizePackageField
 		].forEach {
 			stackView.addArrangedSubview($0)
