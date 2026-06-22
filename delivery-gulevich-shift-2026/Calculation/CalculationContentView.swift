@@ -5,12 +5,15 @@ protocol ICalculationContentViewDelegate: AnyObject {
 	func didTapCalculateDelivery()
 	func didTapTrackParcel()
 	
-	func didTapCitySelectedField()
+	func didTapDepartureCityField()
+	func didTapDestinationCityField()
 	func didTapPackageSizeField()
 }
 
 protocol ICalculationContentView : AnyObject {
 	var delegate: ICalculationContentViewDelegate? { get set }
+	
+	func updateDepartureCity(_ city: String)
 }
 
 final class CalculationContentView: UIView, ICalculationContentView {
@@ -35,6 +38,10 @@ final class CalculationContentView: UIView, ICalculationContentView {
 	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
+	}
+	
+	func updateDepartureCity(_ city: String) {
+//		MARK: Заполнить схему обновления поля Departure
 	}
 }
 
@@ -334,12 +341,19 @@ private extension CalculationContentView {
 
 //MARK: "Выбрать город или Размер посылки"
 extension CalculationContentView: SelectionFieldProtocol {
-	func didTapCitySelectedField() {
-		
-		delegate?.didTapCitySelectedField()
+	
+	func didTapDepartureCityField() {
+		delegate?.didTapDepartureCityField()
+	}
+	
+	func didTapDestinationCityField() {
+		delegate?.didTapDestinationCityField()
 	}
 	
 	func didTapPackageSizeField() {
 		delegate?.didTapPackageSizeField()
 	}
 }
+
+//MARK: Обновление cityField
+

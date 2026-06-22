@@ -3,6 +3,8 @@ import UIKit
 
 final class CitySelectionCoordinator: CoordinatorProtocol {
 	
+	var onCitySelected: ((String) -> ())?
+	
 	weak var parentCoordinator: CalculationCoordinator?
 	let citySelectionAssembly = CitySelectionAssembly()
 	var navigationController: UINavigationController
@@ -16,7 +18,7 @@ final class CitySelectionCoordinator: CoordinatorProtocol {
 	func start() {
 		
 		let citySelectionViewController = citySelectionAssembly.createScreen(output: self)
-		print("parent: \(parentCoordinator)")
+		print("parent: \(String(describing: parentCoordinator))")
 		navigationController.pushViewController(citySelectionViewController, animated: true)
 	}
 	
@@ -26,8 +28,15 @@ final class CitySelectionCoordinator: CoordinatorProtocol {
 }
 
 extension CitySelectionCoordinator: ICitySelectionPresenterOutput {
-	//переименовать userDidFinish() когда появится конкретное действие
 	func userDidFinish() {
+		
+	}
+	
+	func didSelectCity(_ city: String) {
+		onCitySelected?(city)
+		
+		navigationController.popViewController(animated: true)
+		
 		parentCoordinator?.childDidFinish(child: self)
 	}
 }

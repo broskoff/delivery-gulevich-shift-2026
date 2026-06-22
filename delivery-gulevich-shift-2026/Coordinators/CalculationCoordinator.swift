@@ -1,11 +1,16 @@
 import UIKit
 
+protocol CalculationPresenterInputProtocol: AnyObject {
+	func didSelectedDepartureCity(_ city: String)
+}
+
 final class CalculationCoordinator: NSObject, CoordinatorProtocol {
 	
 	let navigationController: UINavigationController
 	let assembly: CalculationAssemblyProtocol
 	
 	var childCoordinators: [CoordinatorProtocol] = []
+	weak var presenterInput: CalculationPresenterInputProtocol?
 	
 	init(
 		navigationController: UINavigationController,
@@ -22,7 +27,8 @@ final class CalculationCoordinator: NSObject, CoordinatorProtocol {
 	private func showScreen() {
 		navigationController.delegate = self
 		let calculationViewController = assembly.build(output: self)
-		navigationController.viewControllers = [calculationViewController]
+		self.presenterInput = calculationViewController.presenterInput
+		navigationController.viewControllers = [calculationViewController.view]
 		navigationController.tabBarItem = UITabBarItem(
 			title: UIConstants.TabBarItem.Title.calculation,
 			image: UIImage(systemName: UIConstants.TabBarItem.Image.calculation),
@@ -49,10 +55,18 @@ extension CalculationCoordinator: ICalculationPresenterOutput {
 			parentCoordinator: self,
 			navigationController: navigationController
 		)
+		//MARK: callback
+		citySelectionCoordinator.onCitySelected = { [weak self] city in
+			self?.citySelected(city)
+		}
 		
 		childCoordinators.append(citySelectionCoordinator)
 		print(childCoordinators)
 		citySelectionCoordinator.start()
+	}
+	
+	private func citySelected(_ city: String) {
+		presenterInput?.didSelectedDepartureCity(city)
 	}
 	
 	func showPackageSize() {

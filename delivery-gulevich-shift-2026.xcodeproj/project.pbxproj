@@ -13,8 +13,7 @@
 		C72F4F842F67D3CD000083FC /* MethodOfSendContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F4F832F67D3CD000083FC /* MethodOfSendContentView.swift */; };
 		C73AFA672F68F82000DB14C5 /* PersonalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA652F68F82000DB14C5 /* PersonalData.swift */; };
 		C73AFA882F69176700DB14C5 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */; };
-		C73AFA8F2F6A5BB000DB14C5 /* AdvBannerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA8C2F6A5BB000DB14C5 /* AdvBannerFactory.swift */; };
-		C73AFA902F6A5BB000DB14C5 /* AdvBannerLabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA8D2F6A5BB000DB14C5 /* AdvBannerLabelFactory.swift */; };
+		C73AFA8F2F6A5BB000DB14C5 /* PromoBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA8C2F6A5BB000DB14C5 /* PromoBanner.swift */; };
 		C73AFAE02F6A996E00DB14C5 /* DeliveryMethodStackFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFADF2F6A996E00DB14C5 /* DeliveryMethodStackFactory.swift */; };
 		C7454F2C2F501CAC008A5D93 /* ProfileContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7454F2B2F501CAC008A5D93 /* ProfileContentView.swift */; };
 		C7454F2E2F501CDC008A5D93 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7454F2D2F501CDC008A5D93 /* ProfilePresenter.swift */; };
@@ -70,8 +69,7 @@
 		C72F4F832F67D3CD000083FC /* MethodOfSendContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendContentView.swift; sourceTree = "<group>"; };
 		C73AFA652F68F82000DB14C5 /* PersonalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalData.swift; sourceTree = "<group>"; };
 		C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarComponent.swift; sourceTree = "<group>"; };
-		C73AFA8C2F6A5BB000DB14C5 /* AdvBannerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvBannerFactory.swift; sourceTree = "<group>"; };
-		C73AFA8D2F6A5BB000DB14C5 /* AdvBannerLabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvBannerLabelFactory.swift; sourceTree = "<group>"; };
+		C73AFA8C2F6A5BB000DB14C5 /* PromoBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoBanner.swift; sourceTree = "<group>"; };
 		C73AFADF2F6A996E00DB14C5 /* DeliveryMethodStackFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMethodStackFactory.swift; sourceTree = "<group>"; };
 		C7454F2B2F501CAC008A5D93 /* ProfileContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContentView.swift; sourceTree = "<group>"; };
 		C7454F2D2F501CDC008A5D93 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
@@ -139,15 +137,6 @@
 				C73AFA652F68F82000DB14C5 /* PersonalData.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		C73AFA8E2F6A5BB000DB14C5 /* AdvBanner */ = {
-			isa = PBXGroup;
-			children = (
-				C73AFA8D2F6A5BB000DB14C5 /* AdvBannerLabelFactory.swift */,
-				C73AFA8C2F6A5BB000DB14C5 /* AdvBannerFactory.swift */,
-			);
-			path = AdvBanner;
 			sourceTree = "<group>";
 		};
 		C73AFADE2F6A991700DB14C5 /* MethodOfSendStack */ = {
@@ -240,7 +229,7 @@
 			children = (
 				C7BD59572F74201D00E8C6AB /* Selection Field */,
 				C73AFADE2F6A991700DB14C5 /* MethodOfSendStack */,
-				C73AFA8E2F6A5BB000DB14C5 /* AdvBanner */,
+				C73AFA8C2F6A5BB000DB14C5 /* PromoBanner.swift */,
 				C7510CE22F4ECF4600AA968F /* ContentColor.swift */,
 				C7510CE32F4ECF4600AA968F /* CustomButtonFactory.swift */,
 				C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */,
@@ -435,8 +424,7 @@
 				C7A8B75E2F74E1FB00ACBC95 /* PackageSizeTableViewCell.swift in Sources */,
 				C73AFAE02F6A996E00DB14C5 /* DeliveryMethodStackFactory.swift in Sources */,
 				C70BE6CA2FD2C06600386F5E /* CalculationAssembly.swift in Sources */,
-				C73AFA8F2F6A5BB000DB14C5 /* AdvBannerFactory.swift in Sources */,
-				C73AFA902F6A5BB000DB14C5 /* AdvBannerLabelFactory.swift in Sources */,
+				C73AFA8F2F6A5BB000DB14C5 /* PromoBanner.swift in Sources */,
 				C7510CEC2F4ECF4600AA968F /* SceneDelegate.swift in Sources */,
 				C7BE24A72F6D88BC0045774E /* CitySelectionContentView.swift in Sources */,
 				C75A24BE2FD983CA0085700A /* FormFieldFactory.swift in Sources */,

@@ -1,16 +1,12 @@
 import UIKit
 
-protocol ICitySelectionViewController: AnyObject {
-	func updateView()
-}
-
 final class CitySelectionViewController: UIViewController {
 	
-	let citySelectionContentView: UIView & ICitySelectionContentView
+	let citySelectionContentView: UIView & CitySelectionContentViewProtocol
 	let presenter: ICitySelectionPresenter
 	
 	init(
-		citySelectionContentView:  UIView & ICitySelectionContentView,
+		citySelectionContentView:  UIView & CitySelectionContentViewProtocol,
 		presenter: ICitySelectionPresenter
 	) {
 		self.citySelectionContentView = citySelectionContentView
@@ -28,11 +24,13 @@ final class CitySelectionViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		citySelectionContentView.delegate = self
 	}
 }
 
-extension CitySelectionViewController: ICitySelectionViewController {
-	func updateView() {
-		
+extension CitySelectionViewController: CitySelectionContentViewDelegateProtocol {
+	func didSelectCity(_ city: String) {
+		presenter.didSelectCity(city)
 	}
 }

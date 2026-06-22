@@ -1,10 +1,17 @@
 import UIKit
 
-protocol ICitySelectionContentView: AnyObject {
+protocol CitySelectionContentViewProtocol: AnyObject {
+	var delegate: CitySelectionContentViewDelegateProtocol? { get set }
 	func configUI()
 }
 
+protocol CitySelectionContentViewDelegateProtocol: AnyObject {
+	func didSelectCity(_ city: String)
+}
+
 final class CitySelectionContentView: UIView {
+	
+	weak var delegate: CitySelectionContentViewDelegateProtocol?
 	
 	private let topView = UIView()
 	private let titleStackView = UIStackView()
@@ -35,7 +42,7 @@ final class CitySelectionContentView: UIView {
 	}
 }
 
-extension CitySelectionContentView: ICitySelectionContentView {
+extension CitySelectionContentView: CitySelectionContentViewProtocol {
 	func configUI() {
 		backgroundColor = .white
 		
@@ -99,5 +106,11 @@ extension CitySelectionContentView {
 extension CitySelectionContentView: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		UIConstants.CitySelection.Heights.cell
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let city = citySelectionTableViewDataSource.cities[indexPath.row]
+		
+		delegate?.didSelectCity(city)
 	}
 }

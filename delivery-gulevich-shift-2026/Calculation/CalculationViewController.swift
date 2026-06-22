@@ -1,7 +1,7 @@
 import UIKit
 
 protocol ICalculationView : AnyObject {
-	func updateView()
+	func updateDepartureCity(_ city: String)
 }
 
 final class CalculationViewController: UIViewController {
@@ -48,8 +48,12 @@ extension CalculationViewController: ICalculationContentViewDelegate {
 		presenter.userDidTapTrackButton()
 	}
 	
-	func didTapCitySelectedField() {
-		presenter.userDidTapCitySelectionField()
+	func didTapDepartureCityField() {
+		presenter.userDidTapDepartureCityField()
+	}
+	
+	func didTapDestinationCityField() {
+		presenter.userDidTapDestinationCityField()
 	}
 	
 	func didTapPackageSizeField() {
@@ -59,7 +63,7 @@ extension CalculationViewController: ICalculationContentViewDelegate {
 }
 
 extension CalculationViewController: ICalculationView {
-	func updateView() {
-
+	func updateDepartureCity(_ city: String) {
+		calculationContentView.updateDepartureCity(city)
 	}
 }

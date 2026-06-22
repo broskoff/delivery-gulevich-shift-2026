@@ -1,11 +1,15 @@
 import UIKit
 
 protocol CalculationAssemblyProtocol: AnyObject {
-	func build(output: ICalculationPresenterOutput) -> UIViewController
+	func build(output: ICalculationPresenterOutput) -> (
+		view: UIViewController,
+		presenterInput: CalculationPresenterInputProtocol
+	)
 }
 
 final class CalculationAssembly: CalculationAssemblyProtocol {
-	func build(output: any ICalculationPresenterOutput) -> UIViewController {
+	func build(output: ICalculationPresenterOutput) -> (view: UIViewController,
+														presenterInput: CalculationPresenterInputProtocol) {
 		let calculationPresenter = CalculationPresenter(output: output)
 		let calculationContentView = CalculationContentView()
 		let calculationView = CalculationViewController(
@@ -14,6 +18,6 @@ final class CalculationAssembly: CalculationAssemblyProtocol {
 		)
 		
 		calculationPresenter.view = calculationView
-		return calculationView
+		return (view: calculationView, presenterInput: calculationPresenter)
 	}
 }
