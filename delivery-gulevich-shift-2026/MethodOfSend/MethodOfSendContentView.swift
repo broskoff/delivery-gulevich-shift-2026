@@ -18,6 +18,7 @@ final class MethodOfSendContentView: UIView, IMethodOfSendContentView {
 	private let scrollView = UIScrollView()
 	private let contentView = UIView()
 	private let mainStackView = UIStackView()
+	private let promoBanner = PromoBanner()
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -145,14 +146,12 @@ extension MethodOfSendContentView {
 	}
 	
 	func configureAdvBannerLabel() {
-		
-		let advBanner = AdvBannerFactory.createAdvBannerStackView(
+		promoBanner.configure(
 			backgroundColor: ContentColor.blueBackgroudColorForPromoAdv,
 			titleFontSize: 32, 
 			titleText: "1+1=3",
 			subtitleText: "3-я доставка в подарок!"
 		)
-		
-		mainStackView.addArrangedSubview(advBanner)
+		mainStackView.addArrangedSubview(promoBanner)
 	}
 }

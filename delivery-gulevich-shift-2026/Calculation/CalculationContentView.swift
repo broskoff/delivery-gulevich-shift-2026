@@ -23,8 +23,9 @@ final class CalculationContentView: UIView, ICalculationContentView {
 	private let mainStackView = UIStackView()
 	
 	private let headerStackView = UIStackView()
-	private let deliveryСalculationStackView = UIStackView()
+	private let deliveryCalculationStackView = UIStackView()
 	private let trackStackView = UIStackView()
+	private let promoBanner = PromoBanner()
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -59,7 +60,8 @@ private extension CalculationContentView {
 		configureTrackLabel()
 		configureTrackTextField()
 		configureButtonTrack()
-		configurePromoStackView()
+		
+		configurePromoBanner()
 	}
 	
 	func setupHierarchy() {
@@ -71,8 +73,9 @@ private extension CalculationContentView {
 		scrollView.addSubview(contentView)
 		contentView.addSubview(mainStackView)
 		
-		mainStackView.addArrangedSubview(deliveryСalculationStackView)
+		mainStackView.addArrangedSubview(deliveryCalculationStackView)
 		mainStackView.addArrangedSubview(trackStackView)
+		mainStackView.addArrangedSubview(promoBanner)
 	}
 }
 
@@ -160,14 +163,14 @@ private extension CalculationContentView {
 	
 private extension CalculationContentView {
 	func configureDeliveryСalculationStackView() {
-		deliveryСalculationStackView.backgroundColor = .white
-		deliveryСalculationStackView.axis = .vertical
-		deliveryСalculationStackView.spacing = UIConstants.Spacing.medium
+		deliveryCalculationStackView.backgroundColor = .white
+		deliveryCalculationStackView.axis = .vertical
+		deliveryCalculationStackView.spacing = UIConstants.Spacing.medium
 		
-		deliveryСalculationStackView.layer.cornerRadius = UIConstants.Layer.CornerRadius.medium
+		deliveryCalculationStackView.layer.cornerRadius = UIConstants.Layer.CornerRadius.medium
 		
-		deliveryСalculationStackView.isLayoutMarginsRelativeArrangement = true
-		deliveryСalculationStackView.layoutMargins = .init(top: 32, left: 16, bottom: 32, right: 16)
+		deliveryCalculationStackView.isLayoutMarginsRelativeArrangement = true
+		deliveryCalculationStackView.layoutMargins = .init(top: 32, left: 16, bottom: 32, right: 16)
 	}
 	
 	func configureLabelCalculateDelivery() {
@@ -176,7 +179,7 @@ private extension CalculationContentView {
 		label.textAlignment = .center
 		label.font = .systemFont(ofSize: 30, weight: .bold)
 		
-		deliveryСalculationStackView.addArrangedSubview(label)
+		deliveryCalculationStackView.addArrangedSubview(label)
 	}
 }
 
@@ -231,7 +234,7 @@ private extension CalculationContentView {
 			stackView.addArrangedSubview($0)
 		}
 		
-		deliveryСalculationStackView.addArrangedSubview(stackView)
+		deliveryCalculationStackView.addArrangedSubview(stackView)
 	}
 }
 
@@ -300,20 +303,18 @@ private extension CalculationContentView {
 }
 
 private extension CalculationContentView {
-	
-	func configurePromoStackView() {
-		let advBanner = AdvBannerFactory.createAdvBannerStackView(
+
+	func configurePromoBanner() {
+		promoBanner.configure(
 			backgroundColor: ContentColor.brownBackgroudColorForPromoAdv,
 			titleFontSize: 24,
 			titleText: "Бесплатная доставка",
 			subtitleText: "за приведенного друга"
 		)
-		
-		mainStackView.addArrangedSubview(advBanner)
 	}
 }
 
-//MARK: Действие "Рассчитать" находится тут
+//MARK: Действие кнопки "Рассчитать"
 private extension CalculationContentView {
 	
 	func configureButtonCalcDelivery() {
