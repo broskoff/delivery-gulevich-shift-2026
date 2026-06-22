@@ -41,6 +41,10 @@ enum UIConstants {
 			static let cityFrom = "Город отправки"
 			static let cityTo = "Город назначения"
 		}
+		
+		enum Heights {
+			static let button: CGFloat = 56
+		}
 	}
 	
 	enum MethodOfSend {

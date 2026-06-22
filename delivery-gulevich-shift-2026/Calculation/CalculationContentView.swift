@@ -51,9 +51,7 @@ private extension CalculationContentView {
 		
 		configureDeliveryСalculationStackView()
 		configureLabelCalculateDelivery()
-		
 		configureShipmentFields()
-		
 		configureButtonCalcDelivery()
 		
 		configureTrackStackView()
@@ -281,11 +279,12 @@ private extension CalculationContentView {
 		trackStackView.addArrangedSubview(textField)
 	}
 	
+	//MARK: Действие кнопки "Найти"
 	func configureButtonTrack() {
 		let button = CustomButtonFactory.make(withTitle: UIConstants.Calculation.ButtonNames.find)
 		
 		button.snp.makeConstraints {
-			$0.height.equalTo(56)
+			$0.height.equalTo(UIConstants.Calculation.Heights.button)
 		}
 		
 		trackStackView.addArrangedSubview(button)
@@ -293,8 +292,6 @@ private extension CalculationContentView {
 		button.addTarget(self, action: #selector(buttonTrackTapped), for: .touchUpInside)
 	}
 	
-	
-	//MARK: Действие кнопки "Найти"
 	@objc
 	func buttonTrackTapped() {
 		delegate?.didTapTrackParcel()
@@ -321,10 +318,10 @@ private extension CalculationContentView {
 		let button = CustomButtonFactory.make(withTitle: UIConstants.Calculation.ButtonNames.calculate)
 		
 		button.snp.makeConstraints {
-			$0.height.equalTo(56)
+			$0.height.equalTo(UIConstants.Calculation.Heights.button)
 		}
 		
-		deliveryСalculationStackView.addArrangedSubview(button)
+		deliveryCalculationStackView.addArrangedSubview(button)
 		
 		button.addTarget(self, action: #selector(buttonCalcDeliveryTapped), for: .touchUpInside)
 	}
