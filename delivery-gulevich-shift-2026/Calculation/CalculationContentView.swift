@@ -190,41 +190,25 @@ private extension CalculationContentView {
 
 private extension CalculationContentView {
 	func configureShipmentFields() {
-		let departureCityConfig = SelectionFieldConfig(
-			tagType: .departureCity,
-			placeholder: "Выберите город",
-			leftIconName: "IconLocation"
-		)
 		
-		let departureField = FormFieldFactory.make(
-			title: "Город отправки",
-			config: departureCityConfig,
-			delegate: self
-		)
+		let departureCityControl = DeliveryFieldControl(imageName: "IconLocation", selectedValue: "Выберите город")
+		departureCityControl.onTap = { [weak self] in
+			self?.delegate?.didTapDepartureCityField()
+		}
+		let departureCityField = DeliveryFieldView(title: "Город отправки", control: departureCityControl)
 		
-		let destinationCityConfig = SelectionFieldConfig(
-			tagType: .departureCity,
-			placeholder: "Выберите город",
-			leftIconName: "pointer"
-		)
 		
-		let destinationField = FormFieldFactory.make(
-			title: "Город назначения",
-			config: destinationCityConfig,
-			delegate: self
-		)
+		let destinationCityControl = DeliveryFieldControl(imageName: "pointer", selectedValue: "Выберите город")
+		destinationCityControl.onTap = { [weak self] in
+			self?.delegate?.didTapDestinationCityField()
+		}
+		let destinationCityField = DeliveryFieldView(title: "Город назначения", control: destinationCityControl)
 		
-		let sizePackageConfig = SelectionFieldConfig(
-			tagType: .sizePackage,
-			placeholder: "Конверт",
-			leftIconName: "IconEnvelope"
-		)
-		
-		let sizePackageField = FormFieldFactory.make(
-			title: "Размер посылки",
-			config: sizePackageConfig,
-			delegate: self
-		)
+		let sizePackageControl = DeliveryFieldControl(imageName: "IconEnvelope", selectedValue: "Конверт")
+		sizePackageControl.onTap = { [weak self] in
+			self?.delegate?.didTapPackageSizeField()
+		}
+		let sizePackageField = DeliveryFieldView(title: "Размер посылки", control: sizePackageControl)
 		
 		let stackView = UIStackView()
 		stackView.backgroundColor = .white
@@ -232,8 +216,8 @@ private extension CalculationContentView {
 		stackView.spacing = UIConstants.Spacing.medium
 		
 		[
-			departureField,
-			destinationField,
+			departureCityField,
+			destinationCityField,
 			sizePackageField
 		].forEach {
 			stackView.addArrangedSubview($0)
@@ -336,22 +320,6 @@ private extension CalculationContentView {
 	@objc
 	func buttonCalcDeliveryTapped() {
 		delegate?.didTapCalculateDelivery()
-	}
-}
-
-//MARK: "Выбрать город или Размер посылки"
-extension CalculationContentView: SelectionFieldProtocol {
-	
-	func didTapDepartureCityField() {
-		delegate?.didTapDepartureCityField()
-	}
-	
-	func didTapDestinationCityField() {
-		delegate?.didTapDestinationCityField()
-	}
-	
-	func didTapPackageSizeField() {
-		delegate?.didTapPackageSizeField()
 	}
 }
 
