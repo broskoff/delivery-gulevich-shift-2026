@@ -2,6 +2,8 @@ import UIKit
 
 protocol ICalculationView : AnyObject {
 	func updateDepartureCity(_ city: String)
+	func updateDestinationCity(_ city: String)
+	func updateSizePackageField(_ size: String)
 }
 
 final class CalculationViewController: UIViewController {
@@ -65,5 +67,13 @@ extension CalculationViewController: ICalculationContentViewDelegate {
 extension CalculationViewController: ICalculationView {
 	func updateDepartureCity(_ city: String) {
 		calculationContentView.updateDepartureCity(city)
+	}
+	
+	func updateDestinationCity(_ city: String) {
+		calculationContentView.updateDestinationCity(city)
+	}
+	
+	func updateSizePackageField(_ size: String) {
+		calculationContentView.updateSizePackageField(size)
 	}
 }

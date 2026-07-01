@@ -14,10 +14,12 @@ protocol ICalculationContentView : AnyObject {
 	var delegate: ICalculationContentViewDelegate? { get set }
 	
 	func updateDepartureCity(_ city: String)
+	func updateDestinationCity(_ city: String)
+	func updateSizePackageField(_ size: String)
 }
 
 final class CalculationContentView: UIView, ICalculationContentView {
-	
+
 	weak var delegate: ICalculationContentViewDelegate?
 	
 	private let topView = UIView()
@@ -54,7 +56,15 @@ final class CalculationContentView: UIView, ICalculationContentView {
 	}
 	
 	func updateDepartureCity(_ city: String) {
-//		MARK: Заполнить схему обновления поля Departure
+		departureCityControl.selectedValue = city
+	}
+	
+	func updateDestinationCity(_ city: String) {
+		destinationCityControl.selectedValue = city
+	}
+	
+	func updateSizePackageField(_ size: String) {
+		sizePackageControl.selectedValue = size
 	}
 }
 
@@ -331,6 +341,3 @@ private extension CalculationContentView {
 		delegate?.didTapCalculateDelivery()
 	}
 }
-
-//MARK: Обновление cityField
-

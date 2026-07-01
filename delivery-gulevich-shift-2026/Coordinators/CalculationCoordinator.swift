@@ -1,16 +1,11 @@
 import UIKit
 
-protocol CalculationPresenterInputProtocol: AnyObject {
-	func didSelectedDepartureCity(_ city: String)
-}
-
 final class CalculationCoordinator: NSObject, CoordinatorProtocol {
 	
 	let navigationController: UINavigationController
 	let assembly: CalculationAssemblyProtocol
 	
 	var childCoordinators: [CoordinatorProtocol] = []
-	weak var presenterInput: CalculationPresenterInputProtocol?
 	
 	init(
 		navigationController: UINavigationController,
@@ -27,8 +22,7 @@ final class CalculationCoordinator: NSObject, CoordinatorProtocol {
 	private func showScreen() {
 		navigationController.delegate = self
 		let calculationViewController = assembly.build(output: self)
-		self.presenterInput = calculationViewController.presenterInput
-		navigationController.viewControllers = [calculationViewController.view]
+		navigationController.viewControllers = [calculationViewController]
 		navigationController.tabBarItem = UITabBarItem(
 			title: UIConstants.TabBarItem.Title.calculation,
 			image: UIImage(systemName: UIConstants.TabBarItem.Image.calculation),
@@ -50,27 +44,23 @@ extension CalculationCoordinator: ICalculationPresenterOutput {
 		methodOfSendCoordinator.start()
 	}
 	
-	func showCitySelection() {
+	func showCitySelection(onSelect: @escaping (String) -> ()) {
 		let citySelectionCoordinator = CitySelectionCoordinator(
 			parentCoordinator: self,
 			navigationController: navigationController
 		)
-		//MARK: callback
-		citySelectionCoordinator.onCitySelected = { [weak self] city in
-			self?.citySelected(city)
-		}
+		//MARK: callback.
+		//В свойство onCitySelected координатора citySelectionCoordinator устанавливается сбегающий клоужер и остается в памяти, В свойстве onCitySelected из CalculationPresenter лежит действие self?.view?.updateDepartureCity(city). Свойство onCitySelected вызовется в методе didSelectCity координатора citySelectionCoordinator
+		citySelectionCoordinator.onCitySelected = onSelect
 		
 		childCoordinators.append(citySelectionCoordinator)
 		print(childCoordinators)
 		citySelectionCoordinator.start()
 	}
 	
-	private func citySelected(_ city: String) {
-		presenterInput?.didSelectedDepartureCity(city)
-	}
-	
-	func showPackageSize() {
+	func showPackageSize(onSelect: @escaping (PackageSizeItem) -> ()) {
 		let packageSize = PackageSizeViewController()
+		packageSize.onSizeSelected = onSelect
 		
 		let sheet = packageSize.sheetPresentationController
 		sheet?.detents = [.medium()]

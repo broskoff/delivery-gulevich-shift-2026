@@ -3,9 +3,9 @@ import UIKit
 
 protocol ICalculationPresenterOutput: AnyObject {
 	func showMethodOfSend()
-	func showPackageSize()
 	
-	func showCitySelection()
+	func showCitySelection(onSelect: @escaping (String) -> ())
+	func showPackageSize(onSelect: @escaping (PackageSizeItem) -> ())
 }
 
 protocol ICalculationPresenter: AnyObject {
@@ -30,28 +30,31 @@ final class CalculationPresenter: ICalculationPresenter {
 	}
 	
 	func userDidTapDepartureCityField() {
-		output?.showCitySelection()
+		output?.showCitySelection { [weak self] city in
+			self?.view?.updateDepartureCity(city) 
+		}
 	}
 	
 	func userDidTapDestinationCityField() {
-		output?.showCitySelection()
+		output?.showCitySelection { [weak self] city in
+			self?.view?.updateDestinationCity(city)
+		}
 	}
 	
 	func userDidTapPackageSizeField() {
-		output?.showPackageSize()
+		output?.showPackageSize { [weak self] size in
+			
+			switch size {
+			case .size(let text):
+				self?.view?.updateSizePackageField(text)
+			case .title:
+				break
+			}
+		}
 	}
 	
 	func userDidTapTrackButton() {
 		print("Нажали кнопку Найти. Это напечатано из CalculationPresenter 2")
 //		output?.
 	}
-}
-
-extension CalculationPresenter: CalculationPresenterInputProtocol {
-	func didSelectedDepartureCity(_ city: String) {
-//		view?.updateDepartureCity(city) пример на будущее
-		print(city)
-	}
-	
-	
 }
