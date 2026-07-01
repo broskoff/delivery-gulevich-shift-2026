@@ -30,6 +30,19 @@ final class CalculationContentView: UIView, ICalculationContentView {
 	private let trackStackView = UIStackView()
 	private let promoBanner = PromoBanner()
 	
+	private let departureCityControl = DeliveryFieldControl(
+		imageName: "IconLocation",
+		selectedValue: "Выберите город"
+	)
+	private let destinationCityControl = DeliveryFieldControl(
+		imageName: "pointer",
+		selectedValue: "Выберите город"
+	)
+	private let sizePackageControl = DeliveryFieldControl(
+		imageName: "IconEnvelope",
+		selectedValue: "Конверт"
+	)
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		
@@ -191,20 +204,16 @@ private extension CalculationContentView {
 private extension CalculationContentView {
 	func configureShipmentFields() {
 		
-		let departureCityControl = DeliveryFieldControl(imageName: "IconLocation", selectedValue: "Выберите город")
 		departureCityControl.onTap = { [weak self] in
 			self?.delegate?.didTapDepartureCityField()
 		}
 		let departureCityField = DeliveryFieldView(title: "Город отправки", control: departureCityControl)
 		
-		
-		let destinationCityControl = DeliveryFieldControl(imageName: "pointer", selectedValue: "Выберите город")
 		destinationCityControl.onTap = { [weak self] in
 			self?.delegate?.didTapDestinationCityField()
 		}
 		let destinationCityField = DeliveryFieldView(title: "Город назначения", control: destinationCityControl)
 		
-		let sizePackageControl = DeliveryFieldControl(imageName: "IconEnvelope", selectedValue: "Конверт")
 		sizePackageControl.onTap = { [weak self] in
 			self?.delegate?.didTapPackageSizeField()
 		}
