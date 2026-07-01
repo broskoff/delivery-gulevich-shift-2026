@@ -19,7 +19,7 @@ final class MethodOfSendCoordinator: CoordinatorProtocol {
 	func start() {
 		
 		let methodOfSendViewController = methodOfSendAssembly.createScreen(output: self)
-		print("parent: \(parentCoordinator)")
+		print("parent: \(String(describing: parentCoordinator))")
 		navigationController.pushViewController(methodOfSendViewController, animated: true)
 	}
 

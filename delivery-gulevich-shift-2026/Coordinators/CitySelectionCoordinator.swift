@@ -16,7 +16,6 @@ final class CitySelectionCoordinator: CoordinatorProtocol {
 	}
 	
 	func start() {
-		
 		let citySelectionViewController = citySelectionAssembly.createScreen(output: self)
 		print("parent: \(String(describing: parentCoordinator))")
 		navigationController.pushViewController(citySelectionViewController, animated: true)
@@ -28,9 +27,6 @@ final class CitySelectionCoordinator: CoordinatorProtocol {
 }
 
 extension CitySelectionCoordinator: ICitySelectionPresenterOutput {
-	func userDidFinish() {
-		
-	}
 	
 	func didSelectCity(_ city: String) {
 		onCitySelected?(city)
