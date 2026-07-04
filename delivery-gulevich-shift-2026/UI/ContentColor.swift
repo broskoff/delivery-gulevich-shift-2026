@@ -7,7 +7,7 @@ final class ContentColor: UIColor, @unchecked Sendable {
 												 blue: 246/255,
 												 alpha: 1.0)
 	
-	static let methodOfSendViewBackground = UIColor(red: 255/255,
+	static let deliveryMethodViewBackground = UIColor(red: 255/255,
 													green: 255/255,
 													blue: 255/255,
 													alpha: 1.0)

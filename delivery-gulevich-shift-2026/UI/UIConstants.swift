@@ -47,7 +47,7 @@ enum UIConstants {
 		}
 	}
 	
-	enum MethodOfSend {
+	enum deliveryMethodContentView {
 		enum HeaderNames {
 			static let title  = "Способ отправки"
 		}

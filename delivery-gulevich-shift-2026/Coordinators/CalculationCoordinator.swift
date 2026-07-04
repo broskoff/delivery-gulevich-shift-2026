@@ -33,15 +33,15 @@ final class CalculationCoordinator: NSObject, CoordinatorProtocol {
 
 extension CalculationCoordinator: ICalculationPresenterOutput {
 	
-	func showMethodOfSend() {
-		let methodOfSendCoordinator = ShipmentCoordinator(
+	func showShipment() {
+		let shipmentCoordinator = ShipmentCoordinator(
 			parentCoordinator: self,
 			navigationController: navigationController
 		)
 		
-		childCoordinators.append(methodOfSendCoordinator)
+		childCoordinators.append(shipmentCoordinator)
 		print(childCoordinators)
-		methodOfSendCoordinator.start()
+		shipmentCoordinator.start()
 	}
 	
 	func showCitySelection(onSelect: @escaping (String) -> ()) {

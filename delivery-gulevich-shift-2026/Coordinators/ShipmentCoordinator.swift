@@ -4,7 +4,7 @@ import UIKit
 final class ShipmentCoordinator: CoordinatorProtocol {
 	
 	weak var parentCoordinator: CalculationCoordinator?
-	var methodOfSendAssembly = ShipmentAssembly()
+	var shipmentAssembly = ShipmentAssembly()
 	var navigationController: UINavigationController
 	var childCoordinators: [CoordinatorProtocol] = []
 	
@@ -18,13 +18,13 @@ final class ShipmentCoordinator: CoordinatorProtocol {
 	
 	func start() {
 		
-		let methodOfSendViewController = methodOfSendAssembly.createScreen(output: self)
+		let deliveryMethodViewController = shipmentAssembly.createDeliveryMethodScreen(output: self)
 		print("parent: \(String(describing: parentCoordinator))")
-		navigationController.pushViewController(methodOfSendViewController, animated: true)
+		navigationController.pushViewController(deliveryMethodViewController, animated: true)
 	}
 
 	deinit {
-		print("MethodOfSendCoordinator deinit")
+		print("ShipmentCoordinator deinit")
 	}
 }
 

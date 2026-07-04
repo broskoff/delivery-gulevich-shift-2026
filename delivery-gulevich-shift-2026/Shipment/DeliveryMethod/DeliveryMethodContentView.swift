@@ -33,7 +33,7 @@ final class DeliveryMethodContentView: UIView, DeliveryMethodContentViewProtocol
 
 extension DeliveryMethodContentView {
 	func configureUI() {
-		backgroundColor = ContentColor.methodOfSendViewBackground
+		backgroundColor = ContentColor.deliveryMethodViewBackground
 		
 		setupHierarchy()
 		
@@ -78,7 +78,7 @@ extension DeliveryMethodContentView {
 		let titleLabel = UILabel()
 		titleStackView.addArrangedSubview(titleLabel)
 		
-		titleLabel.text = UIConstants.MethodOfSend.HeaderNames.title
+		titleLabel.text = UIConstants.deliveryMethodContentView.HeaderNames.title
 		titleLabel.textAlignment = .center
 		titleLabel.font = .systemFont(ofSize: 28, weight: .bold)
 		

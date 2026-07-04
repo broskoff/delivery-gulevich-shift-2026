@@ -7,14 +7,14 @@ protocol DeliveryMethodViewControllerProtocol: AnyObject {
 
 class DeliveryMethodViewController: UIViewController, DeliveryMethodViewDelegateProtocol {
 	
-	let methodOfSendContentView: UIView & DeliveryMethodContentViewProtocol
+	let deliveryMethodContentView: UIView & DeliveryMethodContentViewProtocol
 	let presenter: DeliveryMethodPresenterProtocol
 	
 	init(
-		methodOfSendContentView: UIView & DeliveryMethodContentViewProtocol,
+		deliveryMethodContentView: UIView & DeliveryMethodContentViewProtocol,
 		presenter: DeliveryMethodPresenterProtocol
 	) {
-		self.methodOfSendContentView = methodOfSendContentView
+		self.deliveryMethodContentView = deliveryMethodContentView
 		self.presenter = presenter
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -24,13 +24,13 @@ class DeliveryMethodViewController: UIViewController, DeliveryMethodViewDelegate
 	}
 	
 	override func loadView() {
-		self.view = methodOfSendContentView
+		self.view = deliveryMethodContentView
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		methodOfSendContentView.delegate = self
+		deliveryMethodContentView.delegate = self
 	}
 	
 	//TODO: переход на экран заполнения данных получателя

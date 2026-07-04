@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 protocol ICalculationPresenterOutput: AnyObject {
-	func showMethodOfSend()
+	func showShipment()
 	
 	func showCitySelection(onSelect: @escaping (String) -> ())
 	func showPackageSize(onSelect: @escaping (PackageSizeItem) -> ())
@@ -26,7 +26,7 @@ final class CalculationPresenter: ICalculationPresenter {
 	}
 	
 	func userDidTapCalculateButton() {
-		output?.showMethodOfSend()
+		output?.showShipment()
 	}
 	
 	func userDidTapDepartureCityField() {
