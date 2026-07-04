@@ -1,16 +1,16 @@
 import UIKit
 import SnapKit
 
-protocol IMethodOfSendViewDelegate: AnyObject {
+protocol DeliveryMethodViewDelegateProtocol: AnyObject {
 	func didTapDeliveryToTheDoor()
 }
 
-protocol IMethodOfSendContentView: AnyObject {
-	var delegate: IMethodOfSendViewDelegate? { get set }
+protocol DeliveryMethodContentViewProtocol: AnyObject {
+	var delegate: DeliveryMethodViewDelegateProtocol? { get set }
 }
 
-final class MethodOfSendContentView: UIView, IMethodOfSendContentView {
-	weak var delegate: IMethodOfSendViewDelegate?
+final class DeliveryMethodContentView: UIView, DeliveryMethodContentViewProtocol {
+	weak var delegate: DeliveryMethodViewDelegateProtocol?
 	
 	private let topView = UIView()
 	private let titleStackView = UIStackView()
@@ -31,7 +31,7 @@ final class MethodOfSendContentView: UIView, IMethodOfSendContentView {
 	}
 }
 
-extension MethodOfSendContentView {
+extension DeliveryMethodContentView {
 	func configureUI() {
 		backgroundColor = ContentColor.methodOfSendViewBackground
 		
@@ -45,7 +45,7 @@ extension MethodOfSendContentView {
 	}
 }
 
-extension MethodOfSendContentView {
+extension DeliveryMethodContentView {
 	func setupHierarchy() {
 		addSubview(topView)
 		addSubview(scrollView)
@@ -88,7 +88,7 @@ extension MethodOfSendContentView {
 	}
 }
 
-extension MethodOfSendContentView {
+extension DeliveryMethodContentView {
 	func configureScrollView() {
 		scrollView.bouncesHorizontally = false
 		scrollView.alwaysBounceVertical = true
@@ -110,7 +110,7 @@ extension MethodOfSendContentView {
 	}
 }
 
-extension MethodOfSendContentView {
+extension DeliveryMethodContentView {
 	func configureMainStackView() {
 		mainStackView.axis = .vertical
 		mainStackView.spacing = UIConstants.Spacing.large

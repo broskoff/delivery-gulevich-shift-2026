@@ -1,18 +1,18 @@
 import UIKit
 import SnapKit
 
-protocol IMethodOfSendViewController: AnyObject {
+protocol DeliveryMethodViewControllerProtocol: AnyObject {
 	func updateView()
 }
 
-class MethodOfSendViewController: UIViewController, IMethodOfSendViewDelegate {
+class DeliveryMethodViewController: UIViewController, DeliveryMethodViewDelegateProtocol {
 	
-	let methodOfSendContentView: UIView & IMethodOfSendContentView
-	let presenter: IMethodOfSendPresenter
+	let methodOfSendContentView: UIView & DeliveryMethodContentViewProtocol
+	let presenter: DeliveryMethodPresenterProtocol
 	
 	init(
-		methodOfSendContentView: UIView & IMethodOfSendContentView,
-		presenter: IMethodOfSendPresenter
+		methodOfSendContentView: UIView & DeliveryMethodContentViewProtocol,
+		presenter: DeliveryMethodPresenterProtocol
 	) {
 		self.methodOfSendContentView = methodOfSendContentView
 		self.presenter = presenter
@@ -39,7 +39,7 @@ class MethodOfSendViewController: UIViewController, IMethodOfSendViewDelegate {
 	}
 }
 
-extension MethodOfSendViewController: IMethodOfSendViewController {
+extension DeliveryMethodViewController: DeliveryMethodViewControllerProtocol {
 	func updateView() {
 		
 	}

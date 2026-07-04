@@ -2,21 +2,21 @@ import Foundation
 import UIKit
 
 //переименовать userDidFinish() когда появится конкретное действие
-protocol IMethodOfSendPresenterOutput: AnyObject {
+protocol DeliveryMethodPresenterOutputProtocol: AnyObject {
 	func userDidFinish()
 }
 
 //переименовать userActed() когда появится конкретное действие
-protocol IMethodOfSendPresenter: AnyObject {
+protocol DeliveryMethodPresenterProtocol: AnyObject {
 	func userActed()
 }
 
-class MethodOfSendPresenter: IMethodOfSendPresenter {
+class DeliveryMethodPresenter: DeliveryMethodPresenterProtocol {
 	
-	weak var output: IMethodOfSendPresenterOutput?
-	weak var view: IMethodOfSendViewController?
+	weak var output: DeliveryMethodPresenterOutputProtocol?
+	weak var view: DeliveryMethodViewControllerProtocol?
 	
-	init(output: IMethodOfSendPresenterOutput) {
+	init(output: DeliveryMethodPresenterOutputProtocol) {
 		self.output = output
 	}
 	
