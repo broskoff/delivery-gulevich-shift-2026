@@ -10,7 +10,7 @@
 		C70BE6CA2FD2C06600386F5E /* CalculationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70BE6C92FD2C06600386F5E /* CalculationAssembly.swift */; };
 		C70BE6CC2FD2C26E00386F5E /* HistoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70BE6CB2FD2C26E00386F5E /* HistoryAssembly.swift */; };
 		C70BE6CE2FD2C34200386F5E /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70BE6CD2FD2C34200386F5E /* ProfileAssembly.swift */; };
-		C72F4F842F67D3CD000083FC /* MethodOfSendContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F4F832F67D3CD000083FC /* MethodOfSendContentView.swift */; };
+		C72F4F842F67D3CD000083FC /* DeliveryMethodContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F4F832F67D3CD000083FC /* DeliveryMethodContentView.swift */; };
 		C73AFA672F68F82000DB14C5 /* PersonalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA652F68F82000DB14C5 /* PersonalData.swift */; };
 		C73AFA882F69176700DB14C5 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */; };
 		C73AFA8F2F6A5BB000DB14C5 /* PromoBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA8C2F6A5BB000DB14C5 /* PromoBanner.swift */; };
@@ -26,14 +26,14 @@
 		C7510CEF2F4ECF4600AA968F /* CalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CCF2F4ECF4600AA968F /* CalculationViewController.swift */; };
 		C7510CF02F4ECF4600AA968F /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD12F4ECF4600AA968F /* CoordinatorProtocol.swift */; };
 		C7510CF12F4ECF4600AA968F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD22F4ECF4600AA968F /* MainCoordinator.swift */; };
-		C7510CF22F4ECF4600AA968F /* MethodOfSendCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD32F4ECF4600AA968F /* MethodOfSendCoordinator.swift */; };
+		C7510CF22F4ECF4600AA968F /* ShipmentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD32F4ECF4600AA968F /* ShipmentCoordinator.swift */; };
 		C7510CF32F4ECF4600AA968F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD52F4ECF4600AA968F /* HistoryViewController.swift */; };
-		C7510CF42F4ECF4600AA968F /* MethodOfSendPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD72F4ECF4600AA968F /* MethodOfSendPresenter.swift */; };
-		C7510CF62F4ECF4600AA968F /* MethodOfSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD92F4ECF4600AA968F /* MethodOfSendViewController.swift */; };
+		C7510CF42F4ECF4600AA968F /* DeliveryMethodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD72F4ECF4600AA968F /* DeliveryMethodPresenter.swift */; };
+		C7510CF62F4ECF4600AA968F /* DeliveryMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD92F4ECF4600AA968F /* DeliveryMethodViewController.swift */; };
 		C7510CF72F4ECF4600AA968F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CDB2F4ECF4600AA968F /* ProfileViewController.swift */; };
 		C7510CF82F4ECF4600AA968F /* ContentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CE22F4ECF4600AA968F /* ContentColor.swift */; };
 		C7510CF92F4ECF4600AA968F /* CustomButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CE32F4ECF4600AA968F /* CustomButtonFactory.swift */; };
-		C783215A2F5564AA003144D0 /* MethodOfSendAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78321532F5564AA003144D0 /* MethodOfSendAssembly.swift */; };
+		C783215A2F5564AA003144D0 /* ShipmentAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78321532F5564AA003144D0 /* ShipmentAssembly.swift */; };
 		C78C4A7C2FEA5283007AA2D0 /* DeliveryFieldControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C4A7B2FEA5283007AA2D0 /* DeliveryFieldControl.swift */; };
 		C78C4A802FEAC17A007AA2D0 /* DeliveryFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C4A7F2FEAC17A007AA2D0 /* DeliveryFieldView.swift */; };
 		C7A8B75C2F74E14200ACBC95 /* PackageSizeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B75B2F74E14200ACBC95 /* PackageSizeContentView.swift */; };
@@ -65,7 +65,7 @@
 		C70BE6C92FD2C06600386F5E /* CalculationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationAssembly.swift; sourceTree = "<group>"; };
 		C70BE6CB2FD2C26E00386F5E /* HistoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAssembly.swift; sourceTree = "<group>"; };
 		C70BE6CD2FD2C34200386F5E /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
-		C72F4F832F67D3CD000083FC /* MethodOfSendContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendContentView.swift; sourceTree = "<group>"; };
+		C72F4F832F67D3CD000083FC /* DeliveryMethodContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMethodContentView.swift; sourceTree = "<group>"; };
 		C73AFA652F68F82000DB14C5 /* PersonalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalData.swift; sourceTree = "<group>"; };
 		C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarComponent.swift; sourceTree = "<group>"; };
 		C73AFA8C2F6A5BB000DB14C5 /* PromoBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoBanner.swift; sourceTree = "<group>"; };
@@ -79,17 +79,17 @@
 		C7510CCF2F4ECF4600AA968F /* CalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewController.swift; sourceTree = "<group>"; };
 		C7510CD12F4ECF4600AA968F /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		C7510CD22F4ECF4600AA968F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		C7510CD32F4ECF4600AA968F /* MethodOfSendCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendCoordinator.swift; sourceTree = "<group>"; };
+		C7510CD32F4ECF4600AA968F /* ShipmentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentCoordinator.swift; sourceTree = "<group>"; };
 		C7510CD52F4ECF4600AA968F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		C7510CD72F4ECF4600AA968F /* MethodOfSendPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendPresenter.swift; sourceTree = "<group>"; };
-		C7510CD92F4ECF4600AA968F /* MethodOfSendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendViewController.swift; sourceTree = "<group>"; };
+		C7510CD72F4ECF4600AA968F /* DeliveryMethodPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMethodPresenter.swift; sourceTree = "<group>"; };
+		C7510CD92F4ECF4600AA968F /* DeliveryMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMethodViewController.swift; sourceTree = "<group>"; };
 		C7510CDB2F4ECF4600AA968F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C7510CDD2F4ECF4600AA968F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7510CDE2F4ECF4600AA968F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7510CDF2F4ECF4600AA968F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7510CE22F4ECF4600AA968F /* ContentColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentColor.swift; sourceTree = "<group>"; };
 		C7510CE32F4ECF4600AA968F /* CustomButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonFactory.swift; sourceTree = "<group>"; };
-		C78321532F5564AA003144D0 /* MethodOfSendAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodOfSendAssembly.swift; sourceTree = "<group>"; };
+		C78321532F5564AA003144D0 /* ShipmentAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentAssembly.swift; sourceTree = "<group>"; };
 		C78C4A7B2FEA5283007AA2D0 /* DeliveryFieldControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryFieldControl.swift; sourceTree = "<group>"; };
 		C78C4A7F2FEAC17A007AA2D0 /* DeliveryFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryFieldView.swift; sourceTree = "<group>"; };
 		C7A8B75B2F74E14200ACBC95 /* PackageSizeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSizeContentView.swift; sourceTree = "<group>"; };
@@ -129,12 +129,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C73AFA662F68F82000DB14C5 /* Models */ = {
+		C70EDA742FF65C0500D567DB /* DeliveryMethod */ = {
 			isa = PBXGroup;
 			children = (
-				C73AFA652F68F82000DB14C5 /* PersonalData.swift */,
+				C72F4F832F67D3CD000083FC /* DeliveryMethodContentView.swift */,
+				C7510CD92F4ECF4600AA968F /* DeliveryMethodViewController.swift */,
+				C7510CD72F4ECF4600AA968F /* DeliveryMethodPresenter.swift */,
 			);
-			path = Models;
+			path = DeliveryMethod;
 			sourceTree = "<group>";
 		};
 		C73AFADE2F6A991700DB14C5 /* MethodOfSendStack */ = {
@@ -175,7 +177,7 @@
 				C7B856FE2F59514B004D6B57 /* CalculationCoordinator.swift */,
 				C7B857002F595205004D6B57 /* HistoryCoordinator.swift */,
 				C7B857022F595239004D6B57 /* ProfileCoordinator.swift */,
-				C7510CD32F4ECF4600AA968F /* MethodOfSendCoordinator.swift */,
+				C7510CD32F4ECF4600AA968F /* ShipmentCoordinator.swift */,
 				C7BD59132F6FC01900E8C6AB /* CitySelectionCoordinator.swift */,
 			);
 			path = Coordinators;
@@ -191,15 +193,13 @@
 			path = History;
 			sourceTree = "<group>";
 		};
-		C7510CDA2F4ECF4600AA968F /* MethodOfSend */ = {
+		C7510CDA2F4ECF4600AA968F /* Shipment */ = {
 			isa = PBXGroup;
 			children = (
-				C73AFA662F68F82000DB14C5 /* Models */,
-				C72F4F832F67D3CD000083FC /* MethodOfSendContentView.swift */,
-				C7510CD92F4ECF4600AA968F /* MethodOfSendViewController.swift */,
-				C7510CD72F4ECF4600AA968F /* MethodOfSendPresenter.swift */,
+				C73AFA652F68F82000DB14C5 /* PersonalData.swift */,
+				C70EDA742FF65C0500D567DB /* DeliveryMethod */,
 			);
-			path = MethodOfSend;
+			path = Shipment;
 			sourceTree = "<group>";
 		};
 		C7510CDC2F4ECF4600AA968F /* Profile */ = {
@@ -245,7 +245,7 @@
 				C7510CD02F4ECF4600AA968F /* Calculation */,
 				C7BE24A12F6D87290045774E /* CitySelection */,
 				C7A8B7582F74DDCB00ACBC95 /* PackageSize */,
-				C7510CDA2F4ECF4600AA968F /* MethodOfSend */,
+				C7510CDA2F4ECF4600AA968F /* Shipment */,
 				C7510CD62F4ECF4600AA968F /* History */,
 				C7510CDC2F4ECF4600AA968F /* Profile */,
 				C7510CE12F4ECF4600AA968F /* Supporting */,
@@ -260,7 +260,7 @@
 				C70BE6C92FD2C06600386F5E /* CalculationAssembly.swift */,
 				C70BE6CB2FD2C26E00386F5E /* HistoryAssembly.swift */,
 				C70BE6CD2FD2C34200386F5E /* ProfileAssembly.swift */,
-				C78321532F5564AA003144D0 /* MethodOfSendAssembly.swift */,
+				C78321532F5564AA003144D0 /* ShipmentAssembly.swift */,
 				C7BD59152F6FC20400E8C6AB /* CitySelectionAssembly.swift */,
 			);
 			path = Assembly;
@@ -431,13 +431,13 @@
 				C7510CF02F4ECF4600AA968F /* CoordinatorProtocol.swift in Sources */,
 				C7510CF12F4ECF4600AA968F /* MainCoordinator.swift in Sources */,
 				C7EE1E5C2F500D5700B6326F /* HistoryContentView.swift in Sources */,
-				C7510CF22F4ECF4600AA968F /* MethodOfSendCoordinator.swift in Sources */,
+				C7510CF22F4ECF4600AA968F /* ShipmentCoordinator.swift in Sources */,
 				C7B1F36B2FCEFE760086A9FB /* ThemeService.swift in Sources */,
 				C78C4A802FEAC17A007AA2D0 /* DeliveryFieldView.swift in Sources */,
 				C7B1F36D2FD1470B0086A9FB /* AppContainer.swift in Sources */,
 				C7A8B7652F74EA4100ACBC95 /* PackageSizeViewController.swift in Sources */,
 				C7510CF32F4ECF4600AA968F /* HistoryViewController.swift in Sources */,
-				C7510CF42F4ECF4600AA968F /* MethodOfSendPresenter.swift in Sources */,
+				C7510CF42F4ECF4600AA968F /* DeliveryMethodPresenter.swift in Sources */,
 				C78C4A7C2FEA5283007AA2D0 /* DeliveryFieldControl.swift in Sources */,
 				C73AFA882F69176700DB14C5 /* ProgressBarComponent.swift in Sources */,
 				C7BD59162F6FC20400E8C6AB /* CitySelectionAssembly.swift in Sources */,
@@ -445,10 +445,10 @@
 				C70BE6CC2FD2C26E00386F5E /* HistoryAssembly.swift in Sources */,
 				C7B856FD2F5946A2004D6B57 /* AppCoordinator.swift in Sources */,
 				C7454F2C2F501CAC008A5D93 /* ProfileContentView.swift in Sources */,
-				C7510CF62F4ECF4600AA968F /* MethodOfSendViewController.swift in Sources */,
+				C7510CF62F4ECF4600AA968F /* DeliveryMethodViewController.swift in Sources */,
 				C7BE24A52F6D88A70045774E /* CitySelectionPresenter.swift in Sources */,
 				C7BE24A92F6D88D20045774E /* CitySelectionTableViewCell.swift in Sources */,
-				C783215A2F5564AA003144D0 /* MethodOfSendAssembly.swift in Sources */,
+				C783215A2F5564AA003144D0 /* ShipmentAssembly.swift in Sources */,
 				C7B856FF2F59514B004D6B57 /* CalculationCoordinator.swift in Sources */,
 				C7B857012F595205004D6B57 /* HistoryCoordinator.swift in Sources */,
 				C70BE6CE2FD2C34200386F5E /* ProfileAssembly.swift in Sources */,
@@ -465,7 +465,7 @@
 				C7A8B75C2F74E14200ACBC95 /* PackageSizeContentView.swift in Sources */,
 				C7BD59142F6FC01900E8C6AB /* CitySelectionCoordinator.swift in Sources */,
 				C7510CF92F4ECF4600AA968F /* CustomButtonFactory.swift in Sources */,
-				C72F4F842F67D3CD000083FC /* MethodOfSendContentView.swift in Sources */,
+				C72F4F842F67D3CD000083FC /* DeliveryMethodContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

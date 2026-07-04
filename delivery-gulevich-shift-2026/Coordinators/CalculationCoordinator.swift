@@ -34,7 +34,7 @@ final class CalculationCoordinator: NSObject, CoordinatorProtocol {
 extension CalculationCoordinator: ICalculationPresenterOutput {
 	
 	func showMethodOfSend() {
-		let methodOfSendCoordinator = MethodOfSendCoordinator(
+		let methodOfSendCoordinator = ShipmentCoordinator(
 			parentCoordinator: self,
 			navigationController: navigationController
 		)
@@ -88,8 +88,8 @@ extension CalculationCoordinator: UINavigationControllerDelegate {
 			return
 		} else {
 			switch fromVC {
-			case is MethodOfSendViewController:
-				childCoordinators.removeAll { $0 is MethodOfSendCoordinator }
+			case is DeliveryMethodViewController:
+				childCoordinators.removeAll { $0 is ShipmentCoordinator }
 			case is CitySelectionViewController:
 				childCoordinators.removeAll { $0 is CitySelectionCoordinator }
 			default: break

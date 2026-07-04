@@ -1,10 +1,10 @@
 import Foundation
 import UIKit
 
-final class MethodOfSendCoordinator: CoordinatorProtocol {
+final class ShipmentCoordinator: CoordinatorProtocol {
 	
 	weak var parentCoordinator: CalculationCoordinator?
-	var methodOfSendAssembly = MethodOfSendAssembly()
+	var methodOfSendAssembly = ShipmentAssembly()
 	var navigationController: UINavigationController
 	var childCoordinators: [CoordinatorProtocol] = []
 	
@@ -28,7 +28,7 @@ final class MethodOfSendCoordinator: CoordinatorProtocol {
 	}
 }
 
-extension MethodOfSendCoordinator: IMethodOfSendPresenterOutput {
+extension ShipmentCoordinator: DeliveryMethodPresenterOutputProtocol {
 	//переименовать userDidFinish() когда появится конкретное действие
 	func userDidFinish() {
 		parentCoordinator?.childDidFinish(child: self)
