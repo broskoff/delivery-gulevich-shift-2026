@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-final class CustomButtonFactory {
+final class BigBlueButtonFactory {
 	
 	static func make(withTitle: String) -> UIButton {
 		let button = UIButton(type: .system)
