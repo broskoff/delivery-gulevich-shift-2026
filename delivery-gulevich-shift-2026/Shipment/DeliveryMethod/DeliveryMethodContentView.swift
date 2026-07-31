@@ -10,11 +10,10 @@ protocol DeliveryMethodContentViewProtocol: AnyObject {
 }
 
 final class DeliveryMethodContentView: UIView, DeliveryMethodContentViewProtocol {
+	
 	weak var delegate: DeliveryMethodViewDelegateProtocol?
 	
-	private let topView = UIView()
-	private let titleStackView = UIStackView()
-	
+	private let shipmentTopView = ShipmentTopView(title: UIConstants.Shipment.HeaderNames.deliveryMethodTitle)
 	private let scrollView = UIScrollView()
 	private let contentView = UIView()
 	private let mainStackView = UIStackView()
@@ -33,11 +32,11 @@ final class DeliveryMethodContentView: UIView, DeliveryMethodContentViewProtocol
 
 extension DeliveryMethodContentView {
 	func configureUI() {
-		backgroundColor = ContentColor.deliveryMethodViewBackground
+		backgroundColor = ContentColor.shipmentBackground
 		
 		setupHierarchy()
 		
-		configureTopView()
+		setConstraintsShipmentTopView()
 		
 		configureScrollView()
 		
@@ -47,54 +46,28 @@ extension DeliveryMethodContentView {
 
 extension DeliveryMethodContentView {
 	func setupHierarchy() {
-		addSubview(topView)
+		addSubview(shipmentTopView)
 		addSubview(scrollView)
-		
-		topView.addSubview(titleStackView)
-		
-		scrollView.addSubview(contentView)
-		contentView.addSubview(mainStackView)
 	}
 	
-	func configureTopView() {
-		topView.snp.makeConstraints {
+	func setConstraintsShipmentTopView() {
+		shipmentTopView.snp.makeConstraints {
 			$0.top.equalToSuperview().offset(UIConstants.Offset.topScreen)
 			$0.leading.trailing.equalToSuperview()
-		}
-		
-		configureTitleStackView()
-		configureTitleLabel()
-	}
-	
-	func configureTitleStackView() {
-		titleStackView.axis = .vertical
-		
-		titleStackView.snp.makeConstraints {
-			$0.edges.equalToSuperview().inset(20)
-		}
-	}
-	
-	func configureTitleLabel() {
-		let titleLabel = UILabel()
-		titleStackView.addArrangedSubview(titleLabel)
-		
-		titleLabel.text = UIConstants.deliveryMethodContentView.HeaderNames.title
-		titleLabel.textAlignment = .center
-		titleLabel.font = .systemFont(ofSize: 28, weight: .bold)
-		
-		titleLabel.snp.makeConstraints {
-			$0.centerX.equalToSuperview()
 		}
 	}
 }
 
 extension DeliveryMethodContentView {
 	func configureScrollView() {
+		scrollView.addSubview(contentView)
+		contentView.addSubview(mainStackView)
+		
 		scrollView.bouncesHorizontally = false
 		scrollView.alwaysBounceVertical = true
 		
 		scrollView.snp.makeConstraints {
-			$0.top.equalTo(topView.snp.bottom)
+			$0.top.equalTo(shipmentTopView.snp.bottom)
 			$0.leading.trailing.equalToSuperview()
 			$0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
 		}

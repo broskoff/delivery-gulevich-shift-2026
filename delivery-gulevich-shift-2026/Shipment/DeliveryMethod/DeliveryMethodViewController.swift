@@ -16,6 +16,7 @@ class DeliveryMethodViewController: UIViewController, DeliveryMethodViewDelegate
 	) {
 		self.deliveryMethodContentView = deliveryMethodContentView
 		self.presenter = presenter
+		
 		super.init(nibName: nil, bundle: nil)
 	}
 	
