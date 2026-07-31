@@ -291,7 +291,7 @@ private extension CalculationContentView {
 	
 	//MARK: Действие кнопки "Найти"
 	func configureButtonTrack() {
-		let button = CustomButtonFactory.make(withTitle: UIConstants.Calculation.ButtonNames.find)
+		let button = BigBlueButtonFactory.make(withTitle: UIConstants.Calculation.ButtonNames.find)
 		
 		button.snp.makeConstraints {
 			$0.height.equalTo(UIConstants.Calculation.Heights.button)
@@ -325,7 +325,7 @@ private extension CalculationContentView {
 private extension CalculationContentView {
 	
 	func configureButtonCalcDelivery() {
-		let button = CustomButtonFactory.make(withTitle: UIConstants.Calculation.ButtonNames.calculate)
+		let button = BigBlueButtonFactory.make(withTitle: UIConstants.Calculation.ButtonNames.calculate)
 		
 		button.snp.makeConstraints {
 			$0.height.equalTo(UIConstants.Calculation.Heights.button)
