@@ -31,4 +31,15 @@ final class ShipmentAssembly: ShipmentAssemblyProtocol {
 		presenter.view = recipientView
 		return recipientView
 	}
+	func createSenderScreen(output: ShipmentOutputProtocol) -> UIViewController {
+		let presenter = SenderPresenter(output: output)
+		let senderContentView = SenderContentView()
+		let senderView = SenderViewController(
+			senderContentView: senderContentView,
+			presenter: presenter
+		)
+		
+		presenter.view = senderView
+		return senderView
+	}
 }
