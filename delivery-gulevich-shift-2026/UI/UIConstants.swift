@@ -51,6 +51,8 @@ enum UIConstants {
 		enum HeaderNames {
 			static let deliveryMethodTitle  = "Способ отправки"
 			static let recepientTitle  = "Получатель"
+			static let senderTitle  = "Отправитель"
+			static let senderAddressTitle  = "Откуда забрать"
 		}
 	}
 	
