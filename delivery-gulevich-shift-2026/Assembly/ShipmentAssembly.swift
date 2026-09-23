@@ -20,6 +20,7 @@ final class ShipmentAssembly: ShipmentAssemblyProtocol {
 		presenter.view = deliveryMethodView
 		return deliveryMethodView
 	}
+	
 	func createRecipientScreen(output: ShipmentOutputProtocol) -> UIViewController {
 		let presenter = RecipientPresenter(output: output)
 		let recipientContentView = RecipientContentView()
@@ -31,6 +32,7 @@ final class ShipmentAssembly: ShipmentAssemblyProtocol {
 		presenter.view = recipientView
 		return recipientView
 	}
+	
 	func createSenderScreen(output: ShipmentOutputProtocol) -> UIViewController {
 		let presenter = SenderPresenter(output: output)
 		let senderContentView = SenderContentView()
@@ -41,5 +43,18 @@ final class ShipmentAssembly: ShipmentAssemblyProtocol {
 		
 		presenter.view = senderView
 		return senderView
+	}
+	
+	func createSenderAddressScreen(output: ShipmentOutputProtocol) -> UIViewController {
+		
+		let presenter = SenderAddressPresenter(output: output)
+		let senderAddressContentView = SenderAddressContentView()
+		let senderAddressView = SenderAddressViewController(
+			senderAddressContentView: senderAddressContentView,
+			presenter: presenter
+		)
+		
+		presenter.view = senderAddressView
+		return senderAddressView
 	}
 }
