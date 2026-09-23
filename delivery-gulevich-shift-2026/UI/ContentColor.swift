@@ -8,9 +8,9 @@ final class ContentColor: UIColor, @unchecked Sendable {
 												 alpha: 1.0)
 	
 	static let shipmentBackground = UIColor(red: 255/255,
-													green: 255/255,
-													blue: 255/255,
-													alpha: 1.0)
+											green: 255/255,
+											blue: 255/255,
+											alpha: 1.0)
 	
 	static let subTitleColor = UIColor(red: 99/255,
 									   green: 112/255,
