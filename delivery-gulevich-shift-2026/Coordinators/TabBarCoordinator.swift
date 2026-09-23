@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-final class MainCoordinator {
+final class TabBarCoordinator {
 	
 	private(set) var tabBarController = UITabBarController()
 	private var coordinators: [CoordinatorProtocol] = []
@@ -21,13 +21,19 @@ final class MainCoordinator {
 	}
 	
 	func start() {
-		showTabBarContorller()
+		showTabBarController()
 	}
 	
-	private func showTabBarContorller() {
+	private func showTabBarController() {
 		let calculationNavigationController = UINavigationController()
 		let historyNavigationController = UINavigationController()
 		let profileNavigationController = UINavigationController()
+		
+		tabBarController.viewControllers = [
+			calculationNavigationController,
+			historyNavigationController,
+			profileNavigationController
+		]
 		
 		let calculationCoordinator = CalculationCoordinator(
 			navigationController: calculationNavigationController,
@@ -51,15 +57,9 @@ final class MainCoordinator {
 		calculationCoordinator.start()
 		historyCoordinator.start()
 		profileCoordinator.start()
-		
-		tabBarController.viewControllers = [
-			calculationNavigationController,
-			historyNavigationController,
-			profileNavigationController
-		]
 	}
 	
 	deinit {
-		print("MainCoordinator деинициализирован")
+		print("TabBarCoordinator деинициализирован")
 	}
 }

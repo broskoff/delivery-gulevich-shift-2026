@@ -3,12 +3,12 @@ import UIKit
 final class AppCoordinator: CoordinatorProtocol {
 	
 	private let window: UIWindow
-	private let mainCoordinator: MainCoordinator
+	private let tabBarCoordinator: TabBarCoordinator
 	
 	init(window: UIWindow, appContainer: AppContainer) {
 		self.window = window
 		
-		self.mainCoordinator = MainCoordinator(
+		self.tabBarCoordinator = TabBarCoordinator(
 			calculationAssembly: CalculationAssembly(),
 			historyAssembly: HistoryAssembly(),
 			profileAssembly: ProfileAssembly(themeService: appContainer.themeService)
@@ -16,9 +16,9 @@ final class AppCoordinator: CoordinatorProtocol {
 	}
 	
 	func start() {
-		mainCoordinator.start()
+		tabBarCoordinator.start()
 		
-		window.rootViewController = mainCoordinator.tabBarController
+		window.rootViewController = tabBarCoordinator.tabBarController
 		window.makeKeyAndVisible()
 	}
 }
