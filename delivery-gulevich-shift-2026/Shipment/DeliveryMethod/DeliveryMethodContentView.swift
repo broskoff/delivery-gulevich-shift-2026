@@ -1,17 +1,11 @@
 import UIKit
 import SnapKit
 
-protocol DeliveryMethodViewDelegateProtocol: AnyObject {
-	func didTapDeliveryToTheDoor()
-}
-
 protocol DeliveryMethodContentViewProtocol: AnyObject {
-	var delegate: DeliveryMethodViewDelegateProtocol? { get set }
 }
 
 final class DeliveryMethodContentView: UIView, DeliveryMethodContentViewProtocol {
 	
-	weak var delegate: DeliveryMethodViewDelegateProtocol?
 	
 	private let shipmentTopView = ShipmentTopView(title: UIConstants.Shipment.HeaderNames.deliveryMethodTitle)
 	private let scrollView = UIScrollView()
