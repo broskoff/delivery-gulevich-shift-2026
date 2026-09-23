@@ -45,7 +45,7 @@ final class CitySelectionContentView: UIView, CitySelectionContentViewProtocol {
 extension CitySelectionContentView {
 	
 	func configUI() {
-		backgroundColor = .red
+		backgroundColor = .systemBackground
 		
 		setupHierarchy()
 		
