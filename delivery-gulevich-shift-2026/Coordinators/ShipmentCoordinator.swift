@@ -5,6 +5,7 @@ protocol ShipmentOutputProtocol: AnyObject {
 	func openRecipient(_ type: String, _ price: String, _ days: String)
 	func openSender(_ surname: String, _ name: String, _ patronymic: String, _ phone: String)
 	func openSenderAddress(_ surname: String, _ name: String, _ patronymic: String, _ phone: String)
+	func openRecipientAddress(_ street: String, _ house: String, _ apartment: String, _ note: String)
 }
 
 final class ShipmentCoordinator: CoordinatorProtocol {
@@ -64,5 +65,14 @@ extension ShipmentCoordinator: ShipmentOutputProtocol {
 		
 		let senderAddressViewController = shipmentAssembly.createSenderAddressScreen(output: self)
 		navigationController.pushViewController(senderAddressViewController, animated: true)
+	}
+	func openRecipientAddress(_ street: String, _ house: String, _ apartment: String, _ note: String) {
+		dataToDelivery.streetSender = street
+		dataToDelivery.houseSender = house
+		dataToDelivery.apartmentSender = apartment
+		dataToDelivery.noteForСourierSender = note
+		
+		let recipientAddressViewController = shipmentAssembly.createRecipientAddressScreen(output: self)
+		navigationController.pushViewController(recipientAddressViewController, animated: true)
 	}
 }
