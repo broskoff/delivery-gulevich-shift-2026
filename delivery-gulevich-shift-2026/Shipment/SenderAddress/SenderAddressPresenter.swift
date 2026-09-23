@@ -12,6 +12,6 @@ final class SenderAddressPresenter: SenderAddressPresenterProtocol {
 	}
 	
 	func userEnteredAddress(_ street: String, _ house: String, _ apartment: String, _ note: String) {
-//		output.openRecipientAddress()
+		output?.openRecipientAddress(street, house, apartment, note)
 	}
 }
