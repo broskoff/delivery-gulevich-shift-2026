@@ -1,26 +1,17 @@
-import Foundation
-import UIKit
-
-//переименовать userDidFinish() когда появится конкретное действие
-protocol DeliveryMethodPresenterOutputProtocol: AnyObject {
-	func userDidFinish()
-}
-
-//переименовать userActed() когда появится конкретное действие
 protocol DeliveryMethodPresenterProtocol: AnyObject {
-	func userActed()
+	func userChoseDeliveryMethod(type: String, price: String, days: String)
 }
 
 class DeliveryMethodPresenter: DeliveryMethodPresenterProtocol {
 	
-	weak var output: DeliveryMethodPresenterOutputProtocol?
+	weak var output: ShipmentOutputProtocol?
 	weak var view: DeliveryMethodViewControllerProtocol?
 	
-	init(output: DeliveryMethodPresenterOutputProtocol) {
+	init(output: ShipmentOutputProtocol) {
 		self.output = output
 	}
 	
-	func userActed() {
-		output?.userDidFinish()
+	func userChoseDeliveryMethod(type: String, price: String, days: String) {
+		output?.openRecipient(type, price, days)
 	}
 }
