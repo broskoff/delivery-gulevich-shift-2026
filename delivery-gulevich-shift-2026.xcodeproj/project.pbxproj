@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7067D46306151E80046B8C7 /* DataToDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7067D45306151E80046B8C7 /* DataToDelivery.swift */; };
 		C70BE6CA2FD2C06600386F5E /* CalculationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70BE6C92FD2C06600386F5E /* CalculationAssembly.swift */; };
 		C70BE6CC2FD2C26E00386F5E /* HistoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70BE6CB2FD2C26E00386F5E /* HistoryAssembly.swift */; };
 		C70BE6CE2FD2C34200386F5E /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70BE6CD2FD2C34200386F5E /* ProfileAssembly.swift */; };
@@ -14,7 +15,8 @@
 		C73AFA672F68F82000DB14C5 /* PersonalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA652F68F82000DB14C5 /* PersonalData.swift */; };
 		C73AFA882F69176700DB14C5 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */; };
 		C73AFA8F2F6A5BB000DB14C5 /* PromoBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA8C2F6A5BB000DB14C5 /* PromoBanner.swift */; };
-		C73AFAE02F6A996E00DB14C5 /* DeliveryMethodStackFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFADF2F6A996E00DB14C5 /* DeliveryMethodStackFactory.swift */; };
+		C7413AE4301B291700A85F67 /* RecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7413AE3301B291700A85F67 /* RecipientViewController.swift */; };
+		C7413AEC301B317E00A85F67 /* RecipientPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7413AEB301B317E00A85F67 /* RecipientPresenter.swift */; };
 		C7454F2C2F501CAC008A5D93 /* ProfileContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7454F2B2F501CAC008A5D93 /* ProfileContentView.swift */; };
 		C7454F2E2F501CDC008A5D93 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7454F2D2F501CDC008A5D93 /* ProfilePresenter.swift */; };
 		C7510CE82F4ECF4600AA968F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7510CDD2F4ECF4600AA968F /* Assets.xcassets */; };
@@ -25,14 +27,15 @@
 		C7510CEE2F4ECF4600AA968F /* CalculationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CCE2F4ECF4600AA968F /* CalculationContentView.swift */; };
 		C7510CEF2F4ECF4600AA968F /* CalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CCF2F4ECF4600AA968F /* CalculationViewController.swift */; };
 		C7510CF02F4ECF4600AA968F /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD12F4ECF4600AA968F /* CoordinatorProtocol.swift */; };
-		C7510CF12F4ECF4600AA968F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD22F4ECF4600AA968F /* MainCoordinator.swift */; };
+		C7510CF12F4ECF4600AA968F /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD22F4ECF4600AA968F /* TabBarCoordinator.swift */; };
 		C7510CF22F4ECF4600AA968F /* ShipmentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD32F4ECF4600AA968F /* ShipmentCoordinator.swift */; };
 		C7510CF32F4ECF4600AA968F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD52F4ECF4600AA968F /* HistoryViewController.swift */; };
 		C7510CF42F4ECF4600AA968F /* DeliveryMethodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD72F4ECF4600AA968F /* DeliveryMethodPresenter.swift */; };
 		C7510CF62F4ECF4600AA968F /* DeliveryMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CD92F4ECF4600AA968F /* DeliveryMethodViewController.swift */; };
 		C7510CF72F4ECF4600AA968F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CDB2F4ECF4600AA968F /* ProfileViewController.swift */; };
 		C7510CF82F4ECF4600AA968F /* ContentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CE22F4ECF4600AA968F /* ContentColor.swift */; };
-		C7510CF92F4ECF4600AA968F /* CustomButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CE32F4ECF4600AA968F /* CustomButtonFactory.swift */; };
+		C7510CF92F4ECF4600AA968F /* BigBlueButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CE32F4ECF4600AA968F /* BigBlueButtonFactory.swift */; };
+		C7728AAC3013CB7E00097998 /* RecipientContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7728AAB3013CB7E00097998 /* RecipientContentView.swift */; };
 		C783215A2F5564AA003144D0 /* ShipmentAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78321532F5564AA003144D0 /* ShipmentAssembly.swift */; };
 		C78C4A7C2FEA5283007AA2D0 /* DeliveryFieldControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C4A7B2FEA5283007AA2D0 /* DeliveryFieldControl.swift */; };
 		C78C4A802FEAC17A007AA2D0 /* DeliveryFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C4A7F2FEAC17A007AA2D0 /* DeliveryFieldView.swift */; };
@@ -56,12 +59,30 @@
 		C7BE24A72F6D88BC0045774E /* CitySelectionContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE24A62F6D88BC0045774E /* CitySelectionContentView.swift */; };
 		C7BE24A92F6D88D20045774E /* CitySelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE24A82F6D88D20045774E /* CitySelectionTableViewCell.swift */; };
 		C7BE24AB2F6D8ECD0045774E /* CitySelectionTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE24AA2F6D8ECD0045774E /* CitySelectionTableViewDataSource.swift */; };
+		C7D8D6DA306291F2001FC23C /* SenderAddressContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D8D6D9306291F2001FC23C /* SenderAddressContentView.swift */; };
+		C7D8D6DC30629212001FC23C /* SenderAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D8D6DB30629212001FC23C /* SenderAddressViewController.swift */; };
+		C7D8D6DE30629236001FC23C /* SenderAddressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D8D6DD30629236001FC23C /* SenderAddressPresenter.swift */; };
 		C7DF61422F29C607009B0BA1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C7DF61412F29C607009B0BA1 /* SnapKit */; };
+		C7E30D043057FFE40081BF1C /* SenderContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E30D003057FFE40081BF1C /* SenderContentView.swift */; };
+		C7E30D053057FFE40081BF1C /* SenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E30D013057FFE40081BF1C /* SenderViewController.swift */; };
+		C7E30D063057FFE40081BF1C /* SenderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E30D023057FFE40081BF1C /* SenderPresenter.swift */; };
 		C7EE1E5C2F500D5700B6326F /* HistoryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE1E5B2F500D5700B6326F /* HistoryContentView.swift */; };
 		C7EE1E5E2F500D6600B6326F /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE1E5D2F500D6600B6326F /* HistoryPresenter.swift */; };
+		C7FF7616301C688600B2C13D /* ShipmentTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF7615301C688600B2C13D /* ShipmentTopView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C7FB5EA530189C0D005712E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DF60B12F29BAA4009B0BA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7DF60B82F29BAA4009B0BA1;
+			remoteInfo = "delivery-gulevich-shift-2026";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		C7067D45306151E80046B8C7 /* DataToDelivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataToDelivery.swift; sourceTree = "<group>"; };
 		C70BE6C92FD2C06600386F5E /* CalculationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationAssembly.swift; sourceTree = "<group>"; };
 		C70BE6CB2FD2C26E00386F5E /* HistoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAssembly.swift; sourceTree = "<group>"; };
 		C70BE6CD2FD2C34200386F5E /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
@@ -69,7 +90,8 @@
 		C73AFA652F68F82000DB14C5 /* PersonalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalData.swift; sourceTree = "<group>"; };
 		C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarComponent.swift; sourceTree = "<group>"; };
 		C73AFA8C2F6A5BB000DB14C5 /* PromoBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoBanner.swift; sourceTree = "<group>"; };
-		C73AFADF2F6A996E00DB14C5 /* DeliveryMethodStackFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMethodStackFactory.swift; sourceTree = "<group>"; };
+		C7413AE3301B291700A85F67 /* RecipientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientViewController.swift; sourceTree = "<group>"; };
+		C7413AEB301B317E00A85F67 /* RecipientPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientPresenter.swift; sourceTree = "<group>"; };
 		C7454F2B2F501CAC008A5D93 /* ProfileContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContentView.swift; sourceTree = "<group>"; };
 		C7454F2D2F501CDC008A5D93 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		C7510CCA2F4ECF4600AA968F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +100,7 @@
 		C7510CCE2F4ECF4600AA968F /* CalculationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationContentView.swift; sourceTree = "<group>"; };
 		C7510CCF2F4ECF4600AA968F /* CalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewController.swift; sourceTree = "<group>"; };
 		C7510CD12F4ECF4600AA968F /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
-		C7510CD22F4ECF4600AA968F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		C7510CD22F4ECF4600AA968F /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		C7510CD32F4ECF4600AA968F /* ShipmentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentCoordinator.swift; sourceTree = "<group>"; };
 		C7510CD52F4ECF4600AA968F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		C7510CD72F4ECF4600AA968F /* DeliveryMethodPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMethodPresenter.swift; sourceTree = "<group>"; };
@@ -88,7 +110,8 @@
 		C7510CDE2F4ECF4600AA968F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7510CDF2F4ECF4600AA968F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7510CE22F4ECF4600AA968F /* ContentColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentColor.swift; sourceTree = "<group>"; };
-		C7510CE32F4ECF4600AA968F /* CustomButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonFactory.swift; sourceTree = "<group>"; };
+		C7510CE32F4ECF4600AA968F /* BigBlueButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBlueButtonFactory.swift; sourceTree = "<group>"; };
+		C7728AAB3013CB7E00097998 /* RecipientContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientContentView.swift; sourceTree = "<group>"; };
 		C78321532F5564AA003144D0 /* ShipmentAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentAssembly.swift; sourceTree = "<group>"; };
 		C78C4A7B2FEA5283007AA2D0 /* DeliveryFieldControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryFieldControl.swift; sourceTree = "<group>"; };
 		C78C4A7F2FEAC17A007AA2D0 /* DeliveryFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryFieldView.swift; sourceTree = "<group>"; };
@@ -112,9 +135,17 @@
 		C7BE24A62F6D88BC0045774E /* CitySelectionContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionContentView.swift; sourceTree = "<group>"; };
 		C7BE24A82F6D88D20045774E /* CitySelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionTableViewCell.swift; sourceTree = "<group>"; };
 		C7BE24AA2F6D8ECD0045774E /* CitySelectionTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionTableViewDataSource.swift; sourceTree = "<group>"; };
+		C7D8D6D9306291F2001FC23C /* SenderAddressContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderAddressContentView.swift; sourceTree = "<group>"; };
+		C7D8D6DB30629212001FC23C /* SenderAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderAddressViewController.swift; sourceTree = "<group>"; };
+		C7D8D6DD30629236001FC23C /* SenderAddressPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderAddressPresenter.swift; sourceTree = "<group>"; };
 		C7DF60B92F29BAA4009B0BA1 /* delivery-gulevich-shift-2026.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "delivery-gulevich-shift-2026.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7E30D003057FFE40081BF1C /* SenderContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderContentView.swift; sourceTree = "<group>"; };
+		C7E30D013057FFE40081BF1C /* SenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderViewController.swift; sourceTree = "<group>"; };
+		C7E30D023057FFE40081BF1C /* SenderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderPresenter.swift; sourceTree = "<group>"; };
 		C7EE1E5B2F500D5700B6326F /* HistoryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryContentView.swift; sourceTree = "<group>"; };
 		C7EE1E5D2F500D6600B6326F /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		C7FB5EA130189C0D005712E0 /* delivery-gulevich-shift-2026Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "delivery-gulevich-shift-2026Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7FF7615301C688600B2C13D /* ShipmentTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentTopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +154,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7DF61422F29C607009B0BA1 /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7FB5E9E30189C0D005712E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,14 +175,6 @@
 				C7510CD72F4ECF4600AA968F /* DeliveryMethodPresenter.swift */,
 			);
 			path = DeliveryMethod;
-			sourceTree = "<group>";
-		};
-		C73AFADE2F6A991700DB14C5 /* MethodOfSendStack */ = {
-			isa = PBXGroup;
-			children = (
-				C73AFADF2F6A996E00DB14C5 /* DeliveryMethodStackFactory.swift */,
-			);
-			path = MethodOfSendStack;
 			sourceTree = "<group>";
 		};
 		C7510CCC2F4ECF4600AA968F /* App */ = {
@@ -165,6 +195,8 @@
 				C7510CCE2F4ECF4600AA968F /* CalculationContentView.swift */,
 				C7510CCF2F4ECF4600AA968F /* CalculationViewController.swift */,
 				C7510CCD2F4ECF4600AA968F /* CalculationPresenter.swift */,
+				C7BE24A12F6D87290045774E /* CitySelection */,
+				C7A8B7582F74DDCB00ACBC95 /* PackageSize */,
 			);
 			path = Calculation;
 			sourceTree = "<group>";
@@ -173,12 +205,12 @@
 			isa = PBXGroup;
 			children = (
 				C7510CD12F4ECF4600AA968F /* CoordinatorProtocol.swift */,
-				C7510CD22F4ECF4600AA968F /* MainCoordinator.swift */,
+				C7510CD22F4ECF4600AA968F /* TabBarCoordinator.swift */,
 				C7B856FE2F59514B004D6B57 /* CalculationCoordinator.swift */,
-				C7B857002F595205004D6B57 /* HistoryCoordinator.swift */,
-				C7B857022F595239004D6B57 /* ProfileCoordinator.swift */,
 				C7510CD32F4ECF4600AA968F /* ShipmentCoordinator.swift */,
 				C7BD59132F6FC01900E8C6AB /* CitySelectionCoordinator.swift */,
+				C7B857002F595205004D6B57 /* HistoryCoordinator.swift */,
+				C7B857022F595239004D6B57 /* ProfileCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -197,7 +229,11 @@
 			isa = PBXGroup;
 			children = (
 				C73AFA652F68F82000DB14C5 /* PersonalData.swift */,
+				C7067D45306151E80046B8C7 /* DataToDelivery.swift */,
 				C70EDA742FF65C0500D567DB /* DeliveryMethod */,
+				C7728AAA3013CB3300097998 /* Recipient */,
+				C7E30D033057FFE40081BF1C /* Sender */,
+				C7D8D6D8306291BF001FC23C /* SenderAddress */,
 			);
 			path = Shipment;
 			sourceTree = "<group>";
@@ -225,11 +261,11 @@
 		C7510CE62F4ECF4600AA968F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C7FF7614301C685500B2C13D /* ShipmentTopView */,
 				C7BD59572F74201D00E8C6AB /* DeliveryField */,
-				C73AFADE2F6A991700DB14C5 /* MethodOfSendStack */,
 				C73AFA8C2F6A5BB000DB14C5 /* PromoBanner.swift */,
 				C7510CE22F4ECF4600AA968F /* ContentColor.swift */,
-				C7510CE32F4ECF4600AA968F /* CustomButtonFactory.swift */,
+				C7510CE32F4ECF4600AA968F /* BigBlueButtonFactory.swift */,
 				C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */,
 				C7BE24522F6BB8080045774E /* UIConstants.swift */,
 			);
@@ -243,8 +279,6 @@
 				C7510CD42F4ECF4600AA968F /* Coordinators */,
 				C78321552F5564AA003144D0 /* Assembly */,
 				C7510CD02F4ECF4600AA968F /* Calculation */,
-				C7BE24A12F6D87290045774E /* CitySelection */,
-				C7A8B7582F74DDCB00ACBC95 /* PackageSize */,
 				C7510CDA2F4ECF4600AA968F /* Shipment */,
 				C7510CD62F4ECF4600AA968F /* History */,
 				C7510CDC2F4ECF4600AA968F /* Profile */,
@@ -252,6 +286,16 @@
 				C7510CE62F4ECF4600AA968F /* UI */,
 			);
 			path = "delivery-gulevich-shift-2026";
+			sourceTree = "<group>";
+		};
+		C7728AAA3013CB3300097998 /* Recipient */ = {
+			isa = PBXGroup;
+			children = (
+				C7728AAB3013CB7E00097998 /* RecipientContentView.swift */,
+				C7413AE3301B291700A85F67 /* RecipientViewController.swift */,
+				C7413AEB301B317E00A85F67 /* RecipientPresenter.swift */,
+			);
+			path = Recipient;
 			sourceTree = "<group>";
 		};
 		C78321552F5564AA003144D0 /* Assembly */ = {
@@ -324,6 +368,16 @@
 			path = CitySelection;
 			sourceTree = "<group>";
 		};
+		C7D8D6D8306291BF001FC23C /* SenderAddress */ = {
+			isa = PBXGroup;
+			children = (
+				C7D8D6D9306291F2001FC23C /* SenderAddressContentView.swift */,
+				C7D8D6DB30629212001FC23C /* SenderAddressViewController.swift */,
+				C7D8D6DD30629236001FC23C /* SenderAddressPresenter.swift */,
+			);
+			path = SenderAddress;
+			sourceTree = "<group>";
+		};
 		C7DF60B02F29BAA4009B0BA1 = {
 			isa = PBXGroup;
 			children = (
@@ -336,8 +390,27 @@
 			isa = PBXGroup;
 			children = (
 				C7DF60B92F29BAA4009B0BA1 /* delivery-gulevich-shift-2026.app */,
+				C7FB5EA130189C0D005712E0 /* delivery-gulevich-shift-2026Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C7E30D033057FFE40081BF1C /* Sender */ = {
+			isa = PBXGroup;
+			children = (
+				C7E30D003057FFE40081BF1C /* SenderContentView.swift */,
+				C7E30D013057FFE40081BF1C /* SenderViewController.swift */,
+				C7E30D023057FFE40081BF1C /* SenderPresenter.swift */,
+			);
+			path = Sender;
+			sourceTree = "<group>";
+		};
+		C7FF7614301C685500B2C13D /* ShipmentTopView */ = {
+			isa = PBXGroup;
+			children = (
+				C7FF7615301C688600B2C13D /* ShipmentTopView.swift */,
+			);
+			path = ShipmentTopView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +436,26 @@
 			productReference = C7DF60B92F29BAA4009B0BA1 /* delivery-gulevich-shift-2026.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C7FB5EA030189C0D005712E0 /* delivery-gulevich-shift-2026Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7FB5EA930189C0D005712E0 /* Build configuration list for PBXNativeTarget "delivery-gulevich-shift-2026Tests" */;
+			buildPhases = (
+				C7FB5E9D30189C0D005712E0 /* Sources */,
+				C7FB5E9E30189C0D005712E0 /* Frameworks */,
+				C7FB5E9F30189C0D005712E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7FB5EA630189C0D005712E0 /* PBXTargetDependency */,
+			);
+			name = "delivery-gulevich-shift-2026Tests";
+			packageProductDependencies = (
+			);
+			productName = "delivery-gulevich-shift-2026Tests";
+			productReference = C7FB5EA130189C0D005712E0 /* delivery-gulevich-shift-2026Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -375,6 +468,10 @@
 				TargetAttributes = {
 					C7DF60B82F29BAA4009B0BA1 = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					C7FB5EA030189C0D005712E0 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = C7DF60B82F29BAA4009B0BA1;
 					};
 				};
 			};
@@ -396,6 +493,7 @@
 			projectRoot = "";
 			targets = (
 				C7DF60B82F29BAA4009B0BA1 /* delivery-gulevich-shift-2026 */,
+				C7FB5EA030189C0D005712E0 /* delivery-gulevich-shift-2026Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -410,6 +508,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C7FB5E9F30189C0D005712E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -417,9 +522,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7FF7616301C688600B2C13D /* ShipmentTopView.swift in Sources */,
 				C7510CEB2F4ECF4600AA968F /* AppDelegate.swift in Sources */,
+				C7E30D063057FFE40081BF1C /* SenderPresenter.swift in Sources */,
 				C7A8B75E2F74E1FB00ACBC95 /* PackageSizeTableViewCell.swift in Sources */,
-				C73AFAE02F6A996E00DB14C5 /* DeliveryMethodStackFactory.swift in Sources */,
+				C7728AAC3013CB7E00097998 /* RecipientContentView.swift in Sources */,
+				C7413AE4301B291700A85F67 /* RecipientViewController.swift in Sources */,
 				C70BE6CA2FD2C06600386F5E /* CalculationAssembly.swift in Sources */,
 				C73AFA8F2F6A5BB000DB14C5 /* PromoBanner.swift in Sources */,
 				C7510CEC2F4ECF4600AA968F /* SceneDelegate.swift in Sources */,
@@ -429,9 +537,10 @@
 				C7BE24532F6BB8080045774E /* UIConstants.swift in Sources */,
 				C7510CEF2F4ECF4600AA968F /* CalculationViewController.swift in Sources */,
 				C7510CF02F4ECF4600AA968F /* CoordinatorProtocol.swift in Sources */,
-				C7510CF12F4ECF4600AA968F /* MainCoordinator.swift in Sources */,
+				C7510CF12F4ECF4600AA968F /* TabBarCoordinator.swift in Sources */,
 				C7EE1E5C2F500D5700B6326F /* HistoryContentView.swift in Sources */,
 				C7510CF22F4ECF4600AA968F /* ShipmentCoordinator.swift in Sources */,
+				C7D8D6DE30629236001FC23C /* SenderAddressPresenter.swift in Sources */,
 				C7B1F36B2FCEFE760086A9FB /* ThemeService.swift in Sources */,
 				C78C4A802FEAC17A007AA2D0 /* DeliveryFieldView.swift in Sources */,
 				C7B1F36D2FD1470B0086A9FB /* AppContainer.swift in Sources */,
@@ -443,12 +552,15 @@
 				C7BD59162F6FC20400E8C6AB /* CitySelectionAssembly.swift in Sources */,
 				C7B857032F595239004D6B57 /* ProfileCoordinator.swift in Sources */,
 				C70BE6CC2FD2C26E00386F5E /* HistoryAssembly.swift in Sources */,
+				C7D8D6DA306291F2001FC23C /* SenderAddressContentView.swift in Sources */,
 				C7B856FD2F5946A2004D6B57 /* AppCoordinator.swift in Sources */,
 				C7454F2C2F501CAC008A5D93 /* ProfileContentView.swift in Sources */,
+				C7067D46306151E80046B8C7 /* DataToDelivery.swift in Sources */,
 				C7510CF62F4ECF4600AA968F /* DeliveryMethodViewController.swift in Sources */,
 				C7BE24A52F6D88A70045774E /* CitySelectionPresenter.swift in Sources */,
 				C7BE24A92F6D88D20045774E /* CitySelectionTableViewCell.swift in Sources */,
 				C783215A2F5564AA003144D0 /* ShipmentAssembly.swift in Sources */,
+				C7E30D053057FFE40081BF1C /* SenderViewController.swift in Sources */,
 				C7B856FF2F59514B004D6B57 /* CalculationCoordinator.swift in Sources */,
 				C7B857012F595205004D6B57 /* HistoryCoordinator.swift in Sources */,
 				C70BE6CE2FD2C34200386F5E /* ProfileAssembly.swift in Sources */,
@@ -457,19 +569,37 @@
 				C73AFA672F68F82000DB14C5 /* PersonalData.swift in Sources */,
 				C7BE24AB2F6D8ECD0045774E /* CitySelectionTableViewDataSource.swift in Sources */,
 				C7A8B7672F74EE5200ACBC95 /* PackageSizeTitleTableViewCell.swift in Sources */,
+				C7413AEC301B317E00A85F67 /* RecipientPresenter.swift in Sources */,
 				C7510CF72F4ECF4600AA968F /* ProfileViewController.swift in Sources */,
 				C7510CF82F4ECF4600AA968F /* ContentColor.swift in Sources */,
 				C7A8B7622F74E5A400ACBC95 /* PackageSizeTableViewDataSource.swift in Sources */,
 				C7BE24A32F6D888E0045774E /* CitySelectionViewController.swift in Sources */,
+				C7E30D043057FFE40081BF1C /* SenderContentView.swift in Sources */,
 				C7454F2E2F501CDC008A5D93 /* ProfilePresenter.swift in Sources */,
 				C7A8B75C2F74E14200ACBC95 /* PackageSizeContentView.swift in Sources */,
 				C7BD59142F6FC01900E8C6AB /* CitySelectionCoordinator.swift in Sources */,
-				C7510CF92F4ECF4600AA968F /* CustomButtonFactory.swift in Sources */,
+				C7510CF92F4ECF4600AA968F /* BigBlueButtonFactory.swift in Sources */,
+				C7D8D6DC30629212001FC23C /* SenderAddressViewController.swift in Sources */,
 				C72F4F842F67D3CD000083FC /* DeliveryMethodContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C7FB5E9D30189C0D005712E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7FB5EA630189C0D005712E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7DF60B82F29BAA4009B0BA1 /* delivery-gulevich-shift-2026 */;
+			targetProxy = C7FB5EA530189C0D005712E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C7510CE02F4ECF4600AA968F /* LaunchScreen.storyboard */ = {
@@ -667,6 +797,42 @@
 			};
 			name = Release;
 		};
+		C7FB5EA730189C0D005712E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Tatiana-Gulevich.delivery-gulevich-shift-2026Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/delivery-gulevich-shift-2026.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/delivery-gulevich-shift-2026";
+			};
+			name = Debug;
+		};
+		C7FB5EA830189C0D005712E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Tatiana-Gulevich.delivery-gulevich-shift-2026Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/delivery-gulevich-shift-2026.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/delivery-gulevich-shift-2026";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -684,6 +850,15 @@
 			buildConfigurations = (
 				C7DF60CD2F29BAA5009B0BA1 /* Debug */,
 				C7DF60CE2F29BAA5009B0BA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7FB5EA930189C0D005712E0 /* Build configuration list for PBXNativeTarget "delivery-gulevich-shift-2026Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7FB5EA730189C0D005712E0 /* Debug */,
+				C7FB5EA830189C0D005712E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
