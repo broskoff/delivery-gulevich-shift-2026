@@ -2,10 +2,12 @@ import UIKit
 import SnapKit
 
 protocol RecipientContentViewProtocol {
+	var completionHandler: ((String, String, String, String) -> Void)? { get set }
 }
 
 final class RecipientContentView: UIView, RecipientContentViewProtocol {
 	
+	var completionHandler: ((String, String, String, String) -> Void)?
 	
 	private let shipmentTopView = ShipmentTopView(title: UIConstants.Shipment.HeaderNames.recepientTitle)
 	private let scrollView = UIScrollView()
