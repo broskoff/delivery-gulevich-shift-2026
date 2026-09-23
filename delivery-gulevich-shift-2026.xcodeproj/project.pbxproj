@@ -35,6 +35,15 @@
 		C7510CF72F4ECF4600AA968F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CDB2F4ECF4600AA968F /* ProfileViewController.swift */; };
 		C7510CF82F4ECF4600AA968F /* ContentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CE22F4ECF4600AA968F /* ContentColor.swift */; };
 		C7510CF92F4ECF4600AA968F /* BigBlueButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7510CE32F4ECF4600AA968F /* BigBlueButtonFactory.swift */; };
+		C75BCC563063D771009E05CB /* RecipientAddressContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BCC553063D771009E05CB /* RecipientAddressContentView.swift */; };
+		C75BCC583063D931009E05CB /* RecipientAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BCC573063D931009E05CB /* RecipientAddressViewController.swift */; };
+		C75BCC5A3063DA5D009E05CB /* RecipientAddressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BCC593063DA5D009E05CB /* RecipientAddressPresenter.swift */; };
+		C75BCC5D3063E18D009E05CB /* PaymentDeliveryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BCC5C3063E18D009E05CB /* PaymentDeliveryContentView.swift */; };
+		C75BCC5F3063E26B009E05CB /* PaymentDeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BCC5E3063E26B009E05CB /* PaymentDeliveryViewController.swift */; };
+		C75BCC613063E334009E05CB /* PaymentDeliveryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BCC603063E334009E05CB /* PaymentDeliveryPresenter.swift */; };
+		C75BCC643063E6CA009E05CB /* DataValidationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BCC633063E6CA009E05CB /* DataValidationContentView.swift */; };
+		C75BCC663063E7C4009E05CB /* DataValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BCC653063E7C4009E05CB /* DataValidationViewController.swift */; };
+		C75BCC683063E83D009E05CB /* DataValidationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BCC673063E83D009E05CB /* DataValidationPresenter.swift */; };
 		C7728AAC3013CB7E00097998 /* RecipientContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7728AAB3013CB7E00097998 /* RecipientContentView.swift */; };
 		C783215A2F5564AA003144D0 /* ShipmentAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78321532F5564AA003144D0 /* ShipmentAssembly.swift */; };
 		C78C4A7C2FEA5283007AA2D0 /* DeliveryFieldControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C4A7B2FEA5283007AA2D0 /* DeliveryFieldControl.swift */; };
@@ -111,6 +120,15 @@
 		C7510CDF2F4ECF4600AA968F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7510CE22F4ECF4600AA968F /* ContentColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentColor.swift; sourceTree = "<group>"; };
 		C7510CE32F4ECF4600AA968F /* BigBlueButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBlueButtonFactory.swift; sourceTree = "<group>"; };
+		C75BCC553063D771009E05CB /* RecipientAddressContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientAddressContentView.swift; sourceTree = "<group>"; };
+		C75BCC573063D931009E05CB /* RecipientAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientAddressViewController.swift; sourceTree = "<group>"; };
+		C75BCC593063DA5D009E05CB /* RecipientAddressPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientAddressPresenter.swift; sourceTree = "<group>"; };
+		C75BCC5C3063E18D009E05CB /* PaymentDeliveryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDeliveryContentView.swift; sourceTree = "<group>"; };
+		C75BCC5E3063E26B009E05CB /* PaymentDeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDeliveryViewController.swift; sourceTree = "<group>"; };
+		C75BCC603063E334009E05CB /* PaymentDeliveryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDeliveryPresenter.swift; sourceTree = "<group>"; };
+		C75BCC633063E6CA009E05CB /* DataValidationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValidationContentView.swift; sourceTree = "<group>"; };
+		C75BCC653063E7C4009E05CB /* DataValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValidationViewController.swift; sourceTree = "<group>"; };
+		C75BCC673063E83D009E05CB /* DataValidationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValidationPresenter.swift; sourceTree = "<group>"; };
 		C7728AAB3013CB7E00097998 /* RecipientContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientContentView.swift; sourceTree = "<group>"; };
 		C78321532F5564AA003144D0 /* ShipmentAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentAssembly.swift; sourceTree = "<group>"; };
 		C78C4A7B2FEA5283007AA2D0 /* DeliveryFieldControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryFieldControl.swift; sourceTree = "<group>"; };
@@ -234,6 +252,9 @@
 				C7728AAA3013CB3300097998 /* Recipient */,
 				C7E30D033057FFE40081BF1C /* Sender */,
 				C7D8D6D8306291BF001FC23C /* SenderAddress */,
+				C75BCC543063D726009E05CB /* RecipientAddress */,
+				C75BCC5B3063E16C009E05CB /* PaymentDelivery */,
+				C75BCC623063E6A9009E05CB /* DataValidation */,
 			);
 			path = Shipment;
 			sourceTree = "<group>";
@@ -286,6 +307,36 @@
 				C7510CE62F4ECF4600AA968F /* UI */,
 			);
 			path = "delivery-gulevich-shift-2026";
+			sourceTree = "<group>";
+		};
+		C75BCC543063D726009E05CB /* RecipientAddress */ = {
+			isa = PBXGroup;
+			children = (
+				C75BCC553063D771009E05CB /* RecipientAddressContentView.swift */,
+				C75BCC573063D931009E05CB /* RecipientAddressViewController.swift */,
+				C75BCC593063DA5D009E05CB /* RecipientAddressPresenter.swift */,
+			);
+			path = RecipientAddress;
+			sourceTree = "<group>";
+		};
+		C75BCC5B3063E16C009E05CB /* PaymentDelivery */ = {
+			isa = PBXGroup;
+			children = (
+				C75BCC5C3063E18D009E05CB /* PaymentDeliveryContentView.swift */,
+				C75BCC5E3063E26B009E05CB /* PaymentDeliveryViewController.swift */,
+				C75BCC603063E334009E05CB /* PaymentDeliveryPresenter.swift */,
+			);
+			path = PaymentDelivery;
+			sourceTree = "<group>";
+		};
+		C75BCC623063E6A9009E05CB /* DataValidation */ = {
+			isa = PBXGroup;
+			children = (
+				C75BCC633063E6CA009E05CB /* DataValidationContentView.swift */,
+				C75BCC653063E7C4009E05CB /* DataValidationViewController.swift */,
+				C75BCC673063E83D009E05CB /* DataValidationPresenter.swift */,
+			);
+			path = DataValidation;
 			sourceTree = "<group>";
 		};
 		C7728AAA3013CB3300097998 /* Recipient */ = {
@@ -528,21 +579,26 @@
 				C7A8B75E2F74E1FB00ACBC95 /* PackageSizeTableViewCell.swift in Sources */,
 				C7728AAC3013CB7E00097998 /* RecipientContentView.swift in Sources */,
 				C7413AE4301B291700A85F67 /* RecipientViewController.swift in Sources */,
+				C75BCC5D3063E18D009E05CB /* PaymentDeliveryContentView.swift in Sources */,
 				C70BE6CA2FD2C06600386F5E /* CalculationAssembly.swift in Sources */,
 				C73AFA8F2F6A5BB000DB14C5 /* PromoBanner.swift in Sources */,
 				C7510CEC2F4ECF4600AA968F /* SceneDelegate.swift in Sources */,
+				C75BCC563063D771009E05CB /* RecipientAddressContentView.swift in Sources */,
 				C7BE24A72F6D88BC0045774E /* CitySelectionContentView.swift in Sources */,
 				C7510CED2F4ECF4600AA968F /* CalculationPresenter.swift in Sources */,
 				C7510CEE2F4ECF4600AA968F /* CalculationContentView.swift in Sources */,
 				C7BE24532F6BB8080045774E /* UIConstants.swift in Sources */,
 				C7510CEF2F4ECF4600AA968F /* CalculationViewController.swift in Sources */,
+				C75BCC613063E334009E05CB /* PaymentDeliveryPresenter.swift in Sources */,
 				C7510CF02F4ECF4600AA968F /* CoordinatorProtocol.swift in Sources */,
 				C7510CF12F4ECF4600AA968F /* TabBarCoordinator.swift in Sources */,
 				C7EE1E5C2F500D5700B6326F /* HistoryContentView.swift in Sources */,
 				C7510CF22F4ECF4600AA968F /* ShipmentCoordinator.swift in Sources */,
 				C7D8D6DE30629236001FC23C /* SenderAddressPresenter.swift in Sources */,
 				C7B1F36B2FCEFE760086A9FB /* ThemeService.swift in Sources */,
+				C75BCC663063E7C4009E05CB /* DataValidationViewController.swift in Sources */,
 				C78C4A802FEAC17A007AA2D0 /* DeliveryFieldView.swift in Sources */,
+				C75BCC5F3063E26B009E05CB /* PaymentDeliveryViewController.swift in Sources */,
 				C7B1F36D2FD1470B0086A9FB /* AppContainer.swift in Sources */,
 				C7A8B7652F74EA4100ACBC95 /* PackageSizeViewController.swift in Sources */,
 				C7510CF32F4ECF4600AA968F /* HistoryViewController.swift in Sources */,
@@ -566,6 +622,7 @@
 				C70BE6CE2FD2C34200386F5E /* ProfileAssembly.swift in Sources */,
 				C7B1F3692FCEFE5B0086A9FB /* AppTheme.swift in Sources */,
 				C7EE1E5E2F500D6600B6326F /* HistoryPresenter.swift in Sources */,
+				C75BCC5A3063DA5D009E05CB /* RecipientAddressPresenter.swift in Sources */,
 				C73AFA672F68F82000DB14C5 /* PersonalData.swift in Sources */,
 				C7BE24AB2F6D8ECD0045774E /* CitySelectionTableViewDataSource.swift in Sources */,
 				C7A8B7672F74EE5200ACBC95 /* PackageSizeTitleTableViewCell.swift in Sources */,
@@ -575,10 +632,13 @@
 				C7A8B7622F74E5A400ACBC95 /* PackageSizeTableViewDataSource.swift in Sources */,
 				C7BE24A32F6D888E0045774E /* CitySelectionViewController.swift in Sources */,
 				C7E30D043057FFE40081BF1C /* SenderContentView.swift in Sources */,
+				C75BCC683063E83D009E05CB /* DataValidationPresenter.swift in Sources */,
+				C75BCC643063E6CA009E05CB /* DataValidationContentView.swift in Sources */,
 				C7454F2E2F501CDC008A5D93 /* ProfilePresenter.swift in Sources */,
 				C7A8B75C2F74E14200ACBC95 /* PackageSizeContentView.swift in Sources */,
 				C7BD59142F6FC01900E8C6AB /* CitySelectionCoordinator.swift in Sources */,
 				C7510CF92F4ECF4600AA968F /* BigBlueButtonFactory.swift in Sources */,
+				C75BCC583063D931009E05CB /* RecipientAddressViewController.swift in Sources */,
 				C7D8D6DC30629212001FC23C /* SenderAddressViewController.swift in Sources */,
 				C72F4F842F67D3CD000083FC /* DeliveryMethodContentView.swift in Sources */,
 			);

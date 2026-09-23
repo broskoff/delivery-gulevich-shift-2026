@@ -55,6 +55,7 @@ enum UIConstants {
 			static let senderAddressTitle  = "Откуда забрать"
 			static let recipientAddressTitle  = "Куда доставить"
 			static let paymentDeliveryTitle  = "Оплата доставки"
+			static let dataValidationTitle = "Проверка данных"
 		}
 	}
 	
