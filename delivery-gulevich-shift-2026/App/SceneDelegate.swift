@@ -9,6 +9,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			   options connectionOptions: UIScene.ConnectionOptions) {
 		
 		guard let windowScene = (scene as? UIWindowScene) else { return }
+		
 		let window = UIWindow(windowScene: windowScene)
 		
 		let appContainer = AppContainer(window: window)
@@ -17,11 +18,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	}
 }
 
-
-/*
- 
- Закоммитить AppContainer and ThemeService
- Разделить MainAssembly на Calculation, History, Profile. Возможно сделать фабрику и ассембли
- Создать в ProfileView сегментКонтрол с выбором темы и реализовать нажатие кнопок и смену темы приложения.
- 
- */
+//для теста
+//class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+//
+//	var window: UIWindow?
+//	
+//	func scene(_ scene: UIScene,
+//			   willConnectTo session: UISceneSession,
+//			   options connectionOptions: UIScene.ConnectionOptions) {
+//		
+//		guard let windowScene = (scene as? UIWindowScene) else { return }
+//		window = UIWindow(windowScene: windowScene)
+//
+//		let vc = RecepientViewController()
+//		window?.rootViewController = vc
+//		window?.makeKeyAndVisible()
+//	}
+//}
