@@ -12,7 +12,7 @@ final class RecipientPresenter: RecipientPresenterProtocol {
 	}
 	
 	func userEnteredRecipientData(surname: String, name: String, patronymic: String, phone: String) {
-		output?.openSender(surname: surname, name: name, patronymic: patronymic, phone: phone)
+		output?.openSender(surname, name, patronymic, phone)
 	}
 }
 
