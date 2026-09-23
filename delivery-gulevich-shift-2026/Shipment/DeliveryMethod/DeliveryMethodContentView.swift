@@ -2,10 +2,12 @@ import UIKit
 import SnapKit
 
 protocol DeliveryMethodContentViewProtocol: AnyObject {
+	var completionHandler: ((String, String, String) -> Void)? { get set }
 }
 
 final class DeliveryMethodContentView: UIView, DeliveryMethodContentViewProtocol {
 	
+	var completionHandler: ((String, String, String) -> Void)?
 	
 	private let shipmentTopView = ShipmentTopView(title: UIConstants.Shipment.HeaderNames.deliveryMethodTitle)
 	private let scrollView = UIScrollView()
@@ -161,6 +163,11 @@ private extension DeliveryMethodContentView {
 		buttonRight.snp.makeConstraints {
 			$0.width.equalTo(24)
 		}
+		
+		buttonRight.addAction(UIAction { _ in
+			self.completionHandler?(typeDelivery, price, countDays)
+		}, for: .touchUpInside)
+		
 		deliveryStack.addArrangedSubview(attachedLeftStack)
 		deliveryStack.addArrangedSubview(buttonRight)
 		

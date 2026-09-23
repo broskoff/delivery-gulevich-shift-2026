@@ -5,7 +5,7 @@ protocol DeliveryMethodViewControllerProtocol: AnyObject {
 	func updateView()
 }
 
-class DeliveryMethodViewController: UIViewController, DeliveryMethodViewDelegateProtocol {
+class DeliveryMethodViewController: UIViewController {
 	
 	let deliveryMethodContentView: UIView & DeliveryMethodContentViewProtocol
 	let presenter: DeliveryMethodPresenterProtocol
@@ -31,12 +31,13 @@ class DeliveryMethodViewController: UIViewController, DeliveryMethodViewDelegate
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		deliveryMethodContentView.delegate = self
+		userChoseDeliveryMethod()
 	}
 	
-	//TODO: переход на экран заполнения данных получателя
-	func didTapDeliveryToTheDoor() {
-		print("Нажали Экспресс доставка до двери")
+	func userChoseDeliveryMethod() {
+		deliveryMethodContentView.completionHandler = { [weak self] (type, price, days) in
+			self?.presenter.userChoseDeliveryMethod(type: type, price: price, days: days)
+		}
 	}
 }
 
