@@ -13,6 +13,7 @@ final class ShipmentCoordinator: CoordinatorProtocol {
 	var shipmentAssembly = ShipmentAssembly()
 	var navigationController: UINavigationController
 	var childCoordinators: [CoordinatorProtocol] = []
+	var dataToDelivery = DataToDelivery()
 	
 	init(
 		parentCoordinator: CalculationCoordinator?,
