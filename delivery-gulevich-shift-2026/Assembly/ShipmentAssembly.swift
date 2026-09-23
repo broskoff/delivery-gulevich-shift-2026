@@ -6,6 +6,7 @@ protocol ShipmentAssemblyProtocol: AnyObject {
 	func createRecipientScreen(output: ShipmentOutputProtocol) -> UIViewController
 	func createSenderScreen(output: ShipmentOutputProtocol) -> UIViewController
 	func createRecipientAddressScreen(output: ShipmentOutputProtocol) -> UIViewController
+	func createPaymentDeliveryScreen(output: ShipmentOutputProtocol) -> UIViewController
 }
 
 final class ShipmentAssembly: ShipmentAssemblyProtocol {
@@ -58,6 +59,7 @@ final class ShipmentAssembly: ShipmentAssemblyProtocol {
 		presenter.view = senderAddressView
 		return senderAddressView
 	}
+	
 	func createRecipientAddressScreen(output: ShipmentOutputProtocol) -> UIViewController {
 		let presenter = RecipientAddressPresenter(output: output)
 		let recipientAddressContentView = RecipientAddressContentView()
@@ -68,5 +70,17 @@ final class ShipmentAssembly: ShipmentAssemblyProtocol {
 		
 		presenter.view = recipientAddressView
 		return recipientAddressView
+	}
+	
+	func createPaymentDeliveryScreen(output: ShipmentOutputProtocol) -> UIViewController {
+		let presenter = PaymentDeliveryPresenter(output: output)
+		let paymentDeliveryContentView = PaymentDeliveryContentView()
+		let paymentDeliveryView = PaymentDeliveryViewController(
+			paymentDeliveryContentView: paymentDeliveryContentView,
+			presenter: presenter
+		)
+		
+		presenter.view = paymentDeliveryView
+		return paymentDeliveryView
 	}
 }

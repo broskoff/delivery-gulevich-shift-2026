@@ -6,6 +6,7 @@ protocol ShipmentOutputProtocol: AnyObject {
 	func openSender(_ surname: String, _ name: String, _ patronymic: String, _ phone: String)
 	func openSenderAddress(_ surname: String, _ name: String, _ patronymic: String, _ phone: String)
 	func openRecipientAddress(_ street: String, _ house: String, _ apartment: String, _ note: String)
+	func openPaymentDelivery(_ street: String, _ house: String, _ apartment: String, _ note: String)
 }
 
 final class ShipmentCoordinator: CoordinatorProtocol {
@@ -66,6 +67,7 @@ extension ShipmentCoordinator: ShipmentOutputProtocol {
 		let senderAddressViewController = shipmentAssembly.createSenderAddressScreen(output: self)
 		navigationController.pushViewController(senderAddressViewController, animated: true)
 	}
+	
 	func openRecipientAddress(_ street: String, _ house: String, _ apartment: String, _ note: String) {
 		dataToDelivery.streetSender = street
 		dataToDelivery.houseSender = house
@@ -74,5 +76,16 @@ extension ShipmentCoordinator: ShipmentOutputProtocol {
 		
 		let recipientAddressViewController = shipmentAssembly.createRecipientAddressScreen(output: self)
 		navigationController.pushViewController(recipientAddressViewController, animated: true)
+	}
+	
+	func openPaymentDelivery(_ street: String, _ house: String, _ apartment: String, _ note: String) {
+		print("открылся PaymentDelivery")
+		dataToDelivery.streetRecipient = street
+		dataToDelivery.houseRecipient = house
+		dataToDelivery.apartmentRecipient = apartment
+		dataToDelivery.noteForСourierRecipient = note
+		
+		let paymentDeliveryViewController = shipmentAssembly.createPaymentDeliveryScreen(output: self)
+		navigationController.pushViewController(paymentDeliveryViewController, animated: true)
 	}
 }
