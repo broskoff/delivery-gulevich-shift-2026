@@ -1,17 +1,11 @@
 import UIKit
 import SnapKit
 
-protocol RecipientContentViewDelegateProtocol: AnyObject {
-	func didTapContinueButton()
-}
-
 protocol RecipientContentViewProtocol {
-	var delegate: RecipientContentViewDelegateProtocol? { get set }
 }
 
 final class RecipientContentView: UIView, RecipientContentViewProtocol {
 	
-	weak var delegate: RecipientContentViewDelegateProtocol?
 	
 	private let shipmentTopView = ShipmentTopView(title: UIConstants.Shipment.HeaderNames.recepientTitle)
 	private let scrollView = UIScrollView()
