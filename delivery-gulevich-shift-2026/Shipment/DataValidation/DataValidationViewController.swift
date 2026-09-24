@@ -1,7 +1,7 @@
 import UIKit
 
 protocol DataValidationViewControllerProtocol: AnyObject {
-	func updateView()
+	func showData(_ data: DataToDelivery)
 }
 
 final class DataValidationViewController: UIViewController {
@@ -28,11 +28,12 @@ final class DataValidationViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		presenter.viewDidLoad()
 	}
 }
 
 extension DataValidationViewController: DataValidationViewControllerProtocol {
-	func updateView() {
-		
+	func showData(_ data: DataToDelivery) {
+		dataValidationContentView.showData(data)
 	}
 }

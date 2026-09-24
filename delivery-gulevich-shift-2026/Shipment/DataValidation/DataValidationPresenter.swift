@@ -1,5 +1,5 @@
 protocol DataValidationPresenterProtocol: AnyObject {
-//	func userChoisePayment()
+	func viewDidLoad()
 }
 
 final class DataValidationPresenter: DataValidationPresenterProtocol {
@@ -14,7 +14,7 @@ final class DataValidationPresenter: DataValidationPresenterProtocol {
 		self.data = data
 	}
 	
-//	func userChoisePayment() {
-//		self.output?.openDataValidation()
-//	}
+	func viewDidLoad() {
+		view?.showData(data)
+	}
 }

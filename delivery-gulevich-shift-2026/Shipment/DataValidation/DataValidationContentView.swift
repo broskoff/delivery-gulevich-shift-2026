@@ -3,16 +3,16 @@ import UIKit
 import SnapKit
 
 protocol DataValidationContentViewProtocol: AnyObject {
-//	var completionHandler: (() -> Void)? { get set }
+	func showData(_ data: DataToDelivery)
 }
 
 final class DataValidationContentView: UIView, DataValidationContentViewProtocol {
-//	var completionHandler: (() -> Void)?
 	
 	private let shipmentTopView = ShipmentTopView(title: UIConstants.Shipment.HeaderNames.dataValidationTitle)
 	private let scrollView = UIScrollView()
 	private let contentView = UIView()
 	private let mainStackView = UIStackView()
+	private let textView = UITextView()
 	private let arrangeButton = BigBlueButtonFactory.make(withTitle: "Оформить")
 	
 	override init(frame: CGRect) {
@@ -23,6 +23,13 @@ final class DataValidationContentView: UIView, DataValidationContentViewProtocol
 	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
+	}
+	
+	func showData(_ data: DataToDelivery) {
+		guard
+			let type = data.type,
+			let price = data.price else { fatalError() }
+		textView.text = "\(type)" + " " + "\(price)"
 	}
 }
 
@@ -93,23 +100,15 @@ private extension DataValidationContentView {
 	}
 	
 	func configureTextField() {
-			let textField = UITextField()
+			textView.layer.cornerRadius = UIConstants.Layer.CornerRadius.extraSmall
+			textView.layer.borderWidth = 1
+			textView.layer.borderColor = ContentColor.borderLight.cgColor
 			
-			textField.layer.cornerRadius = UIConstants.Layer.CornerRadius.extraSmall
-			textField.layer.borderWidth = 1
-			textField.layer.borderColor = ContentColor.borderLight.cgColor
-			
-			textField.leftView = UIView(frame: CGRect(x: 0,
-													  y: 0,
-													  width: 8,
-													  height: textField.frame.height))
-			textField.leftViewMode = .always
-			
-			textField.snp.makeConstraints {
+			textView.snp.makeConstraints {
 				$0.height.equalTo(48)
 			}
 			
-			mainStackView.addArrangedSubview(textField)
+			mainStackView.addArrangedSubview(textView)
 		}
 	
 	func addContinueButton() {
