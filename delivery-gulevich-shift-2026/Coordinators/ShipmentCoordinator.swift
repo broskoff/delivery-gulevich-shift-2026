@@ -91,7 +91,7 @@ extension ShipmentCoordinator: ShipmentOutputProtocol {
 	}
 	
 	func openDataValidation() {
-		let dataValidationViewController = shipmentAssembly.createDataValidationScreen(output: self)
+		let dataValidationViewController = shipmentAssembly.createDataValidationScreen(output: self, data: dataToDelivery)
 		navigationController.pushViewController(dataValidationViewController, animated: true)
 	}
 }

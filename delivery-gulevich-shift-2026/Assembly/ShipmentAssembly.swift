@@ -8,7 +8,7 @@ protocol ShipmentAssemblyProtocol: AnyObject {
 	func createSenderAddressScreen(output: ShipmentOutputProtocol) -> UIViewController
 	func createRecipientAddressScreen(output: ShipmentOutputProtocol) -> UIViewController
 	func createPaymentDeliveryScreen(output: ShipmentOutputProtocol) -> UIViewController
-	func createDataValidationScreen(output: ShipmentOutputProtocol) -> UIViewController
+	func createDataValidationScreen(output: ShipmentOutputProtocol, data: DataToDelivery) -> UIViewController
 }
 
 final class ShipmentAssembly: ShipmentAssemblyProtocol {
@@ -85,8 +85,8 @@ final class ShipmentAssembly: ShipmentAssemblyProtocol {
 		return paymentDeliveryView
 	}
 	
-	func createDataValidationScreen(output: ShipmentOutputProtocol) -> UIViewController {
-		let presenter = DataValidationPresenter(output: output)
+	func createDataValidationScreen(output: ShipmentOutputProtocol, data: DataToDelivery) -> UIViewController {
+		let presenter = DataValidationPresenter(output: output, data: data)
 		let dataValidationContentView = DataValidationContentView()
 		let dataValidationView = DataValidationViewController(
 			dataValidationContentView: dataValidationContentView,
