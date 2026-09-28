@@ -11,6 +11,7 @@
 		C70BE6CA2FD2C06600386F5E /* CalculationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70BE6C92FD2C06600386F5E /* CalculationAssembly.swift */; };
 		C70BE6CC2FD2C26E00386F5E /* HistoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70BE6CB2FD2C26E00386F5E /* HistoryAssembly.swift */; };
 		C70BE6CE2FD2C34200386F5E /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70BE6CD2FD2C34200386F5E /* ProfileAssembly.swift */; };
+		C712BED630662FBC00767D5A /* LeaveAtTheDoorControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C712BED530662FBC00767D5A /* LeaveAtTheDoorControl.swift */; };
 		C72F4F842F67D3CD000083FC /* DeliveryMethodContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F4F832F67D3CD000083FC /* DeliveryMethodContentView.swift */; };
 		C73AFA672F68F82000DB14C5 /* PersonalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA652F68F82000DB14C5 /* PersonalData.swift */; };
 		C73AFA882F69176700DB14C5 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */; };
@@ -95,6 +96,7 @@
 		C70BE6C92FD2C06600386F5E /* CalculationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationAssembly.swift; sourceTree = "<group>"; };
 		C70BE6CB2FD2C26E00386F5E /* HistoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAssembly.swift; sourceTree = "<group>"; };
 		C70BE6CD2FD2C34200386F5E /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		C712BED530662FBC00767D5A /* LeaveAtTheDoorControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveAtTheDoorControl.swift; sourceTree = "<group>"; };
 		C72F4F832F67D3CD000083FC /* DeliveryMethodContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMethodContentView.swift; sourceTree = "<group>"; };
 		C73AFA652F68F82000DB14C5 /* PersonalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalData.swift; sourceTree = "<group>"; };
 		C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarComponent.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				C75BCC553063D771009E05CB /* RecipientAddressContentView.swift */,
 				C75BCC573063D931009E05CB /* RecipientAddressViewController.swift */,
 				C75BCC593063DA5D009E05CB /* RecipientAddressPresenter.swift */,
+				C712BED530662FBC00767D5A /* LeaveAtTheDoorControl.swift */,
 			);
 			path = RecipientAddress;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				C78C4A7C2FEA5283007AA2D0 /* DeliveryFieldControl.swift in Sources */,
 				C73AFA882F69176700DB14C5 /* ProgressBarComponent.swift in Sources */,
 				C7BD59162F6FC20400E8C6AB /* CitySelectionAssembly.swift in Sources */,
+				C712BED630662FBC00767D5A /* LeaveAtTheDoorControl.swift in Sources */,
 				C7B857032F595239004D6B57 /* ProfileCoordinator.swift in Sources */,
 				C70BE6CC2FD2C26E00386F5E /* HistoryAssembly.swift in Sources */,
 				C7D8D6DA306291F2001FC23C /* SenderAddressContentView.swift in Sources */,
