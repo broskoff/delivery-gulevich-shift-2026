@@ -49,6 +49,7 @@
 		C783215A2F5564AA003144D0 /* ShipmentAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78321532F5564AA003144D0 /* ShipmentAssembly.swift */; };
 		C78C4A7C2FEA5283007AA2D0 /* DeliveryFieldControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C4A7B2FEA5283007AA2D0 /* DeliveryFieldControl.swift */; };
 		C78C4A802FEAC17A007AA2D0 /* DeliveryFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C4A7F2FEAC17A007AA2D0 /* DeliveryFieldView.swift */; };
+		C7A672A8306B7EEC009B7969 /* PayerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A672A7306B7EEC009B7969 /* PayerSelectionView.swift */; };
 		C7A8B75C2F74E14200ACBC95 /* PackageSizeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B75B2F74E14200ACBC95 /* PackageSizeContentView.swift */; };
 		C7A8B75E2F74E1FB00ACBC95 /* PackageSizeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B75D2F74E1FB00ACBC95 /* PackageSizeTableViewCell.swift */; };
 		C7A8B7622F74E5A400ACBC95 /* PackageSizeTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B7612F74E5A400ACBC95 /* PackageSizeTableViewDataSource.swift */; };
@@ -135,6 +136,7 @@
 		C78321532F5564AA003144D0 /* ShipmentAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentAssembly.swift; sourceTree = "<group>"; };
 		C78C4A7B2FEA5283007AA2D0 /* DeliveryFieldControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryFieldControl.swift; sourceTree = "<group>"; };
 		C78C4A7F2FEAC17A007AA2D0 /* DeliveryFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryFieldView.swift; sourceTree = "<group>"; };
+		C7A672A7306B7EEC009B7969 /* PayerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerSelectionView.swift; sourceTree = "<group>"; };
 		C7A8B75B2F74E14200ACBC95 /* PackageSizeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSizeContentView.swift; sourceTree = "<group>"; };
 		C7A8B75D2F74E1FB00ACBC95 /* PackageSizeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSizeTableViewCell.swift; sourceTree = "<group>"; };
 		C7A8B7612F74E5A400ACBC95 /* PackageSizeTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSizeTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				C75BCC5C3063E18D009E05CB /* PaymentDeliveryContentView.swift */,
 				C75BCC5E3063E26B009E05CB /* PaymentDeliveryViewController.swift */,
 				C75BCC603063E334009E05CB /* PaymentDeliveryPresenter.swift */,
+				C7A672A7306B7EEC009B7969 /* PayerSelectionView.swift */,
 			);
 			path = PaymentDelivery;
 			sourceTree = "<group>";
@@ -518,7 +521,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
-				LastUpgradeCheck = 1640;
+				LastUpgradeCheck = 2660;
 				TargetAttributes = {
 					C7DF60B82F29BAA4009B0BA1 = {
 						CreatedOnToolsVersion = 16.4;
@@ -641,6 +644,7 @@
 				C7454F2E2F501CDC008A5D93 /* ProfilePresenter.swift in Sources */,
 				C7A8B75C2F74E14200ACBC95 /* PackageSizeContentView.swift in Sources */,
 				C7BD59142F6FC01900E8C6AB /* CitySelectionCoordinator.swift in Sources */,
+				C7A672A8306B7EEC009B7969 /* PayerSelectionView.swift in Sources */,
 				C7510CF92F4ECF4600AA968F /* BigBlueButtonFactory.swift in Sources */,
 				C75BCC583063D931009E05CB /* RecipientAddressViewController.swift in Sources */,
 				C7D8D6DC30629212001FC23C /* SenderAddressViewController.swift in Sources */,
@@ -800,6 +804,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -856,6 +861,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
