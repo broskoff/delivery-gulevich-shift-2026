@@ -14,6 +14,8 @@ final class PaymentDeliveryContentView: UIView, PaymentDeliveryContentViewProtoc
 	private let contentView = UIView()
 	private let mainStackView = UIStackView()
 	private let continueButton = BigBlueButtonFactory.make(withTitle: "Продолжить")
+	private let payerSelectionView = PayerSelectionView()
+	private var selectedPayer: Payer = .recipient
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -64,6 +66,8 @@ private extension PaymentDeliveryContentView {
 		configureContentView()
 		configureMainStackView()
 		configureProgressBarComponent()
+		configureTitleLabel()
+		configurePayerSelectionView()
 		addContinueButton()
 	}
 	
@@ -89,6 +93,22 @@ private extension PaymentDeliveryContentView {
 		
 		mainStackView.addArrangedSubview(progressBarComponent)
 		progressBarComponent.makeComponent(currentStep: 6, totalSteps: 7)
+	}
+	
+	func configureTitleLabel() {
+		let titleLabel = UILabel()
+		
+		titleLabel.text = "Кто оплачивает доставку"
+		
+		mainStackView.addArrangedSubview(titleLabel)
+	}
+	
+	func configurePayerSelectionView() {
+		mainStackView.addArrangedSubview(payerSelectionView)
+		
+		payerSelectionView.onTap = { [weak self] payer in
+			self?.selectedPayer = payer
+		}
 	}
 	
 	func addContinueButton() {
