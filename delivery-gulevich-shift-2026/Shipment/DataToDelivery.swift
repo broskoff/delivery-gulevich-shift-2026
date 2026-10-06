@@ -24,4 +24,6 @@ struct DataToDelivery {
 	var apartmentRecipient: String?
 	var noteForСourierRecipient: String?
 	var leaveAtTheDoor = false
+	
+	var payer: String?
 }

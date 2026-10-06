@@ -6,8 +6,8 @@ protocol ShipmentOutputProtocol: AnyObject {
 	func openSender(_ surname: String, _ name: String, _ patronymic: String, _ phone: String)
 	func openSenderAddress(_ surname: String, _ name: String, _ patronymic: String, _ phone: String)
 	func openRecipientAddress(_ street: String, _ house: String, _ apartment: String, _ note: String)
-	func openDataValidation()
 	func openPaymentDelivery(_ street: String, _ house: String, _ apartment: String, _ note: String, _ leaveAtTheDoor: Bool)
+	func openDataValidation(_ payer: String)
 }
 
 final class ShipmentCoordinator: CoordinatorProtocol {
@@ -91,8 +91,15 @@ extension ShipmentCoordinator: ShipmentOutputProtocol {
 		navigationController.pushViewController(paymentDeliveryViewController, animated: true)
 	}
 	
-	func openDataValidation() {
-		let dataValidationViewController = shipmentAssembly.createDataValidationScreen(output: self, data: dataToDelivery)
+	func openDataValidation(_ payer: String) {
+		print("открылся DataValidation")
+		dataToDelivery.payer = payer
+		
+		let dataValidationViewController = shipmentAssembly.createDataValidationScreen(
+			output: self,
+			data: dataToDelivery
+		)
+		
 		navigationController.pushViewController(dataValidationViewController, animated: true)
 	}
 }

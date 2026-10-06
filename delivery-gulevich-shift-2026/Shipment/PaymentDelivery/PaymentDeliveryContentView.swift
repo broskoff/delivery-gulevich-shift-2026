@@ -3,11 +3,11 @@ import UIKit
 import SnapKit
 
 protocol PaymentDeliveryContentViewProtocol: AnyObject {
-//	var completionHandler: (() -> Void)? { get set }
+	var completionHandler: ((String) -> Void)? { get set }
 }
 
 final class PaymentDeliveryContentView: UIView, PaymentDeliveryContentViewProtocol {
-//	var completionHandler: (() -> Void)?
+	var completionHandler: ((String) -> Void)?
 	
 	private let shipmentTopView = ShipmentTopView(title: UIConstants.Shipment.HeaderNames.paymentDeliveryTitle)
 	private let scrollView = UIScrollView()
@@ -119,9 +119,7 @@ private extension PaymentDeliveryContentView {
 		mainStackView.addArrangedSubview(continueButton)
 		
 		continueButton.addAction(UIAction { _ in
-			
-//			self?.completionHandler?()
-			
+			self.completionHandler?(self.selectedPayer.rawValue)
 		}, for: .touchUpInside)
 	}
 }

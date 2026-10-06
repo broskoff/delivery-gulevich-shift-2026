@@ -32,8 +32,9 @@ final class PaymentDeliveryViewController: UIViewController {
 	}
 	
 	func userChoisePayment() {
-		//метод срабатывает сразу при первом появлении экрана, так как нет ручки которая бы ожидала поступления данных от пользователя
-		self.presenter.userChoisePayment()
+		paymentDeliveryContentView.completionHandler = { [weak self] payer in
+			self?.presenter.userChoisePayment(payer)
+		}
 	}
 }
 

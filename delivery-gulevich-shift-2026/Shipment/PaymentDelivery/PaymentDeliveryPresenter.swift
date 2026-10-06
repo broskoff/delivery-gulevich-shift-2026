@@ -1,5 +1,5 @@
 protocol PaymentDeliveryPresenterProtocol: AnyObject {
-	func userChoisePayment()
+	func userChoisePayment(_ payer: String)
 }
 
 final class PaymentDeliveryPresenter: PaymentDeliveryPresenterProtocol {
@@ -11,7 +11,7 @@ final class PaymentDeliveryPresenter: PaymentDeliveryPresenterProtocol {
 		self.output = output
 	}
 	
-	func userChoisePayment() {
-		self.output?.openDataValidation()
+	func userChoisePayment(_ payer: String) {
+		self.output?.openDataValidation(payer)
 	}
 }
