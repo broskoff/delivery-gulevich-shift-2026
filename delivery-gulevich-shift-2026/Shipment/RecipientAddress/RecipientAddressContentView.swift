@@ -2,11 +2,11 @@ import UIKit
 import SnapKit
 
 protocol RecipientAddressContentViewProtocol: AnyObject {
-	var completionHandler: ((String, String, String, String) -> Void)? { get set }
+	var completionHandler: ((String, String, String, String, Bool) -> Void)? { get set }
 }
 
 final class RecipientAddressContentView: UIView, RecipientAddressContentViewProtocol {
-	var completionHandler: ((String, String, String, String) -> Void)?
+	var completionHandler: ((String, String, String, String, Bool) -> Void)?
 	var textFields: [UITextField] = []
 	
 	private let shipmentTopView = ShipmentTopView(title: UIConstants.Shipment.HeaderNames.recipientAddressTitle)
@@ -135,14 +135,17 @@ private extension RecipientAddressContentView {
 		mainStackView.addArrangedSubview(continueButton)
 		
 		continueButton.addAction(UIAction { [weak self] _ in
+			guard let self else { return }
+			
 			guard
-				let street = self?.textFields[0].text,
-				let house = self?.textFields[1].text,
-				let apartment = self?.textFields[2].text,
-				let note = self?.textFields[3].text else { fatalError() }
+				let street = self.textFields[0].text,
+				let house = self.textFields[1].text,
+				let apartment = self.textFields[2].text,
+				let note = self.textFields[3].text else { fatalError() }
 			
-			self?.completionHandler?(street, house, apartment, note)
+			let leaveAtTheDoor = self.checkBox.leaveAtTheDoor
 			
+			self.completionHandler?(street, house, apartment, note, leaveAtTheDoor)
 		}, for: .touchUpInside)
 	}
 }

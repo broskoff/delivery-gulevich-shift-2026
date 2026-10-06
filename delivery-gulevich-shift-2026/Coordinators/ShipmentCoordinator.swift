@@ -6,8 +6,8 @@ protocol ShipmentOutputProtocol: AnyObject {
 	func openSender(_ surname: String, _ name: String, _ patronymic: String, _ phone: String)
 	func openSenderAddress(_ surname: String, _ name: String, _ patronymic: String, _ phone: String)
 	func openRecipientAddress(_ street: String, _ house: String, _ apartment: String, _ note: String)
-	func openPaymentDelivery(_ street: String, _ house: String, _ apartment: String, _ note: String)
 	func openDataValidation()
+	func openPaymentDelivery(_ street: String, _ house: String, _ apartment: String, _ note: String, _ leaveAtTheDoor: Bool)
 }
 
 final class ShipmentCoordinator: CoordinatorProtocol {
@@ -79,12 +79,13 @@ extension ShipmentCoordinator: ShipmentOutputProtocol {
 		navigationController.pushViewController(recipientAddressViewController, animated: true)
 	}
 	
-	func openPaymentDelivery(_ street: String, _ house: String, _ apartment: String, _ note: String) {
+	func openPaymentDelivery(_ street: String, _ house: String, _ apartment: String, _ note: String, _ leaveAtTheDoor: Bool) {
 		print("открылся PaymentDelivery")
 		dataToDelivery.streetRecipient = street
 		dataToDelivery.houseRecipient = house
 		dataToDelivery.apartmentRecipient = apartment
 		dataToDelivery.noteForСourierRecipient = note
+		dataToDelivery.leaveAtTheDoor = leaveAtTheDoor
 		
 		let paymentDeliveryViewController = shipmentAssembly.createPaymentDeliveryScreen(output: self)
 		navigationController.pushViewController(paymentDeliveryViewController, animated: true)

@@ -32,8 +32,9 @@ final class RecipientAddressViewController: UIViewController {
 	}
 	
 	func userEnteredRecipientAddress() {
-		recipientAddressContentView.completionHandler = { (street, house, apartment, note) in
-			self.presenter.userEnteredAddress(street, house, apartment, note)
+		recipientAddressContentView.completionHandler = {
+			[weak self] (street, house, apartment, note, leaveAtTheDoor) in
+			self?.presenter.userEnteredAddress(street, house, apartment, note, leaveAtTheDoor)
 		}
 	}
 }
