@@ -13,6 +13,7 @@ final class RecipientAddressContentView: UIView, RecipientAddressContentViewProt
 	private let scrollView = UIScrollView()
 	private let contentView = UIView()
 	private let mainStackView = UIStackView()
+	private let checkBox = LeaveAtTheDoorControl()
 	private let continueButton = BigBlueButtonFactory.make(withTitle: "Продолжить")
 	
 	override init(frame: CGRect) {
@@ -65,6 +66,7 @@ private extension RecipientAddressContentView {
 		configureMainStackView()
 		configureProgressBarComponent()
 		configureTextField()
+		configureCheckBox()
 		addContinueButton()
 	}
 	
@@ -119,6 +121,10 @@ private extension RecipientAddressContentView {
 		textFields[1].placeholder = "Дом"
 		textFields[2].placeholder = "Квартира"
 		textFields[3].placeholder = "Заметка для курьера"
+	}
+	
+	func configureCheckBox() {
+		mainStackView.addArrangedSubview(checkBox)
 	}
 	
 	func addContinueButton() {
