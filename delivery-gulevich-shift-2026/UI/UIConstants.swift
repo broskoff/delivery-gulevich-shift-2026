@@ -19,6 +19,10 @@ enum UIConstants {
 	enum BigBlueButton {
 		static let heightButton: CGFloat = 56
 	
+		static let calculate = "Расчитать"
+		static let find = "Найти"
+		static let continueButton = "Продолжить"
+		static let checkout = "Оформить"
 		
 		static let viewStatusButton = "Посмотреть статус"
 	}
@@ -27,11 +31,6 @@ enum UIConstants {
 		enum HeaderNames {
 			static let title = "Мы доставим\nваш заказ"
 			static let subtitle = "Отправляйте посылки в приложении\nШифт Delivery"
-		}
-		
-		enum ButtonNames {
-			static let calculate = "Расчитать"
-			static let find = "Найти"
 		}
 		
 		enum CardNames {
@@ -48,10 +47,6 @@ enum UIConstants {
 			static let cityFrom = "Город отправки"
 			static let cityTo = "Город назначения"
 		}
-		
-		enum Heights {
-			static let button: CGFloat = 56
-		}
 	}
 	
 	enum Shipment {
@@ -63,6 +58,11 @@ enum UIConstants {
 			static let recipientAddressTitle  = "Куда доставить"
 			static let paymentDeliveryTitle  = "Оплата доставки"
 			static let dataValidationTitle = "Проверка данных"
+		}
+		
+		enum RecipientAddress {
+			static let titleContactFreeDelivery = "Бесконтактная доставка"
+			static let descriptionContactFreeDelivery = "Курьер привозит заказ, оставляет его у двери и уходит, а вам приходит уведомление на телефон о том, что заказ доставлен"
 		}
 	}
 	
