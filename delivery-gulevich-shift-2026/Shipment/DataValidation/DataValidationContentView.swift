@@ -13,7 +13,7 @@ final class DataValidationContentView: UIView, DataValidationContentViewProtocol
 	private let contentView = UIView()
 	private let mainStackView = UIStackView()
 	private let textView = UITextView()
-	private let arrangeButton = BigBlueButtonFactory.make(withTitle: "Оформить")
+	private let checkoutButton = BigBlueButtonFactory.make(withTitle: UIConstants.BigBlueButton.checkout)
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -72,7 +72,7 @@ private extension DataValidationContentView {
 		configureMainStackView()
 		configureProgressBarComponent()
 		configureTextField()
-		addContinueButton()
+		addCheckoutButton()
 	}
 	
 	func configureContentView() {
@@ -111,12 +111,12 @@ private extension DataValidationContentView {
 			mainStackView.addArrangedSubview(textView)
 		}
 	
-	func addContinueButton() {
-		arrangeButton.snp.makeConstraints {
-			$0.height.equalTo(UIConstants.Calculation.Heights.button)
+	func addCheckoutButton() {
+		checkoutButton.snp.makeConstraints {
+			$0.height.equalTo(UIConstants.BigBlueButton.heightButton)
 		}
 		
-		mainStackView.addArrangedSubview(arrangeButton)
+		mainStackView.addArrangedSubview(checkoutButton)
 		
 		arrangeButton.addAction(UIAction { _ in
 			

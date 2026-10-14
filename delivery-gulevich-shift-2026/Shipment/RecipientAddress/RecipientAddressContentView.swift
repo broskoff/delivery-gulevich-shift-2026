@@ -14,7 +14,7 @@ final class RecipientAddressContentView: UIView, RecipientAddressContentViewProt
 	private let contentView = UIView()
 	private let mainStackView = UIStackView()
 	private let checkBox = LeaveAtTheDoorControl()
-	private let continueButton = BigBlueButtonFactory.make(withTitle: "Продолжить")
+	private let continueButton = BigBlueButtonFactory.make(withTitle: UIConstants.BigBlueButton.continueButton)
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -129,7 +129,7 @@ private extension RecipientAddressContentView {
 	
 	func addContinueButton() {
 		continueButton.snp.makeConstraints {
-			$0.height.equalTo(UIConstants.Calculation.Heights.button)
+			$0.height.equalTo(UIConstants.BigBlueButton.heightButton)
 		}
 		
 		mainStackView.addArrangedSubview(continueButton)

@@ -13,7 +13,7 @@ final class PaymentDeliveryContentView: UIView, PaymentDeliveryContentViewProtoc
 	private let scrollView = UIScrollView()
 	private let contentView = UIView()
 	private let mainStackView = UIStackView()
-	private let continueButton = BigBlueButtonFactory.make(withTitle: "Продолжить")
+	private let continueButton = BigBlueButtonFactory.make(withTitle: UIConstants.BigBlueButton.continueButton)
 	private let payerSelectionView = PayerSelectionView()
 	private var selectedPayer: Payer = .recipient
 	
@@ -113,7 +113,7 @@ private extension PaymentDeliveryContentView {
 	
 	func addContinueButton() {
 		continueButton.snp.makeConstraints {
-			$0.height.equalTo(UIConstants.Calculation.Heights.button)
+			$0.height.equalTo(UIConstants.BigBlueButton.heightButton)
 		}
 		
 		mainStackView.addArrangedSubview(continueButton)
