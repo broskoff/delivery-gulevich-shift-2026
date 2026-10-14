@@ -96,4 +96,16 @@ final class ShipmentAssembly: ShipmentAssemblyProtocol {
 		presenter.view = dataValidationView
 		return dataValidationView
 	}
+	
+	func createSuccessScreen(output: ShipmentOutputProtocol) -> UIViewController {
+		let presenter = SuccessPresenter(output: output)
+		let successContentView = SuccessContentView()
+		let successView = SuccessViewController(
+			successContentView: successContentView,
+			presenter: presenter
+		)
+		
+		presenter.view = successView
+		return successView
+	}
 }

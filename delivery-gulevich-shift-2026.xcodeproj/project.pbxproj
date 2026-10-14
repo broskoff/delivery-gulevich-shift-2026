@@ -74,11 +74,17 @@
 		C7D8D6DC30629212001FC23C /* SenderAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D8D6DB30629212001FC23C /* SenderAddressViewController.swift */; };
 		C7D8D6DE30629236001FC23C /* SenderAddressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D8D6DD30629236001FC23C /* SenderAddressPresenter.swift */; };
 		C7DF61422F29C607009B0BA1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C7DF61412F29C607009B0BA1 /* SnapKit */; };
+		C7E2BFB93077542F00E58FBB /* LeaveAtTheDoorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E2BFB83077542F00E58FBB /* LeaveAtTheDoorInfoViewController.swift */; };
+		C7E2BFBB307758A400E58FBB /* LeaveAtTheDoorPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E2BFBA307758A400E58FBB /* LeaveAtTheDoorPresentationController.swift */; };
+		C7E2BFBD3077591600E58FBB /* LeaveAtTheDoorTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E2BFBC3077591600E58FBB /* LeaveAtTheDoorTransitioningDelegate.swift */; };
 		C7E30D043057FFE40081BF1C /* SenderContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E30D003057FFE40081BF1C /* SenderContentView.swift */; };
 		C7E30D053057FFE40081BF1C /* SenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E30D013057FFE40081BF1C /* SenderViewController.swift */; };
 		C7E30D063057FFE40081BF1C /* SenderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E30D023057FFE40081BF1C /* SenderPresenter.swift */; };
 		C7EE1E5C2F500D5700B6326F /* HistoryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE1E5B2F500D5700B6326F /* HistoryContentView.swift */; };
 		C7EE1E5E2F500D6600B6326F /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE1E5D2F500D6600B6326F /* HistoryPresenter.swift */; };
+		C7F49770307F4988006D5755 /* SuccessPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4976F307F4988006D5755 /* SuccessPresenter.swift */; };
+		C7F49772307F4999006D5755 /* SuccessContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F49771307F4999006D5755 /* SuccessContentView.swift */; };
+		C7F49774307F49C9006D5755 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F49773307F49C9006D5755 /* SuccessViewController.swift */; };
 		C7FF7616301C688600B2C13D /* ShipmentTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF7615301C688600B2C13D /* ShipmentTopView.swift */; };
 /* End PBXBuildFile section */
 
@@ -161,11 +167,17 @@
 		C7D8D6DB30629212001FC23C /* SenderAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderAddressViewController.swift; sourceTree = "<group>"; };
 		C7D8D6DD30629236001FC23C /* SenderAddressPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderAddressPresenter.swift; sourceTree = "<group>"; };
 		C7DF60B92F29BAA4009B0BA1 /* delivery-gulevich-shift-2026.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "delivery-gulevich-shift-2026.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7E2BFB83077542F00E58FBB /* LeaveAtTheDoorInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveAtTheDoorInfoViewController.swift; sourceTree = "<group>"; };
+		C7E2BFBA307758A400E58FBB /* LeaveAtTheDoorPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveAtTheDoorPresentationController.swift; sourceTree = "<group>"; };
+		C7E2BFBC3077591600E58FBB /* LeaveAtTheDoorTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveAtTheDoorTransitioningDelegate.swift; sourceTree = "<group>"; };
 		C7E30D003057FFE40081BF1C /* SenderContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderContentView.swift; sourceTree = "<group>"; };
 		C7E30D013057FFE40081BF1C /* SenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderViewController.swift; sourceTree = "<group>"; };
 		C7E30D023057FFE40081BF1C /* SenderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderPresenter.swift; sourceTree = "<group>"; };
 		C7EE1E5B2F500D5700B6326F /* HistoryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryContentView.swift; sourceTree = "<group>"; };
 		C7EE1E5D2F500D6600B6326F /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		C7F4976F307F4988006D5755 /* SuccessPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessPresenter.swift; sourceTree = "<group>"; };
+		C7F49771307F4999006D5755 /* SuccessContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessContentView.swift; sourceTree = "<group>"; };
+		C7F49773307F49C9006D5755 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		C7FB5EA130189C0D005712E0 /* delivery-gulevich-shift-2026Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "delivery-gulevich-shift-2026Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FF7615301C688600B2C13D /* ShipmentTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentTopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +209,16 @@
 				C7510CD72F4ECF4600AA968F /* DeliveryMethodPresenter.swift */,
 			);
 			path = DeliveryMethod;
+			sourceTree = "<group>";
+		};
+		C728B710307DF2DD001576A3 /* Success */ = {
+			isa = PBXGroup;
+			children = (
+				C7F49771307F4999006D5755 /* SuccessContentView.swift */,
+				C7F49773307F49C9006D5755 /* SuccessViewController.swift */,
+				C7F4976F307F4988006D5755 /* SuccessPresenter.swift */,
+			);
+			path = Success;
 			sourceTree = "<group>";
 		};
 		C7510CCC2F4ECF4600AA968F /* App */ = {
@@ -259,6 +281,7 @@
 				C75BCC543063D726009E05CB /* RecipientAddress */,
 				C75BCC5B3063E16C009E05CB /* PaymentDelivery */,
 				C75BCC623063E6A9009E05CB /* DataValidation */,
+				C728B710307DF2DD001576A3 /* Success */,
 			);
 			path = Shipment;
 			sourceTree = "<group>";
@@ -320,6 +343,9 @@
 				C75BCC573063D931009E05CB /* RecipientAddressViewController.swift */,
 				C75BCC593063DA5D009E05CB /* RecipientAddressPresenter.swift */,
 				C712BED530662FBC00767D5A /* LeaveAtTheDoorControl.swift */,
+				C7E2BFB83077542F00E58FBB /* LeaveAtTheDoorInfoViewController.swift */,
+				C7E2BFBA307758A400E58FBB /* LeaveAtTheDoorPresentationController.swift */,
+				C7E2BFBC3077591600E58FBB /* LeaveAtTheDoorTransitioningDelegate.swift */,
 			);
 			path = RecipientAddress;
 			sourceTree = "<group>";
@@ -593,6 +619,7 @@
 				C7BE24A72F6D88BC0045774E /* CitySelectionContentView.swift in Sources */,
 				C7510CED2F4ECF4600AA968F /* CalculationPresenter.swift in Sources */,
 				C7510CEE2F4ECF4600AA968F /* CalculationContentView.swift in Sources */,
+				C7F49774307F49C9006D5755 /* SuccessViewController.swift in Sources */,
 				C7BE24532F6BB8080045774E /* UIConstants.swift in Sources */,
 				C7510CEF2F4ECF4600AA968F /* CalculationViewController.swift in Sources */,
 				C75BCC613063E334009E05CB /* PaymentDeliveryPresenter.swift in Sources */,
@@ -609,6 +636,8 @@
 				C7A8B7652F74EA4100ACBC95 /* PackageSizeViewController.swift in Sources */,
 				C7510CF32F4ECF4600AA968F /* HistoryViewController.swift in Sources */,
 				C7510CF42F4ECF4600AA968F /* DeliveryMethodPresenter.swift in Sources */,
+				C7E2BFBD3077591600E58FBB /* LeaveAtTheDoorTransitioningDelegate.swift in Sources */,
+				C7F49772307F4999006D5755 /* SuccessContentView.swift in Sources */,
 				C78C4A7C2FEA5283007AA2D0 /* DeliveryFieldControl.swift in Sources */,
 				C73AFA882F69176700DB14C5 /* ProgressBarComponent.swift in Sources */,
 				C7BD59162F6FC20400E8C6AB /* CitySelectionAssembly.swift in Sources */,
@@ -620,12 +649,15 @@
 				C7454F2C2F501CAC008A5D93 /* ProfileContentView.swift in Sources */,
 				C7067D46306151E80046B8C7 /* DataToDelivery.swift in Sources */,
 				C7510CF62F4ECF4600AA968F /* DeliveryMethodViewController.swift in Sources */,
+				C7F49770307F4988006D5755 /* SuccessPresenter.swift in Sources */,
 				C7BE24A52F6D88A70045774E /* CitySelectionPresenter.swift in Sources */,
 				C7BE24A92F6D88D20045774E /* CitySelectionTableViewCell.swift in Sources */,
 				C783215A2F5564AA003144D0 /* ShipmentAssembly.swift in Sources */,
+				C7E2BFBB307758A400E58FBB /* LeaveAtTheDoorPresentationController.swift in Sources */,
 				C7E30D053057FFE40081BF1C /* SenderViewController.swift in Sources */,
 				C7B856FF2F59514B004D6B57 /* CalculationCoordinator.swift in Sources */,
 				C7B857012F595205004D6B57 /* HistoryCoordinator.swift in Sources */,
+				C7E2BFB93077542F00E58FBB /* LeaveAtTheDoorInfoViewController.swift in Sources */,
 				C70BE6CE2FD2C34200386F5E /* ProfileAssembly.swift in Sources */,
 				C7B1F3692FCEFE5B0086A9FB /* AppTheme.swift in Sources */,
 				C7EE1E5E2F500D6600B6326F /* HistoryPresenter.swift in Sources */,

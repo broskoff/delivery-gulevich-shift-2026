@@ -16,6 +16,13 @@ enum UIConstants {
 		}
 	}
 	
+	enum BigBlueButton {
+		static let heightButton: CGFloat = 56
+	
+		
+		static let viewStatusButton = "Посмотреть статус"
+	}
+	
 	enum Calculation {
 		enum HeaderNames {
 			static let title = "Мы доставим\nваш заказ"
@@ -69,6 +76,7 @@ enum UIConstants {
 		static let small: CGFloat = 16
 		static let medium: CGFloat = 24
 		static let large: CGFloat = 32
+		static let forty: CGFloat = 40
 	}
 	
 	enum Inset {
@@ -104,5 +112,18 @@ enum UIConstants {
 		enum Header {
 			static let title  = "Размер посылки"
 		}
+	}
+	
+	enum Success {
+		static let acceptImage = "Accept"
+		static let titleLabel = "Заявка отправлена"
+		static let descriptionLabel = "Вы можете оплатить ваш заказ \nв разделе «Профиль»"
+		
+		static let successImageViewSize = 80
+		static let headingStackViewHeight = 184
+		static let mainStackViewWidth = 328
+		
+		static let titleLabelFontSize: CGFloat = 24
+		static let descriptionLabelFontSize: CGFloat = 18
 	}
 }
