@@ -6,8 +6,8 @@ protocol DataValidationViewControllerProtocol: AnyObject {
 
 final class DataValidationViewController: UIViewController {
 	
-	var dataValidationContentView: UIView & DataValidationContentViewProtocol
-	var presenter: DataValidationPresenterProtocol
+	private var dataValidationContentView: UIView & DataValidationContentViewProtocol
+	private var presenter: DataValidationPresenterProtocol
 	
 	init(dataValidationContentView: UIView & DataValidationContentViewProtocol,
 		 presenter: DataValidationPresenterProtocol) {
@@ -29,6 +29,13 @@ final class DataValidationViewController: UIViewController {
 		super.viewDidLoad()
 		
 		presenter.viewDidLoad()
+		userDidTapCheckoutButton()
+	}
+	
+	private func userDidTapCheckoutButton() {
+		dataValidationContentView.onTap = { [weak self] in
+			self?.presenter.userDidTapCheckoutButton()
+		}
 	}
 }
 

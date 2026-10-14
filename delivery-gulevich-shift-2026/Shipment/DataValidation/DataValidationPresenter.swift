@@ -1,5 +1,6 @@
 protocol DataValidationPresenterProtocol: AnyObject {
 	func viewDidLoad()
+	func userDidTapCheckoutButton()
 }
 
 final class DataValidationPresenter: DataValidationPresenterProtocol {
@@ -9,12 +10,16 @@ final class DataValidationPresenter: DataValidationPresenterProtocol {
 	weak var output: ShipmentOutputProtocol?
 	
 	
-	init(output: ShipmentOutputProtocol?, data: DataToDelivery) {
+	init(output: ShipmentOutputProtocol, data: DataToDelivery) {
 		self.output = output
 		self.data = data
 	}
 	
 	func viewDidLoad() {
 		view?.showData(data)
+	}
+	
+	func userDidTapCheckoutButton() {
+		output?.openSuccess()
 	}
 }

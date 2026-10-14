@@ -1,12 +1,14 @@
-
 import UIKit
 import SnapKit
 
 protocol DataValidationContentViewProtocol: AnyObject {
+	var onTap: (() -> Void)? { get set }
+	
 	func showData(_ data: DataToDelivery)
 }
 
 final class DataValidationContentView: UIView, DataValidationContentViewProtocol {
+	var onTap: (() -> Void)?
 	
 	private let shipmentTopView = ShipmentTopView(title: UIConstants.Shipment.HeaderNames.dataValidationTitle)
 	private let scrollView = UIScrollView()
@@ -28,8 +30,14 @@ final class DataValidationContentView: UIView, DataValidationContentViewProtocol
 	func showData(_ data: DataToDelivery) {
 		guard
 			let type = data.type,
-			let price = data.price else { fatalError() }
-		textView.text = "\(type)" + " " + "\(price)"
+			let price = data.price,
+			let payer = data.payer else { fatalError() }
+		
+		if data.leaveAtTheDoor {
+			textView.text = "\(type)" + " " + "\(price)" + "\nОставить заказ у двери" + "\n\(payer)"
+		} else {
+			textView.text = "\(type)" + " " + "\(price)"
+		}
 	}
 }
 
@@ -118,10 +126,8 @@ private extension DataValidationContentView {
 		
 		mainStackView.addArrangedSubview(checkoutButton)
 		
-		arrangeButton.addAction(UIAction { _ in
-			
-//			self?.completionHandler?()
-			
+		checkoutButton.addAction(UIAction { _ in
+			self.onTap?()
 		}, for: .touchUpInside)
 	}
 }
