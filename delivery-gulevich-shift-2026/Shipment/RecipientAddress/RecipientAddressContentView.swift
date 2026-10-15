@@ -2,10 +2,12 @@ import UIKit
 import SnapKit
 
 protocol RecipientAddressContentViewProtocol: AnyObject {
+	var onInfoTap: (() -> Void)? { get set }
 	var completionHandler: ((String, String, String, String, Bool) -> Void)? { get set }
 }
 
 final class RecipientAddressContentView: UIView, RecipientAddressContentViewProtocol {
+	var onInfoTap: (() -> Void)?
 	var completionHandler: ((String, String, String, String, Bool) -> Void)?
 	var textFields: [UITextField] = []
 	
@@ -125,6 +127,10 @@ private extension RecipientAddressContentView {
 	
 	func configureCheckBox() {
 		mainStackView.addArrangedSubview(checkBox)
+		
+		checkBox.onInfoTap = { [weak self] in
+			self?.onInfoTap?()
+		}
 	}
 	
 	func addContinueButton() {
