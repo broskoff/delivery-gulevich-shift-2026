@@ -29,16 +29,29 @@ final class RecipientAddressViewController: UIViewController {
 		super.viewDidLoad()
 		
 		userEnteredRecipientAddress()
+		configureInfoTap()
 	}
 	
-	func userEnteredRecipientAddress() {
+	private func userEnteredRecipientAddress() {
 		recipientAddressContentView.completionHandler = {
 			[weak self] (street, house, apartment, note, leaveAtTheDoor) in
 			self?.presenter.userEnteredAddress(street, house, apartment, note, leaveAtTheDoor)
 		}
 	}
+	
+	private func configureInfoTap() {
+		recipientAddressContentView.onInfoTap = { [weak self] in
+			self?.showLeaveAtTheDoorInfo()
+		}
+	}
+	
+	private func showLeaveAtTheDoorInfo() {
+		let leaveAtTheDoorInfoViewController = LeaveAtTheDoorInfoViewController()
+		leaveAtTheDoorInfoViewController.modalPresentationStyle = .custom
+		
+		present(leaveAtTheDoorInfoViewController, animated: true)
+	}
 }
-
 
 extension RecipientAddressViewController: RecipientAddressViewControllerProtocol {
 	func updateView() {
