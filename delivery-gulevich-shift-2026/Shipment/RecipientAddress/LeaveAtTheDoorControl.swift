@@ -3,10 +3,10 @@ import SnapKit
 
 final class LeaveAtTheDoorControl: UIControl {
 	
-	var onInfoTap:(() -> Void)?
+	var onInfoTap: (() -> Void)?
 	var leaveAtTheDoor = false
 
-	private let checkBoxButton = UIButton()
+	private let checkboxButton = UIButton()
 	private let infoButton = UIButton()
 	private let titleLabel = UILabel()
 	
@@ -17,7 +17,7 @@ final class LeaveAtTheDoorControl: UIControl {
 		
 		setHierarchy()
 		
-		configureCheckBoxButton()
+		configureCheckboxButton()
 		configureTitleLabel()
 		configureInfoButton()
 		
@@ -30,7 +30,7 @@ final class LeaveAtTheDoorControl: UIControl {
 	
 	private func setHierarchy() {
 		[
-			checkBoxButton,
+			checkboxButton,
 			titleLabel,
 			infoButton
 		].forEach {
@@ -49,20 +49,20 @@ final class LeaveAtTheDoorControl: UIControl {
 		}
 	}
 	
-	private func configureCheckBoxButton() {
-		checkBoxButton.isSelected = false
-		checkBoxButton.setImage(UIImage(systemName: "square"), for: .normal)
-		checkBoxButton.setImage(UIImage(systemName: "checkmark.square"), for: .selected)
+	private func configureCheckboxButton() {
+		checkboxButton.isSelected = false
+		checkboxButton.setImage(UIImage(systemName: "square"), for: .normal)
+		checkboxButton.setImage(UIImage(systemName: "checkmark.square"), for: .selected)
 
-		checkBoxButton.tintColor = .systemGray4
+		checkboxButton.tintColor = .systemGray4
 		
-		checkBoxButton.addTarget(self, action: #selector(changeCheckBox), for: .touchUpInside)
+		checkboxButton.addTarget(self, action: #selector(changeCheckBox), for: .touchUpInside)
 	}
 	
 	@objc
 	func changeCheckBox() {
-		checkBoxButton.isSelected.toggle()
-		leaveAtTheDoor = checkBoxButton.isSelected
+		checkboxButton.isSelected.toggle()
+		leaveAtTheDoor = checkboxButton.isSelected
 		sendActions(for: .valueChanged)
 	}
 	
