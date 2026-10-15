@@ -10,7 +10,6 @@ final class LeaveAtTheDoorPresentationController: UIPresentationController {
 		let y = ((containerView?.bounds.height ?? 00) - height) / 2
 		
 		let frame = CGRect(x: x, y: y, width: width, height: height)
-			print("container frame:", frame)
 			return frame
 	}
 }

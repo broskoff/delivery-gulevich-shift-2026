@@ -30,7 +30,6 @@ final class ShipmentCoordinator: CoordinatorProtocol {
 	func start() {
 		
 		let deliveryMethodViewController = shipmentAssembly.createDeliveryMethodScreen(output: self)
-		print("parent: \(String(describing: parentCoordinator))")
 		navigationController.pushViewController(deliveryMethodViewController, animated: true)
 	}
 

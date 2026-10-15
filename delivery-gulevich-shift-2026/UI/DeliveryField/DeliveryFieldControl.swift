@@ -35,7 +35,6 @@ final class DeliveryFieldControl: UIControl {
 	
 	@objc
 	private func didTap() {
-		print("didTap")
 		onTap?()
 	}
 }

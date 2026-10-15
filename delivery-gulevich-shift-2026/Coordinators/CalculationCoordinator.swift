@@ -40,7 +40,6 @@ extension CalculationCoordinator: ICalculationPresenterOutput {
 		)
 		
 		childCoordinators.append(shipmentCoordinator)
-		print(childCoordinators)
 		shipmentCoordinator.start()
 	}
 	
@@ -54,7 +53,6 @@ extension CalculationCoordinator: ICalculationPresenterOutput {
 		citySelectionCoordinator.onCitySelected = onSelect
 		
 		childCoordinators.append(citySelectionCoordinator)
-		print(childCoordinators)
 		citySelectionCoordinator.start()
 	}
 	
@@ -72,7 +70,6 @@ extension CalculationCoordinator: ICalculationPresenterOutput {
 	
 	func childDidFinish(child: CoordinatorProtocol) {
 		childCoordinators.removeAll { $0 === child }
-		print("принт из метода childDidFinish в CalculationCoordinator: \(childCoordinators)")
 	}
 }
 
