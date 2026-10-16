@@ -86,10 +86,9 @@ private extension SenderContentView {
 	}
 	
 	func configureProgressBarComponent() {
-		let progressBarComponent = ProgressBarComponent()
+		let progressBarComponent = ProgressBarComponent(currentStep: 3, totalSteps: 7)
 		
 		mainStackView.addArrangedSubview(progressBarComponent)
-		progressBarComponent.makeComponent(currentStep: 3, totalSteps: 7)
 	}
 	
 	func configureTextField() {

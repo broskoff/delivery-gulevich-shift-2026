@@ -89,10 +89,9 @@ private extension PaymentDeliveryContentView {
 	}
 	
 	func configureProgressBarComponent() {
-		let progressBarComponent = ProgressBarComponent()
+		let progressBarComponent = ProgressBarComponent(currentStep: 6, totalSteps: 7)
 		
 		mainStackView.addArrangedSubview(progressBarComponent)
-		progressBarComponent.makeComponent(currentStep: 6, totalSteps: 7)
 	}
 	
 	func configureTitleLabel() {

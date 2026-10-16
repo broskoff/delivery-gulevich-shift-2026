@@ -14,6 +14,7 @@ final class DataValidationContentView: UIView, DataValidationContentViewProtocol
 	private let scrollView = UIScrollView()
 	private let contentView = UIView()
 	private let mainStackView = UIStackView()
+	private let progressBarComponent = ProgressBarComponent(currentStep: 7, totalSteps: 7)
 	private let textView = UITextView()
 	private let checkoutButton = BigBlueButtonFactory.make(withTitle: UIConstants.BigBlueButton.checkout)
 	
@@ -101,10 +102,8 @@ private extension DataValidationContentView {
 	}
 	
 	func configureProgressBarComponent() {
-		let progressBarComponent = ProgressBarComponent()
 		
 		mainStackView.addArrangedSubview(progressBarComponent)
-		progressBarComponent.makeComponent(currentStep: 7, totalSteps: 7)
 	}
 	
 	func configureTextField() {

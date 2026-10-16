@@ -1,35 +1,56 @@
 import UIKit
+import SnapKit
 
 final class ProgressBarComponent: UIView {
 	
-	override init(frame: CGRect) {
-		super.init(frame: frame)
+	private let stepsProgressLabel = UILabel()
+	private let stepProgressBar = UIProgressView()
+	private let stackView = UIStackView()
+	
+	init(currentStep: Int, totalSteps: Int) {
+		super.init(frame: .zero)
+		
+		setupHierarchy()
+		configureStackView()
+		configureContent(currentStep: currentStep, totalSteps: totalSteps)
+		setupConstraints()
 	}
 	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
+}
+
+private extension ProgressBarComponent {
+	func setupHierarchy() {
+		addSubview(stackView)
+		
+		stackView.addArrangedSubview(stepsProgressLabel)
+		stackView.addArrangedSubview(stepProgressBar)
+	}
 	
-	func makeComponent(currentStep: Int, totalSteps: Int)  {
-		layoutMargins = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+	func configureStackView() {
+		stackView.axis = .vertical
+		stackView.spacing = 8
 		
-		let stepsProgresslabel = UILabel()
-		stepsProgresslabel.text = "Шаг \(currentStep) из \(totalSteps)"
+		layoutMargins = UIEdgeInsets(
+			top: 8,
+			left: 0,
+			bottom: 8,
+			right: 0
+		)
+	}
+	
+	func configureContent(currentStep: Int, totalSteps: Int)  {
+		stepsProgressLabel.text = "Шаг \(currentStep) из \(totalSteps)"
 		
-		addSubview(stepsProgresslabel)
-		
-		stepsProgresslabel.snp.makeConstraints {
-			$0.edges.equalTo(layoutMarginsGuide)
-		}
-		
-		let stepProgressBar = UIProgressView()
 		stepProgressBar.progress = Float(currentStep) / Float(totalSteps)
 		stepProgressBar.progressTintColor = .green
-		addSubview(stepProgressBar)
-		
-		stepProgressBar.snp.makeConstraints {
-			$0.top.equalTo(stepsProgresslabel.snp.bottom).offset(8)
-			$0.leading.trailing.equalTo(layoutMarginsGuide)
+	}
+	
+	func setupConstraints() {
+		stackView.snp.makeConstraints {
+			$0.edges.equalTo(layoutMarginsGuide)
 		}
 	}
 }
