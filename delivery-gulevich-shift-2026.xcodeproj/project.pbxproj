@@ -47,6 +47,7 @@
 		C75BCC683063E83D009E05CB /* DataValidationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BCC673063E83D009E05CB /* DataValidationPresenter.swift */; };
 		C7728AAC3013CB7E00097998 /* RecipientContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7728AAB3013CB7E00097998 /* RecipientContentView.swift */; };
 		C783215A2F5564AA003144D0 /* ShipmentAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78321532F5564AA003144D0 /* ShipmentAssembly.swift */; };
+		C7877CC23091FE4500560DAA /* DataValidationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7877CC13091FE4500560DAA /* DataValidationCard.swift */; };
 		C78C4A7C2FEA5283007AA2D0 /* DeliveryFieldControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C4A7B2FEA5283007AA2D0 /* DeliveryFieldControl.swift */; };
 		C78C4A802FEAC17A007AA2D0 /* DeliveryFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C4A7F2FEAC17A007AA2D0 /* DeliveryFieldView.swift */; };
 		C7A672A8306B7EEC009B7969 /* PayerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A672A7306B7EEC009B7969 /* PayerSelectionView.swift */; };
@@ -140,6 +141,7 @@
 		C75BCC673063E83D009E05CB /* DataValidationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValidationPresenter.swift; sourceTree = "<group>"; };
 		C7728AAB3013CB7E00097998 /* RecipientContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientContentView.swift; sourceTree = "<group>"; };
 		C78321532F5564AA003144D0 /* ShipmentAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentAssembly.swift; sourceTree = "<group>"; };
+		C7877CC13091FE4500560DAA /* DataValidationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValidationCard.swift; sourceTree = "<group>"; };
 		C78C4A7B2FEA5283007AA2D0 /* DeliveryFieldControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryFieldControl.swift; sourceTree = "<group>"; };
 		C78C4A7F2FEAC17A007AA2D0 /* DeliveryFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryFieldView.swift; sourceTree = "<group>"; };
 		C7A672A7306B7EEC009B7969 /* PayerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerSelectionView.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				C7510CE32F4ECF4600AA968F /* BigBlueButtonFactory.swift */,
 				C73AFA872F69176700DB14C5 /* ProgressBarComponent.swift */,
 				C7BE24522F6BB8080045774E /* UIConstants.swift */,
+				C7877CC13091FE4500560DAA /* DataValidationCard.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				C7A8B75C2F74E14200ACBC95 /* PackageSizeContentView.swift in Sources */,
 				C7BD59142F6FC01900E8C6AB /* CitySelectionCoordinator.swift in Sources */,
 				C7A672A8306B7EEC009B7969 /* PayerSelectionView.swift in Sources */,
+				C7877CC23091FE4500560DAA /* DataValidationCard.swift in Sources */,
 				C7510CF92F4ECF4600AA968F /* BigBlueButtonFactory.swift in Sources */,
 				C75BCC583063D931009E05CB /* RecipientAddressViewController.swift in Sources */,
 				C7D8D6DC30629212001FC23C /* SenderAddressViewController.swift in Sources */,
