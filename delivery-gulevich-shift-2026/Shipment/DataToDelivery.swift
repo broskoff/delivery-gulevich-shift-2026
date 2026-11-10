@@ -1,29 +1,31 @@
-struct DataToDelivery {
-	
+struct DeliveryDetails {
 	var type: String?
 	var price: String?
 	var days: String?
-	
-	var surnameRecipient: String?
-	var nameRecipient: String?
-	var patronymicRecipient: String?
-	var phoneRecipient: String?
-	
-	var surnameSender: String?
-	var nameSender: String?
-	var patronymicSender: String?
-	var phoneSender: String?
-	
-	var streetSender: String?
-	var houseSender: String?
-	var apartmentSender: String?
-	var noteForСourierSender: String?
-	
-	var streetRecipient: String?
-	var houseRecipient: String?
-	var apartmentRecipient: String?
-	var noteForСourierRecipient: String?
 	var leaveAtTheDoor = false
-	
 	var payer: String?
+}
+
+struct Person {
+	var surname: String?
+	var name: String?
+	var patronymic: String?
+	var phone: String?
+}
+
+struct Address {
+	var street: String?
+	var house: String?
+	var apartment: String?
+	var noteForCourier: String?
+}
+
+struct DataToDelivery {
+	var recipient = Person()
+	var recipientAddress = Address()
+	
+	var sender = Person()
+	var senderAddress = Address()
+	
+	var deliveryDetails = DeliveryDetails()
 }
