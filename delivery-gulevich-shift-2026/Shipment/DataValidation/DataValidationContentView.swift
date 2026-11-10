@@ -4,7 +4,7 @@ import SnapKit
 protocol DataValidationContentViewProtocol: AnyObject {
 	var onTap: (() -> Void)? { get set }
 	
-	func showData(_ data: DataToDelivery)
+	func showData(_ data: [DataValidationCardModel])
 }
 
 final class DataValidationContentView: UIView, DataValidationContentViewProtocol {
@@ -31,12 +31,12 @@ final class DataValidationContentView: UIView, DataValidationContentViewProtocol
 		fatalError("init(coder:) has not been implemented")
 	}
 	
-	func showData(_ data: DataToDelivery) {
-		guard
-			let type = data.type,
-			let price = data.price,
-			let payer = data.payer else { fatalError() }
+	func showData(_ data: [DataValidationCardModel]) {
 		
+		recipientCard.configure(with: data[0])
+		senderCard.configure(with: data[1])
+		senderAddressCard.configure(with: data[2])
+		recipientAddressCard.configure(with: data[3])
 	}
 }
 

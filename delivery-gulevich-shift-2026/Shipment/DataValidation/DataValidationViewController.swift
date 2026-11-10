@@ -1,7 +1,8 @@
 import UIKit
 
 protocol DataValidationViewControllerProtocol: AnyObject {
-	func showData(_ data: DataToDelivery)
+	func showData(_ data: [DataValidationCardModel])
+	func showError(_ error: DataValidationError)
 }
 
 final class DataValidationViewController: UIViewController {
@@ -40,7 +41,11 @@ final class DataValidationViewController: UIViewController {
 }
 
 extension DataValidationViewController: DataValidationViewControllerProtocol {
-	func showData(_ data: DataToDelivery) {
+	func showData(_ data: [DataValidationCardModel]) {
 		dataValidationContentView.showData(data)
+	}
+	
+	func showError(_ error: DataValidationError) {
+		
 	}
 }
