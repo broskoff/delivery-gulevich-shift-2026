@@ -15,7 +15,10 @@ final class DataValidationContentView: UIView, DataValidationContentViewProtocol
 	private let contentView = UIView()
 	private let mainStackView = UIStackView()
 	private let progressBarComponent = ProgressBarComponent(currentStep: 7, totalSteps: 7)
-	private let textView = UITextView()
+	private let recipientCard = DataValidationCard()
+	private let senderCard = DataValidationCard()
+	private let senderAddressCard = DataValidationCard()
+	private let recipientAddressCard = DataValidationCard()
 	private let checkoutButton = BigBlueButtonFactory.make(withTitle: UIConstants.BigBlueButton.checkout)
 	
 	override init(frame: CGRect) {
@@ -34,11 +37,6 @@ final class DataValidationContentView: UIView, DataValidationContentViewProtocol
 			let price = data.price,
 			let payer = data.payer else { fatalError() }
 		
-		if data.leaveAtTheDoor {
-			textView.text = "\(type)" + " " + "\(price)" + "\nОставить заказ у двери" + "\n\(payer)"
-		} else {
-			textView.text = "\(type)" + " " + "\(price)"
-		}
 	}
 }
 
@@ -48,16 +46,45 @@ private extension DataValidationContentView {
 		backgroundColor = ContentColor.shipmentBackground
 		
 		setupHierarchy()
-		setConstraints()
 		configureScrollView()
+		configureMainStackView()
+		setupCheckoutButtonAction()
+		setupConstraints()
 	}
 	
 	func setupHierarchy() {
 		addSubview(shipmentTopView)
 		addSubview(scrollView)
+		
+		scrollView.addSubview(contentView)
+		
+		contentView.addSubview(mainStackView)
+		
+		mainStackView.addArrangedSubview(progressBarComponent)
+		mainStackView.addArrangedSubview(recipientCard)
+		mainStackView.addArrangedSubview(senderCard)
+		mainStackView.addArrangedSubview(senderAddressCard)
+		mainStackView.addArrangedSubview(recipientAddressCard)
+		mainStackView.addArrangedSubview(checkoutButton)
 	}
 	
-	func setConstraints() {
+	func configureScrollView() {
+		scrollView.bouncesHorizontally = false
+		scrollView.alwaysBounceVertical = true
+	}
+	
+	func configureMainStackView() {
+		mainStackView.axis = .vertical
+		mainStackView.spacing = UIConstants.Spacing.large
+	}
+	
+	func setupCheckoutButtonAction() {
+		checkoutButton.addAction(UIAction { _ in
+			self.onTap?()
+		}, for: .touchUpInside)
+	}
+	
+	func setupConstraints() {
 		shipmentTopView.snp.makeConstraints {
 			$0.top.equalToSuperview().offset(UIConstants.Offset.topScreen)
 			$0.leading.trailing.equalToSuperview()
@@ -68,65 +95,19 @@ private extension DataValidationContentView {
 			$0.leading.trailing.equalToSuperview()
 			$0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
 		}
-	}
-	
-	func configureScrollView() {
-		scrollView.addSubview(contentView)
-		contentView.addSubview(mainStackView)
 		
-		scrollView.bouncesHorizontally = false
-		scrollView.alwaysBounceVertical = true
-		
-		configureContentView()
-		configureMainStackView()
-		configureProgressBarComponent()
-		configureTextField()
-		addCheckoutButton()
-	}
-	
-	func configureContentView() {
 		contentView.snp.makeConstraints {
-			$0.edges.equalToSuperview()
-			$0.width.equalToSuperview()
+			$0.edges.equalTo(scrollView.contentLayoutGuide)
+			$0.width.equalTo(scrollView.frameLayoutGuide)
 		}
-	}
-	
-	func configureMainStackView() {
-		mainStackView.axis = .vertical
-		mainStackView.spacing = UIConstants.Spacing.large
 		
 		mainStackView.snp.makeConstraints {
 			$0.top.bottom.equalToSuperview().inset(UIConstants.Inset.small)
 			$0.leading.trailing.equalToSuperview().inset(UIConstants.Inset.small)
 		}
-	}
-	
-	func configureProgressBarComponent() {
 		
-		mainStackView.addArrangedSubview(progressBarComponent)
-	}
-	
-	func configureTextField() {
-			textView.layer.cornerRadius = UIConstants.Layer.CornerRadius.extraSmall
-			textView.layer.borderWidth = 1
-			textView.layer.borderColor = ContentColor.borderLight.cgColor
-			
-			textView.snp.makeConstraints {
-				$0.height.equalTo(48)
-			}
-			
-			mainStackView.addArrangedSubview(textView)
-		}
-	
-	func addCheckoutButton() {
 		checkoutButton.snp.makeConstraints {
 			$0.height.equalTo(UIConstants.BigBlueButton.heightButton)
 		}
-		
-		mainStackView.addArrangedSubview(checkoutButton)
-		
-		checkoutButton.addAction(UIAction { _ in
-			self.onTap?()
-		}, for: .touchUpInside)
 	}
 }
