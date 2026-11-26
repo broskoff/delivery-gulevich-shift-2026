@@ -71,6 +71,7 @@
 		C7BE24A72F6D88BC0045774E /* CitySelectionContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE24A62F6D88BC0045774E /* CitySelectionContentView.swift */; };
 		C7BE24A92F6D88D20045774E /* CitySelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE24A82F6D88D20045774E /* CitySelectionTableViewCell.swift */; };
 		C7BE24AB2F6D8ECD0045774E /* CitySelectionTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE24AA2F6D8ECD0045774E /* CitySelectionTableViewDataSource.swift */; };
+		C7C5F26730AD6DFC005A150B /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5F26630AD6DFC005A150B /* KeyboardManager.swift */; };
 		C7D8D6DA306291F2001FC23C /* SenderAddressContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D8D6D9306291F2001FC23C /* SenderAddressContentView.swift */; };
 		C7D8D6DC30629212001FC23C /* SenderAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D8D6DB30629212001FC23C /* SenderAddressViewController.swift */; };
 		C7D8D6DE30629236001FC23C /* SenderAddressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D8D6DD30629236001FC23C /* SenderAddressPresenter.swift */; };
@@ -165,6 +166,7 @@
 		C7BE24A62F6D88BC0045774E /* CitySelectionContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionContentView.swift; sourceTree = "<group>"; };
 		C7BE24A82F6D88D20045774E /* CitySelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionTableViewCell.swift; sourceTree = "<group>"; };
 		C7BE24AA2F6D8ECD0045774E /* CitySelectionTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionTableViewDataSource.swift; sourceTree = "<group>"; };
+		C7C5F26630AD6DFC005A150B /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		C7D8D6D9306291F2001FC23C /* SenderAddressContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderAddressContentView.swift; sourceTree = "<group>"; };
 		C7D8D6DB30629212001FC23C /* SenderAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderAddressViewController.swift; sourceTree = "<group>"; };
 		C7D8D6DD30629236001FC23C /* SenderAddressPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderAddressPresenter.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				C7510CDC2F4ECF4600AA968F /* Profile */,
 				C7510CE12F4ECF4600AA968F /* Supporting */,
 				C7510CE62F4ECF4600AA968F /* UI */,
+				C7C5F26530AD6DE0005A150B /* Utils */,
 			);
 			path = "delivery-gulevich-shift-2026";
 			sourceTree = "<group>";
@@ -452,6 +455,14 @@
 				C7BE24A42F6D88A70045774E /* CitySelectionPresenter.swift */,
 			);
 			path = CitySelection;
+			sourceTree = "<group>";
+		};
+		C7C5F26530AD6DE0005A150B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5F26630AD6DFC005A150B /* KeyboardManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		C7D8D6D8306291BF001FC23C /* SenderAddress */ = {
@@ -640,6 +651,7 @@
 				C7510CF32F4ECF4600AA968F /* HistoryViewController.swift in Sources */,
 				C7510CF42F4ECF4600AA968F /* DeliveryMethodPresenter.swift in Sources */,
 				C7E2BFBD3077591600E58FBB /* LeaveAtTheDoorTransitioningDelegate.swift in Sources */,
+				C7C5F26730AD6DFC005A150B /* KeyboardManager.swift in Sources */,
 				C7F49772307F4999006D5755 /* SuccessContentView.swift in Sources */,
 				C78C4A7C2FEA5283007AA2D0 /* DeliveryFieldControl.swift in Sources */,
 				C73AFA882F69176700DB14C5 /* ProgressBarComponent.swift in Sources */,
