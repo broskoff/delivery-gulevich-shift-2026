@@ -5,11 +5,16 @@ protocol RecipientContentViewProtocol {
 	var completionHandler: ((String, String, String, String) -> Void)? { get set }
 }
 
-final class RecipientContentView: UIView, RecipientContentViewProtocol {
+final class RecipientContentView: UIView, RecipientContentViewProtocol, KeyboardManagerDependenciesProtocol {
 	
+	var keyboardTextFields: [UITextField] {
+		textFields
+	}
+	var keyboardScrollView: UIScrollView {
+		scrollView
+	}
 	var completionHandler: ((String, String, String, String) -> Void)?
-	var textFields: [UITextField] = []
-	
+	private var textFields: [UITextField] = []
 	private let shipmentTopView = ShipmentTopView(title: UIConstants.Shipment.HeaderNames.recepientTitle)
 	private let scrollView = UIScrollView()
 	private let contentView = UIView()

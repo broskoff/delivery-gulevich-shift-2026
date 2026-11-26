@@ -6,11 +6,12 @@ protocol RecipientViewControllerProtocol: AnyObject  {
 
 final class RecipientViewController: UIViewController {
 	
-	var recipientContentView: UIView & RecipientContentViewProtocol
+	var recipientContentView: UIView & RecipientContentViewProtocol & KeyboardManagerDependenciesProtocol
 	let presenter: RecipientPresenterProtocol
+	private var keyboardManager: KeyboardManager?
 	
 	init(
-		recipientContentView: UIView & RecipientContentViewProtocol,
+		recipientContentView: UIView & RecipientContentViewProtocol & KeyboardManagerDependenciesProtocol,
 		presenter: RecipientPresenterProtocol
 	) {
 		self.recipientContentView = recipientContentView
@@ -29,6 +30,8 @@ final class RecipientViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		keyboardManager = KeyboardManager(dependencies: recipientContentView)
 		
 		userEnteredRecipientData()
 	}
